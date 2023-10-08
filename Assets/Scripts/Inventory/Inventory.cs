@@ -101,10 +101,7 @@ public class Inventory
     }
 
 
-    /*public void addFruitsToBlender(Fruits f)
-    {
-
-    }*/
+    
 
 
     public List<Fruits> getFruitsList()
