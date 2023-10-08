@@ -44,6 +44,25 @@ public class Inventory
         onFruitListChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    public void addToBlender(Fruits f)
+    {
+        if (f.isStackable())
+        {
+            bool fruitInInventory = false;
+            
+            if (!fruitInInventory)
+            {
+                fruitsList.Add(f);
+                
+            }
+            
+        }
+        
+        onFruitListChanged?.Invoke(this, EventArgs.Empty);
+
+    }
+
+
     public void removeFruits(Fruits f)
     {
         if (f.isStackable())
@@ -82,10 +101,10 @@ public class Inventory
     }
 
 
-    public void useFruit(Fruits f)
+    /*public void addFruitsToBlender(Fruits f)
     {
 
-    }
+    }*/
 
 
     public List<Fruits> getFruitsList()

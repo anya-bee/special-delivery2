@@ -50,6 +50,10 @@ public class UI_Inventory2 : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        Inventory blenderInventory = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderInventory;
+        bool isOnBlender = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().isOnBlender;
+
+
         foreach (Fruits f in inventory.getFruitsList())
         {
             RectTransform itemSlotRectTransform = Instantiate(slotTemplate, itemSlots).GetComponent<RectTransform>();
@@ -58,8 +62,9 @@ public class UI_Inventory2 : MonoBehaviour
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
                 //use items 
+                blenderInventory.addToBlender(f);
                 inventory.removeFruits(f);
-
+                
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * cellsize, y * cellsize);

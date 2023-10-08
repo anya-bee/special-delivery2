@@ -39,7 +39,7 @@ public class PlayerInventory2 : MonoBehaviour
     }
 
 
-    private void UseItem(Fruits f)
+    /*private void UseItem(Fruits f)
     {
         switch (f.fruitType)
         {
@@ -57,7 +57,7 @@ public class PlayerInventory2 : MonoBehaviour
                 break;
 
         }
-    }
+    }*/
 
 
 

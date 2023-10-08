@@ -26,7 +26,14 @@ public class fruitImageReference : MonoBehaviour
     public Color32 strawberryColor;
     public Color32 limeColor;
     public Color32 lemonColor;
-    public Color32 pitahayaColor; 
+    public Color32 pitahayaColor;
+
+    [Header("Fruit Name String")]
+
+    public string strawberry_string = "Strawberry_Fruit";
+    public string lemon_string = "Lemon_Fruit";
+    public string lime_string = "Lime_Fruit";
+    public string pitahaya_string = "Pitahaya_Fruit";
 
 
 }

@@ -57,4 +57,19 @@ public class Fruits
         }
     }
 
+
+    public string GetString()
+    {
+        switch (fruitType)
+        {
+            default:
+
+            case FruitTypes.Lime: return fruitImageReference.Instance.lime_string; 
+            case FruitTypes.Strawberry: return fruitImageReference.Instance.strawberry_string;
+            case FruitTypes.Lemon: return fruitImageReference.Instance.lemon_string;
+            case FruitTypes.Pitahaya: return fruitImageReference.Instance.pitahaya_string;
+            
+        }
+    }
+
 }
