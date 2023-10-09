@@ -13,7 +13,7 @@ public class PatrolAction : AIAction
     public Vector3 walkPointTransform;
     public bool walkPointSet;
     public float walkpointrange;
-    public float Timer = 5;
+    public float Timer ;
 
     protected override void Start()
     {
@@ -31,11 +31,9 @@ public class PatrolAction : AIAction
     {
         if (!walkPointSet)
         {
-            Timer--; 
-            if (Timer == 0)
-            {
+            
                 searchWalkPoint();
-            }
+            
             
         }
 
@@ -47,7 +45,7 @@ public class PatrolAction : AIAction
         //walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
         {
-            
+
                 walkPointSet = false;
 
         }
@@ -57,7 +55,6 @@ public class PatrolAction : AIAction
 
     private void searchWalkPoint()
     {
-        Timer = 5;
         float randomZ = Random.Range(-walkpointrange, walkpointrange);
         float randomx = Random.Range(-walkpointrange, walkpointrange);
         walkPointTransform = new Vector3(transform.position.x + randomx, transform.position.y, transform.position.z);
