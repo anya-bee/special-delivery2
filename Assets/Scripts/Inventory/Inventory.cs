@@ -7,7 +7,8 @@ public class Inventory
 {
 
     public event EventHandler onFruitListChanged;
-    private List<Fruits> fruitsList;
+    [SerializeField]private List<Fruits> fruitsList;
+    public int fruitAmount = 0;
 
     public Inventory()
     {

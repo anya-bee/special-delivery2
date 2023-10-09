@@ -50,8 +50,10 @@ public class UI_Inventory2 : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        Inventory blenderInventory = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderInventory;
+        
         bool isOnBlender = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().isOnBlender;
+        int fruitAmount = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender;
+        List<string> fruitList = GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitList;
 
 
         foreach (Fruits f in inventory.getFruitsList())
@@ -62,9 +64,33 @@ public class UI_Inventory2 : MonoBehaviour
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
                 //use items 
-                blenderInventory.addToBlender(f);
-                inventory.removeFruits(f);
                 
+                if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().isOnBlender)
+                {
+                    if(fruitAmount == 0)
+                {
+                    fruitList.Add(f.GetString());
+                    
+                }
+
+                if (fruitAmount == 1)
+                {
+                    fruitList.Add(f.GetString());
+                }
+
+                if ( fruitAmount == 2)
+                {
+                    fruitList.Add(f.GetString());
+                }
+
+                    if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender < 3)
+                    {
+                        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender++;
+                        inventory.removeFruits(f);
+                        fruitAmount++;
+                    }   
+                }
+
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * cellsize, y * cellsize);
