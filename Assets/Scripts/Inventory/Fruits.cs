@@ -42,6 +42,20 @@ public class Fruits
         }
     }
 
+    public Mesh getMesh()
+    {
+        switch (fruitType)
+        {
+            default:
+
+            case FruitTypes.Lime: return fruitImageReference.Instance.limeMesh;
+            case FruitTypes.Strawberry: return fruitImageReference.Instance.strawberryMesh;
+            case FruitTypes.Lemon: return fruitImageReference.Instance.lemonMesh;
+            case FruitTypes.Pitahaya: return fruitImageReference.Instance.pitahayaMesh;
+
+        }
+    }
+
 
 
 

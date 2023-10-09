@@ -1,50 +1,73 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PatrolAction : AIAction
 {
-    public Transform targetA;
-    public Transform targetB;
-    public float smoothTime = 0.3F;
+    
 
-    private Vector3 velocity = Vector3.zero;
-    private Vector3 targetAPosition = Vector3.zero;
-    private Vector3 targetBPosition = Vector3.zero;
-    private bool hasReachedA = false;
-    private bool hasReachedB = true;
+    public NavMeshAgent enemy;
+    public LayerMask whatisground, whatisplayer;
+
+    public Vector3 walkPointTransform;
+    public bool walkPointSet;
+    public float walkpointrange;
+    public float Timer = 5;
 
     protected override void Start()
     {
         base.Start();
-        targetAPosition = targetA.position;
-        targetBPosition = targetB.position;
+        enemy = GetComponent<NavMeshAgent>();
+        
     }
 
     public override void PerformAction()
     {
-        if (!hasReachedA && Vector3.Distance(this.transform.position, targetAPosition) < 0.05f)
-        {
-            hasReachedA = true;
-            hasReachedB = false;
-        }
-
-        if (!hasReachedB && Vector3.Distance(this.transform.position, targetBPosition) < 0.05f)
-        {
-            hasReachedA = false;
-            hasReachedB = true;
-        }
-
-        if (!hasReachedA && hasReachedB)
-        {
-            this.transform.position = Vector3.SmoothDamp(this.transform.position, targetAPosition, ref velocity, smoothTime);
-            return;
-        }
-
-        if (!hasReachedB && hasReachedA)
-        {
-            this.transform.position = Vector3.SmoothDamp(this.transform.position, targetBPosition, ref velocity, smoothTime);
-            return;
-        }
+        Patrol();
     }
+
+    public void Patrol()
+    {
+        if (!walkPointSet)
+        {
+            Timer--; 
+            if (Timer == 0)
+            {
+                searchWalkPoint();
+            }
+            
+        }
+
+        if (walkPointSet)
+            enemy.SetDestination(walkPointTransform);
+
+        Vector3 distanceToWalkPoint = transform.position - walkPointTransform;
+
+        //walkpoint reached
+        if (distanceToWalkPoint.magnitude < 1f)
+        {
+            
+                walkPointSet = false;
+
+        }
+           
+
+    }
+
+    private void searchWalkPoint()
+    {
+        Timer = 5;
+        float randomZ = Random.Range(-walkpointrange, walkpointrange);
+        float randomx = Random.Range(-walkpointrange, walkpointrange);
+        walkPointTransform = new Vector3(transform.position.x + randomx, transform.position.y, transform.position.z);
+
+        if (Physics.Raycast(walkPointTransform, -transform.up, 2f, whatisground))
+        {
+
+            walkPointSet = true;
+        }
+    
+    }
+
 }

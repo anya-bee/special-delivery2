@@ -5,31 +5,35 @@ using UnityEngine;
 public class fruitDrops : MonoBehaviour
 {
 
+
+     public MeshFilter prefabBaseMesh;
+
     public static fruitDrops SpawnFruitDrops(Vector3 position, Fruits fruit2)
     {
         Transform transform = Instantiate(fruitImageReference.Instance.prefabFruit, position, Quaternion.identity);
-
+        
         fruitDrops fruitdrop1 = transform.GetComponent<fruitDrops>();
         fruitdrop1.SetFruit(fruit2);
-
+        
         return fruitdrop1;
     }
 
     private Fruits fruit;
     private Renderer fruitrender1;
-    public GameObject mesh;
+    public GameObject thisFruit;
 
 
     private void Awake()
     {
-        mesh = this.gameObject;
-        fruitrender1 = mesh.GetComponent<Renderer>();
+        thisFruit = this.gameObject;
+        fruitrender1 = thisFruit.GetComponent<Renderer>();
        
     }
 
     public void SetFruit(Fruits f1)
     {
         this.fruit = f1;
+        prefabBaseMesh.mesh = f1.getMesh();
         fruitrender1.material.SetColor("_BaseColor", f1.GetColor());
     }
 

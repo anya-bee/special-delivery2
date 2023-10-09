@@ -158,4 +158,4 @@ MonoBehaviour:
   currentLifeAmount: 10
   maxLifeAmount: 10
   isDead: 0
-  Name: 
+  enemyString: 

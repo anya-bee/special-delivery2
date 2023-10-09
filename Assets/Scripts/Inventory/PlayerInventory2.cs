@@ -15,8 +15,8 @@ public class PlayerInventory2 : MonoBehaviour
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
 
-        Spawn_Enemy1.SpawnEnemy(new Vector3(7, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Lemon_Enemy, amount = 1 });
-        Spawn_Enemy1.SpawnEnemy(new Vector3(-5, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Pitahaya_Enemy, amount = 1 });
+        //Spawn_Enemy1.SpawnEnemy(new Vector3(7, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Lemon_Enemy, amount = 1 });
+        //Spawn_Enemy1.SpawnEnemy(new Vector3(-5, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Pitahaya_Enemy, amount = 1 });
         fruitDrops.SpawnFruitDrops(new Vector3(5, 0), new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 1 });
         fruitDrops.SpawnFruitDrops(new Vector3(0, 1), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
         fruitDrops.SpawnFruitDrops(new Vector3(1, 0), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });

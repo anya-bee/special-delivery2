@@ -18,8 +18,8 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         currentLifeAmount = maxLifeAmount;
-        thisEnemy = this.gameObject.GetComponent<Spawn_Enemy1>().enemy1;
-         enemyString = thisEnemy.GetString();
+        //thisEnemy = this.gameObject.GetComponent<Spawn_Enemy1>().enemy1;
+        //enemyString = thisEnemy.GetString();
     }
 
     private void Update()

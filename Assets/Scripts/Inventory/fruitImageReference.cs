@@ -35,5 +35,12 @@ public class fruitImageReference : MonoBehaviour
     public string lime_string = "Lime_Fruit";
     public string pitahaya_string = "Pitahaya_Fruit";
 
+    [Header("Fruit Meshes")]
+
+    public Mesh strawberryMesh;
+    public Mesh lemonMesh;
+    public Mesh limeMesh;
+    public Mesh pitahayaMesh;
+
 
 }

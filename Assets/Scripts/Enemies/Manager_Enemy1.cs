@@ -28,4 +28,5 @@ public class Manager_Enemy1 : MonoBehaviour
     public string pitahaya_string = "Pitahaya_Enemy";
 
 
+
 }

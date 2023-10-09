@@ -141,3 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96878996a0ffa34eb70f32bd876f0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabBaseMesh: {fileID: 2864771666871996762}
+  thisFruit: {fileID: 0}

@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     {
         
         movePlayer();
+
+
         
     }
 

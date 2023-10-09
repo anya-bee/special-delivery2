@@ -7,9 +7,7 @@ public class Blender_Inventory : MonoBehaviour
 {
 
     public bool isOnBlender = false;
-    public string[] fruitsArray = new string[3];
     public List<string> fruitList;
-    
     public int fruitsOnBlender;
     
 
@@ -34,6 +32,11 @@ public class Blender_Inventory : MonoBehaviour
     {
         
     }
+    private void OnTriggerExit(Collider collider)
+    {
+        isOnBlender = false;
+    }
+
 
     private void refreshBlender()
     {
