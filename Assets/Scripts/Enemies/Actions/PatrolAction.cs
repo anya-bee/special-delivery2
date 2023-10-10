@@ -11,15 +11,22 @@ public class PatrolAction : AIAction
     public LayerMask whatisground, whatisplayer;
 
     public Vector3 walkPointTransform;
+    Transform original;
     public bool walkPointSet;
-    public float walkpointrange;
+    
     public float Timer ;
 
+    [Header ("Movement Range")]
+    public float safedistance;
+    public float walkpointrange;
+
+    
+    bool direccion = true;
     protected override void Start()
     {
         base.Start();
         enemy = GetComponent<NavMeshAgent>();
-        
+        original = transform;
     }
 
     public override void PerformAction()
@@ -45,7 +52,7 @@ public class PatrolAction : AIAction
         //walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
         {
-
+                
                 walkPointSet = false;
 
         }
@@ -56,8 +63,20 @@ public class PatrolAction : AIAction
     private void searchWalkPoint()
     {
         float randomZ = Random.Range(-walkpointrange, walkpointrange);
-        float randomx = Random.Range(-walkpointrange, walkpointrange);
-        walkPointTransform = new Vector3(transform.position.x + randomx, transform.position.y, transform.position.z);
+        float randomx = Random.Range(safedistance, walkpointrange + safedistance);
+        
+        if (direccion)
+        {
+            walkPointTransform = new Vector3(original.position.x + randomx, original.position.y, original.position.z);
+            direccion = false;
+        }
+        else
+        {
+            walkPointTransform = new Vector3(original.position.x - randomx, original.position.y, original.position.z);
+            direccion = true;
+        }
+      
+        
 
         if (Physics.Raycast(walkPointTransform, -transform.up, 2f, whatisground))
         {
