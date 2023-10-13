@@ -28,10 +28,7 @@ public class Blender_Inventory : MonoBehaviour
         isOnBlender = true; 
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
+  
     private void OnTriggerExit(Collider collider)
     {
         isOnBlender = false;
