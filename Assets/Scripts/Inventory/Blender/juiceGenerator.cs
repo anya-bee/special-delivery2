@@ -18,8 +18,6 @@ public class juiceGenerator : MonoBehaviour
         juiceGlass1.juiceType = juiceGlass1.glassOrder[0];
         juiceGlass1.juiceColor = juiceGlass1.GetColor();
 
-        
-
     }
 
     

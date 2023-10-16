@@ -72,18 +72,22 @@ public class UI_Inventory2 : MonoBehaviour
                 {
                         
                         fruitList.Add(f.GetString());
-                    
+                        
                 }
 
                 if (fruitAmount == 1)
                 {
                     fruitList.Add(f.GetString());
-                }
+                        
+                    }
 
                 if ( fruitAmount == 2)
                 {
                     fruitList.Add(f.GetString());
-                        
+                        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
+
+
+
                     }
 
                     if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender < 3)
@@ -91,6 +95,7 @@ public class UI_Inventory2 : MonoBehaviour
                         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender++;
                         inventory.removeFruits(f);
                         fruitAmount++;
+
                     }   
                 }
 

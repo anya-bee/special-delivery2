@@ -12,8 +12,12 @@ public class Blender_Inventory : MonoBehaviour
     public Animator blenderAnimator;
 
 
-    [Header("thisGameObject")]
+    [Header("juiceGenerator")]
+    public Transform prefabJuice;
+    public string juiceType;
+    private Renderer fruitrender1;
     public GameObject blender;
+    public Transform newLocation;
     
 
     private void Start()
@@ -32,15 +36,29 @@ public class Blender_Inventory : MonoBehaviour
         if (isOnBlender && fruitsOnBlender == 0)
         {
             blenderAnimator.SetBool("openBlender", true);
+            
         }
         if (fruitsOnBlender == 3)
         {
             blenderAnimator.SetBool("openBlender", false);
-            GetComponentInChildren<juiceGenerator>().SetJuice(fruitList);
             fruitsOnBlender = 0;
-            
         }
     }
+
+    public void SetJuice(List<string> juiceOrder)
+    {
+
+        Transform transform = Instantiate(prefabJuice, newLocation.position, Quaternion.identity);
+        juiceGlass juiceGlass1 = transform.GetComponent<juiceGlass>();
+        foreach(string fruitItem in juiceOrder)
+        {
+            juiceGlass1.glassOrder.Add(fruitItem);
+        }
+        juiceGlass1.juiceType = juiceGlass1.glassOrder[0]; 
+        juiceGlass1.juiceColor = juiceGlass1.GetColor();
+
+    }
+
 
 
     private void OnTriggerEnter(Collider collider)
@@ -61,7 +79,7 @@ public class Blender_Inventory : MonoBehaviour
     
 
 
-    private void refreshBlender()
+    public void refreshBlender()
     {
         isOnBlender = false;
         fruitList.Clear();

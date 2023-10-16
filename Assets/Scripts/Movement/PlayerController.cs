@@ -48,7 +48,9 @@ public class PlayerController : MonoBehaviour
             currentGlass = glassHitColliders[0].gameObject;
             currentGlass.GetComponent<juiceGlass>().carryJuice();
             carryingOrder = true;
+            GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().refreshBlender();
         }
+
 
         int numColliders3 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, trayCollider, trayLayer);
         if (numColliders3 == 1)
