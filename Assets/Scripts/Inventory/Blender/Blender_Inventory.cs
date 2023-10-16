@@ -38,6 +38,7 @@ public class Blender_Inventory : MonoBehaviour
             blenderAnimator.SetBool("openBlender", false);
             GetComponentInChildren<juiceGenerator>().SetJuice(fruitList);
             fruitsOnBlender = 0;
+            
         }
     }
 

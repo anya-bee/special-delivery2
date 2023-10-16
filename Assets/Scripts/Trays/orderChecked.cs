@@ -16,6 +16,7 @@ public class orderChecked : MonoBehaviour
     public LayerMask glassLayer;
     public LayerMask clientLayer;
     public float radius;
+    public bool glassIsOnTray = false;
 
     [Header("Client and Glass")]
     public GameObject Client;
@@ -30,7 +31,7 @@ public class orderChecked : MonoBehaviour
          
         int numColliders2 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, glassHitColliders, glassLayer);
 
-        if (numColliders2 == 1)
+        if (numColliders2 == 1 && glassIsOnTray)
         {
             Glass = glassHitColliders[0].gameObject;
             glassOrder1 = Glass.GetComponent<juiceGlass>().glassOrder;
@@ -43,8 +44,11 @@ public class orderChecked : MonoBehaviour
         
         if(orderFinished == true)
         {
+            clientEntered = false;
             Glass = null;
             glassOrder1 = null;
+            Client = null;
+            clientOrder1 = null;
             Destroy(Glass);
         }
         
@@ -57,14 +61,14 @@ public class orderChecked : MonoBehaviour
     }
 
 
-    private void checkOrder()
+    public void checkOrder()
     {
         for (int i = 0; i < 3; i++)
         {
             if (glassOrder1[i] == clientOrder1[i])
             {
                 points = points + 10;
-                
+                break;
             }
             
         }
