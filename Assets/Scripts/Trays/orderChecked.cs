@@ -40,6 +40,7 @@ public class orderChecked : MonoBehaviour
         if(clientEntered && Glass != null)
         {
             checkOrder();
+            
         }
         
         if(orderFinished == true)
@@ -49,7 +50,7 @@ public class orderChecked : MonoBehaviour
             glassOrder1 = null;
             Client = null;
             clientOrder1 = null;
-            Destroy(Glass);
+            //Destroy(Glass);
         }
         
     }
@@ -68,11 +69,13 @@ public class orderChecked : MonoBehaviour
             if (glassOrder1[i] == clientOrder1[i])
             {
                 points = points + 10;
-                break;
+                
             }
             
         }
+        GameObject.FindObjectOfType<Points>().pointsTracker(points);
         orderFinished = true;
+        
     }
 
     private void OnTriggerEnter(Collider other)
