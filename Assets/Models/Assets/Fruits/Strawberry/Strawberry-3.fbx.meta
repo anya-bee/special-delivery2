@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80e32f82be1fa6a4bac6c243033f03c3
+guid: ae2cc11f318f0a9429afddf9fd991819
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: fresa_color
     second: {fileID: 2100000, guid: 4e17418fd2b522a4a9542222221a0b4b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hojas_color1
-    second: {fileID: 2100000, guid: 2eb62ec1ccda7ab49a936d88e166a312, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -45,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 4
+    globalScale: 0.07
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -98,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.04
+    globalScale: 0.0007
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

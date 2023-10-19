@@ -42,5 +42,12 @@ public class fruitImageReference : MonoBehaviour
     public Mesh limeMesh;
     public Mesh pitahayaMesh;
 
+    [Header("Fruit Textures")]
+
+    public Material strawberryTXT;
+    public Material lemonTXT;
+    public Material limeTXT;
+    public Material pitahayaTXT;
+
 
 }

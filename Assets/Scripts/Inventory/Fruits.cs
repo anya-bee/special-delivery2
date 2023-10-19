@@ -56,6 +56,19 @@ public class Fruits
         }
     }
 
+    public Material getMaterial()
+    {
+        switch (fruitType)
+        {
+            default:
+
+            case FruitTypes.Lime: return fruitImageReference.Instance.limeTXT;
+            case FruitTypes.Strawberry: return fruitImageReference.Instance.strawberryTXT;
+            case FruitTypes.Lemon: return fruitImageReference.Instance.lemonTXT;
+            case FruitTypes.Pitahaya: return fruitImageReference.Instance.pitahayaTXT;
+
+        }
+    }
 
 
 

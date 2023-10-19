@@ -35,6 +35,7 @@ public class fruitDrops : MonoBehaviour
         this.fruit = f1;
         prefabBaseMesh.mesh = f1.getMesh();
         fruitrender1.material.SetColor("_BaseColor", f1.GetColor());
+        fruitrender1.material = f1.getMaterial();
     }
 
     public Fruits getFruit()
