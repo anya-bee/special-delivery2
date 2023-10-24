@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 move;
     public Animator animator1;
     public float rtquaternion;
+    public bool isOnBus;
 
     [Header("Taking Orders")]
     public float radius;

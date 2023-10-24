@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fruitDrops : MonoBehaviour
 {
-
+    //This code spawns fruits anywhere in the map
 
      public MeshFilter prefabBaseMesh;
 

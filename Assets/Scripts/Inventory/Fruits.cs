@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fruits 
 {
+
+    //this code is the main fruit code, which are scriptable objects. It has various get functions to obtain the fruits attributes
     public enum FruitTypes
     {
         Lime,

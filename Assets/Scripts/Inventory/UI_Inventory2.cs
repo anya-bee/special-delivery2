@@ -68,10 +68,11 @@ public class UI_Inventory2 : MonoBehaviour
                 if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().isOnBlender)
                 {
                     
-                    if (fruitAmount == 0)
+                    if (fruitAmount <= 0)
                 {
                         
                         fruitList.Add(f.GetString());
+                        
                         
                 }
 

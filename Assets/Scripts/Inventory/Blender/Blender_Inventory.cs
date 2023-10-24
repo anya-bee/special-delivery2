@@ -6,6 +6,8 @@ using System;
 public class Blender_Inventory : MonoBehaviour
 {
 
+    //this is the main blender code, which makes smoothies 
+
     public bool isOnBlender = false;
     public List<string> fruitList;
     public int fruitsOnBlender;

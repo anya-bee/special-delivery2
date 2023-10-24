@@ -45,12 +45,12 @@ public class orderChecked : MonoBehaviour
         
         if(orderFinished == true)
         {
+            StartCoroutine(destroyGlass(Glass));
             clientEntered = false;
             Glass = null;
             glassOrder1 = null;
-            Client = null;
-            clientOrder1 = null;
-            //Destroy(Glass);
+            
+            
         }
         
     }
@@ -95,6 +95,19 @@ public class orderChecked : MonoBehaviour
         clientEntered = false;
         Client = null;
         clientOrder1 = null;
+        orderFinished = false;
+    }
+
+
+    IEnumerator destroyGlass(GameObject object1)
+    {
+        yield return new WaitForSeconds(4f);
+        Glass = null;
+        Destroy(object1);
+        glassIsOnTray = false;
+        points = 0;
+
+
     }
 
 
