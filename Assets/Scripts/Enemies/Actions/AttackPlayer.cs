@@ -9,6 +9,7 @@ public class AttackPlayer : AIAction
     public Transform player;
     public LayerMask whatisground, whatisplayer;
     public Animator enemyAnimator;
+    public int dmg = 0;
 
 
     public float timeBetweenAttacks;
@@ -25,16 +26,26 @@ public class AttackPlayer : AIAction
     public override void PerformAction()
     {
         enemy.SetDestination(transform.position);
-        enemyAnimator.SetBool("isWalking", true);
-
         transform.LookAt(player);
-        Invoke(nameof(resetAction), timeBetweenAttacks);
+
+        if (!alreadyAttacked)
+        {
+
+            enemyAnimator.SetTrigger("attack");
+            player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
+
+            alreadyAttacked = true;
+            Invoke(nameof(resetAction), timeBetweenAttacks);
+        }
+
+       
+        
     }
 
     private void resetAction()
     {
         alreadyAttacked = false;
-        enemyAnimator.SetBool("isWalking", false);
+        
     }
 
 }

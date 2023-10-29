@@ -45,7 +45,9 @@ public class orderChecked : MonoBehaviour
         
         if(orderFinished == true)
         {
+            
             StartCoroutine(destroyGlass(Glass));
+            
             clientEntered = false;
             Glass = null;
             glassOrder1 = null;
@@ -93,7 +95,7 @@ public class orderChecked : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         clientEntered = false;
-        Client = null;
+        
         clientOrder1 = null;
         orderFinished = false;
     }
@@ -102,10 +104,15 @@ public class orderChecked : MonoBehaviour
     IEnumerator destroyGlass(GameObject object1)
     {
         yield return new WaitForSeconds(4f);
+        
         Glass = null;
         Destroy(object1);
         glassIsOnTray = false;
         points = 0;
+        Client.GetComponent<clientOrder>().orderFinished = true;
+        yield return new WaitForSeconds(5f);
+        Client = null;
+
 
 
     }

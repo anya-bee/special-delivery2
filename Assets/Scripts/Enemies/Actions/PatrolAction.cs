@@ -68,6 +68,7 @@ public class PatrolAction : AIAction
         if (direccion)
         {
             walkPointTransform = new Vector3(original.position.x + randomx, original.position.y, original.position.z);
+            
             direccion = false;
         }
         else

@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grass_Material
+  m_Name: Grass_Material 1
   m_Shader: {fileID: -6465566751694194690, guid: fee64073bfbf18d449c2ed2113cd6974,
     type: 3}
   m_ValidKeywords: []
@@ -124,7 +124,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GrassColor: {r: 0.5382451, g: 0.8679245, b: 0.43723744, a: 0}
+    - _GrassColor: {r: 0.3764706, g: 0.85882354, b: 0.5865579, a: 0}
     - _GrassColor2: {r: 1, g: 0.15825075, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

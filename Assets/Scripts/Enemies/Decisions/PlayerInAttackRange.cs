@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
 
-public class PlayerHasEnteredField : AIDecision
+public class PlayerInAttackRange : AIDecision
 {
     public bool playerHasEntered = false;
-    public bool playerinSight;
+    public bool playerInSight;
     public float sightRange;
     public LayerMask whatisPlayer;
 
@@ -18,16 +18,16 @@ public class PlayerHasEnteredField : AIDecision
 
     private void Update()
     {
-        playerinSight = Physics.CheckSphere(transform.position, sightRange, whatisPlayer);
-        if (playerinSight)
+        playerInSight = Physics.CheckSphere(transform.position, sightRange, whatisPlayer);
+        if (playerInSight)
         {
             playerHasEntered = true;
         }
-        if (!playerinSight)
+        if (!playerInSight)
         {
             playerHasEntered = false;
         }
-        
+
     }
 
     public override void OnEnterState()
@@ -38,7 +38,7 @@ public class PlayerHasEnteredField : AIDecision
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }

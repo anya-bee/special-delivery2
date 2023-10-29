@@ -40,11 +40,7 @@ public class Blender_Inventory : MonoBehaviour
             blenderAnimator.SetBool("openBlender", true);
             
         }
-        if (fruitsOnBlender == 3)
-        {
-            blenderAnimator.SetBool("openBlender", false);
-            fruitsOnBlender = 0;
-        }
+        
     }
 
     public void SetJuice(List<string> juiceOrder)
@@ -75,7 +71,8 @@ public class Blender_Inventory : MonoBehaviour
     private void OnTriggerExit(Collider collider)
     {
         isOnBlender = false;
-        
+        blenderAnimator.SetBool("openBlender", false);
+
     }
 
     

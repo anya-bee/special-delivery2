@@ -17,13 +17,13 @@ public class PlayerInventory2 : MonoBehaviour
 
         //Spawn_Enemy1.SpawnEnemy(new Vector3(7, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Lemon_Enemy, amount = 1 });
         //Spawn_Enemy1.SpawnEnemy(new Vector3(-5, 0), new Enemy_1 { enemyType = Enemy_1.EnemyType.Pitahaya_Enemy, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(5, 0), new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(0, 1), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(1, 0), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(3, 0,-2), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(4, 0, -4), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(6, 0,3), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
-        fruitDrops.SpawnFruitDrops(new Vector3(-8, 0), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-9, 0), new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-10, 1), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-11, 0), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-13, 0,-2), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-14, 0, -4), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-12, 0,3), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
+        fruitDrops.SpawnFruitDrops(new Vector3(-16, 0), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
     }
 
     private void OnTriggerEnter(Collider collider)

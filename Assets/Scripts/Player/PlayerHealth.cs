@@ -61,6 +61,11 @@ public class PlayerHealth : MonoBehaviour
     {
         currentLifeAmount -= amount;
 
+        if (currentLifeAmount <= 1)
+        {
+            currentLifeAmount = 1;
+        }
+
         if (currentLifeAmount <= 0)
         {
             Die();
@@ -70,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
 
 
 
-    protected void Die()
+    private void Die()
     {
         isDead = true;
         Destroy(this.gameObject);
