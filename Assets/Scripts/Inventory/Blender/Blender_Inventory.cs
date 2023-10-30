@@ -26,6 +26,9 @@ public class Blender_Inventory : MonoBehaviour
     {
         isOnBlender = false;
         blender = this.gameObject;
+        fruitList.Add("");
+        fruitList.Add("");
+        fruitList.Add("");
     }
 
     private void refreshSmoothie()
@@ -81,7 +84,9 @@ public class Blender_Inventory : MonoBehaviour
     public void refreshBlender()
     {
         isOnBlender = false;
-        fruitList.Clear();
+        fruitList[0] = ("");
+        fruitList[1] = ("");
+        fruitList[2] = ("");
         fruitsOnBlender = 0;
     }
 

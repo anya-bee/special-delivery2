@@ -52,7 +52,7 @@ public class Client_Manager : MonoBehaviour
             {
                 currentClient.SetActive(false);
                 isonTray = false;
-                if (ongoingClients < 2)
+                if (ongoingClients < 1)
                 {
                     ongoingClients++;
                     currentClient = clientList[ongoingClients];

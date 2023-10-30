@@ -110,8 +110,8 @@ public class orderChecked : MonoBehaviour
         glassIsOnTray = false;
         points = 0;
         Client.GetComponent<clientOrder>().orderFinished = true;
-        yield return new WaitForSeconds(5f);
-        Client = null;
+        
+        
 
 
 
