@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class orderChecked : MonoBehaviour
 {
+
+    // This code works for TRAYS, where orders are placed. Trays check the clients order and the order of the glass placed over it. 
+    // in the end, it delivers point based on the smoothie. 10+ per each correct fruit
+
     [Header("Orders")]
     public List<string> glassOrder1;
     public List<string> clientOrder1;

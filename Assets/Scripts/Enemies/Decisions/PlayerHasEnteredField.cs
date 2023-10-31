@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
 
+
 public class PlayerHasEnteredField : AIDecision
 {
     public bool playerHasEntered = false;

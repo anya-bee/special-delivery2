@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// This code sets de UI Inventory for the player. Based on the fruit recollected, it will update the players inventory
+// it is also interactible so when  you click a fruit when youre on the blender, it will remove fruits from the player and add them
+//in the blender to make a smoothie
+
 public class UI_Inventory2 : MonoBehaviour
 {
     private Inventory inventory;

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+// This code is a Client Manager, which updates clients and their nav mesh, so they always go to the same tray to get their order. When a client finishes, 
+// the next goes and so on.
+
 public class Client_Manager : MonoBehaviour
 {
 
@@ -20,6 +24,7 @@ public class Client_Manager : MonoBehaviour
     public bool isonTray;
     public Animator currentAnimator;
     public int ongoingClients = 0;
+    public int count;
 
     private void Start()
     {
@@ -29,9 +34,11 @@ public class Client_Manager : MonoBehaviour
 
     void Update()
     {
+        
         currentAnimator = currentClient.GetComponent<Animator>();
         if (!isonTray)
         {
+            
             currentNMA.SetDestination(enterStage.position);
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
@@ -50,14 +57,23 @@ public class Client_Manager : MonoBehaviour
             currentNMA.SetDestination(exitStage.position);
             if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2)
             {
-                currentClient.SetActive(false);
+                
                 isonTray = false;
-                if (ongoingClients < 1)
+                if (ongoingClients < (clientList.Count))
                 {
+                    
+                    currentClient.SetActive(false);
                     ongoingClients++;
                     currentClient = clientList[ongoingClients];
                     currentNMA = clientNMA[ongoingClients];
+
                 }
+                /*if( ongoingClients == (clientList.Count - 1))
+                {
+                    isonTray = true;
+                    currentClient = clientList[ongoingClients];
+                    currentNMA = clientNMA[ongoingClients];
+                }*/
 
                 
             }
