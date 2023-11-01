@@ -22127,7 +22127,7 @@ Transform:
   m_GameObject: {fileID: 1829549497}
   m_LocalRotation: {x: -0, y: 0.69949454, z: -0, w: 0.714638}
   m_LocalPosition: {x: 1.983, y: 1.68, z: -0.577}
-  m_LocalScale: {x: 1, y: 1, z: 1.9171016}
+  m_LocalScale: {x: 0.92045, y: 0.92045, z: 0.88436264}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1217008004}
@@ -22144,8 +22144,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.3, y: 7.18, z: 4.57}
-  m_Center: {x: 4.06, y: 0, z: 0}
+  m_Size: {x: 2.53, y: 4.1, z: 4.32}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1829549500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22226,7 +22226,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829549497}
-  m_Mesh: {fileID: 4787136918717088048, guid: 5067b95b74e5b014eb1f69efaac90c9a, type: 3}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &1829549503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27763,7 +27763,7 @@ MonoBehaviour:
   animator1: {fileID: 2123671275}
   rtquaternion: 0.6
   isOnBus: 0
-  radius: 2.7
+  radius: 2.15
   glassHitColliders:
   - {fileID: 0}
   trayCollider:
