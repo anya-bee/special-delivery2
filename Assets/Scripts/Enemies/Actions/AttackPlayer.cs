@@ -31,15 +31,15 @@ public class AttackPlayer : AIAction
         if (!alreadyAttacked)
         {
 
-            enemyAnimator.SetTrigger("attack");
+            enemyAnimator.SetBool("attack", true);
             player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
 
             alreadyAttacked = true;
             Invoke(nameof(resetAction), timeBetweenAttacks);
         }
 
-       
-        
+
+
     }
 
     private void resetAction()
