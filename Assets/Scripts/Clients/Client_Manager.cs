@@ -30,7 +30,6 @@ public class Client_Manager : MonoBehaviour
     {
         currentClient = clientList[0];
         currentNMA = clientNMA[0];
-        isonTray = false;
     }
 
     void Update()
@@ -56,11 +55,11 @@ public class Client_Manager : MonoBehaviour
         {
             currentAnimator.SetBool("isStanding", false);
             currentNMA.SetDestination(exitStage.position);
-            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 5)
+            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2)
             {
                 
                 isonTray = false;
-                if (ongoingClients < 20)
+                if (ongoingClients < (clientList.Count))
                 {
                     
                     currentClient.SetActive(false);
@@ -69,14 +68,12 @@ public class Client_Manager : MonoBehaviour
                     currentNMA = clientNMA[ongoingClients];
 
                 }
-                if( ongoingClients == (clientList.Count - 1))
+                /*if( ongoingClients == (clientList.Count - 1))
                 {
-                    Debug.Log("This is the last client !!!");
-                    currentClient.SetActive(true);
-                    currentClient = clientList[clientList.Count - 1];
-                    currentNMA = clientNMA[clientList.Count - 1];
-
-                }
+                    isonTray = true;
+                    currentClient = clientList[ongoingClients];
+                    currentNMA = clientNMA[ongoingClients];
+                }*/
 
                 
             }

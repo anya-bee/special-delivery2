@@ -10,8 +10,6 @@ public class FollowPlayer : AIAction
     public NavMeshAgent enemy;
     public Transform player;
     public LayerMask whatisground, whatisplayer;
-    public Animator enemyAnimator;
-
 
     protected override void Start()
     {
@@ -24,7 +22,6 @@ public class FollowPlayer : AIAction
     public override void PerformAction()
     {
         enemy.SetDestination(player.transform.position);
-        enemyAnimator.SetBool("attack", false);
     }
 
 

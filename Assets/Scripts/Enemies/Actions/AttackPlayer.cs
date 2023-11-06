@@ -31,14 +31,14 @@ public class AttackPlayer : AIAction
         if (!alreadyAttacked)
         {
 
-            enemyAnimator.SetBool("attack",true);
+            enemyAnimator.SetTrigger("attack");
             player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
 
             alreadyAttacked = true;
             Invoke(nameof(resetAction), timeBetweenAttacks);
         }
 
-       //
+       
         
     }
 
