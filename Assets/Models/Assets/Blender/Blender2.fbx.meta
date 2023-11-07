@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Crystal
     second: {fileID: 2100000, guid: bf1329126df3402459fe9a94acba7c64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red mat
+    second: {fileID: 2100000, guid: 5e8a13e13c9419a4bbf7d15c87224851, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
