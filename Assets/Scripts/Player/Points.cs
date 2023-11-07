@@ -25,7 +25,7 @@ public class Points : MonoBehaviour
     {
         tray1points = tray1.GetComponent<orderChecked>().points;
         
-        Text1.text = "Points : " + totalPoints.ToString();
+        Text1.text = "Points: " + totalPoints.ToString();
     }
 
     public void pointsTracker(int number)
