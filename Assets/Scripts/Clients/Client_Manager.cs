@@ -68,12 +68,13 @@ public class Client_Manager : MonoBehaviour
                     currentNMA = clientNMA[ongoingClients];
 
                 }
-                /*if( ongoingClients == (clientList.Count - 1))
+                if( currentClient.GetComponent<clientOrder>().lastClient == true )
                 {
+                    currentClient.SetActive(true);
                     isonTray = true;
                     currentClient = clientList[ongoingClients];
                     currentNMA = clientNMA[ongoingClients];
-                }*/
+                }
 
                 
             }

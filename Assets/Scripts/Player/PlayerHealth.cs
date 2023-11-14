@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public float cellsize;
 
 
+
     private void Start()
     {
         currentLifeAmount = maxLifeAmount;

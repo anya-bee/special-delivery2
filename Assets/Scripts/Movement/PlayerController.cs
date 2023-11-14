@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask trayLayer;
     public InputManager glassTakeout;
     private InputAction takeglass;
+    private InputAction attack;
     public bool carryingOrder = false;
     public GameObject currentGlass;
 
@@ -30,6 +31,9 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         takeglass = glassTakeout.Player.TakeGlass;
+        attack = glassTakeout.Player.Attack;
+        attack.Enable();
+        attack.performed += attackAction;
         takeglass.Enable();
         takeglass.performed += takeGlass;
     }
@@ -38,6 +42,18 @@ public class PlayerController : MonoBehaviour
     {
         
         move = context.ReadValue<Vector2>();
+        
+    }
+
+    public void attackAction(InputAction.CallbackContext context)
+    {
+        
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().isOnBus == false)
+        {
+            animator1.SetTrigger("IsAttacking");
+
+            GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().attackState();
+        }
         
     }
 
@@ -74,10 +90,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
