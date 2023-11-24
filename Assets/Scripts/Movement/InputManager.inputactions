@@ -103,13 +103,85 @@
                 {
                     "name": "",
                     "id": "385c0706-2c9f-472e-9b77-5d9a77db5321",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Bus",
+            "id": "7203e3b5-cdfe-4cb9-aaf6-674034566d65",
+            "actions": [
+                {
+                    "name": "MoveBus",
+                    "type": "Value",
+                    "id": "a76c4f2a-5696-4a16-9bac-fb2307b3d138",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "d8c86b23-b405-4f48-b13a-5977eba80a9b",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBus",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "130f390e-b41b-4b2b-93d4-547e0dae7619",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBus",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3873bcaf-a3aa-4d87-83cb-ec33aa4507cd",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBus",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b598ed90-03fc-4979-bb8b-2fe980bdf4e4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBus",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bdd55e8c-f4d5-44a9-a73e-53eb9f0a1d0e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBus",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

@@ -125,13 +125,85 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""385c0706-2c9f-472e-9b77-5d9a77db5321"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Bus"",
+            ""id"": ""7203e3b5-cdfe-4cb9-aaf6-674034566d65"",
+            ""actions"": [
+                {
+                    ""name"": ""MoveBus"",
+                    ""type"": ""Value"",
+                    ""id"": ""a76c4f2a-5696-4a16-9bac-fb2307b3d138"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""d8c86b23-b405-4f48-b13a-5977eba80a9b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveBus"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""130f390e-b41b-4b2b-93d4-547e0dae7619"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveBus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""3873bcaf-a3aa-4d87-83cb-ec33aa4507cd"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveBus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b598ed90-03fc-4979-bb8b-2fe980bdf4e4"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveBus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""bdd55e8c-f4d5-44a9-a73e-53eb9f0a1d0e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveBus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -143,6 +215,9 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_TakeGlass = m_Player.FindAction("TakeGlass", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        // Bus
+        m_Bus = asset.FindActionMap("Bus", throwIfNotFound: true);
+        m_Bus_MoveBus = m_Bus.FindAction("MoveBus", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -262,10 +337,60 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Bus
+    private readonly InputActionMap m_Bus;
+    private List<IBusActions> m_BusActionsCallbackInterfaces = new List<IBusActions>();
+    private readonly InputAction m_Bus_MoveBus;
+    public struct BusActions
+    {
+        private @InputManager m_Wrapper;
+        public BusActions(@InputManager wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MoveBus => m_Wrapper.m_Bus_MoveBus;
+        public InputActionMap Get() { return m_Wrapper.m_Bus; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BusActions set) { return set.Get(); }
+        public void AddCallbacks(IBusActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BusActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BusActionsCallbackInterfaces.Add(instance);
+            @MoveBus.started += instance.OnMoveBus;
+            @MoveBus.performed += instance.OnMoveBus;
+            @MoveBus.canceled += instance.OnMoveBus;
+        }
+
+        private void UnregisterCallbacks(IBusActions instance)
+        {
+            @MoveBus.started -= instance.OnMoveBus;
+            @MoveBus.performed -= instance.OnMoveBus;
+            @MoveBus.canceled -= instance.OnMoveBus;
+        }
+
+        public void RemoveCallbacks(IBusActions instance)
+        {
+            if (m_Wrapper.m_BusActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBusActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BusActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BusActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BusActions @Bus => new BusActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnTakeGlass(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+    }
+    public interface IBusActions
+    {
+        void OnMoveBus(InputAction.CallbackContext context);
     }
 }
