@@ -9,6 +9,7 @@ TagManager:
   - Heart_Icon
   - glassHolder
   - tray
+  - blueScreen
   layers:
   - Default
   - TransparentFX

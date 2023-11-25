@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/gameStartScene.unity
+    guid: dd9dcb2728d85ba46b52963174049685
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/loadingScreen.unity
+    guid: 5cbc34f06635cfd46b4c45dfebfe8d19
+  - enabled: 1
+    path: Assets/Scenes/travelBoardScene.unity
+    guid: bc37180c8a5e2d34ab22663b72f46bea
+  - enabled: 1
+    path: Assets/Scenes/lvlOneLoad.unity
+    guid: 66c901e453031ca4d8d831ceb4b12724
   m_configObjects: {}

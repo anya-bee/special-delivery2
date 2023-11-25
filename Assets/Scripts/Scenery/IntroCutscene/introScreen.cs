@@ -10,25 +10,29 @@ public class introScreen : MonoBehaviour
     public Image logo;
     public float logoappear;
     public float alphadur;
+    public Color transparent;
+    public Color fullcolor;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        logo.CrossFadeAlpha(1, alphadur, true);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         
     }
 
 
     IEnumerator appearLogo()
     {
-        yield return new WaitForSeconds(logoappear);
-        logo.CrossFadeAlpha(1, alphadur, false);
+        yield return new WaitForSeconds(3f);
+        
     }
 
 }
