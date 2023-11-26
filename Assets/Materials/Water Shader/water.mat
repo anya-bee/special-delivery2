@@ -56,10 +56,10 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _divide: 2.87
-    - _innerThreshold: 0.3
-    - _noiseScale: 4.86
+    - _divide: 2.83
+    - _innerThreshold: 0.326
+    - _noiseScale: 4.42
     - _outerThershold: 0.679
-    - _speed: 1.1
+    - _speed: 1.36
     m_Colors: []
   m_BuildTextureStacks: []

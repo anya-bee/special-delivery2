@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 
 // This code is a Client Manager, which updates clients and their nav mesh, so they always go to the same tray to get their order. When a client finishes, 
@@ -26,10 +27,21 @@ public class Client_Manager : MonoBehaviour
     public int ongoingClients = 0;
     public int count;
 
+    [Header("GameOver")]
+    public Image gameOverBoard;
+    public Button goToTravellBttn;
+
     private void Start()
     {
         currentClient = clientList[0];
         currentNMA = clientNMA[0];
+    }
+
+    IEnumerator appearButton()
+    {
+        yield return new WaitForSeconds(2f);
+        goToTravellBttn.gameObject.SetActive(true);
+
     }
 
     void Update()
@@ -54,12 +66,19 @@ public class Client_Manager : MonoBehaviour
         if(currentClient.GetComponent<clientOrder>().orderFinished == true)
         {
             currentAnimator.SetBool("isStanding", false);
+            
             currentNMA.SetDestination(exitStage.position);
-            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2)
+            if(currentClient.GetComponent<clientOrder>().lastClient == true)
+            {
+                ongoingClients = clientList.Count;
+                gameOverBoard.gameObject.SetActive(true);
+                StartCoroutine(appearButton());
+            }
+            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2 && currentClient.GetComponent<clientOrder>().lastClient == false)
             {
                 
                 isonTray = false;
-                if (ongoingClients < (clientList.Count))
+                if (ongoingClients < (clientList.Count) )
                 {
                     
                     currentClient.SetActive(false);
@@ -68,17 +87,18 @@ public class Client_Manager : MonoBehaviour
                     currentNMA = clientNMA[ongoingClients];
 
                 }
-                if( currentClient.GetComponent<clientOrder>().lastClient == true )
+                /*if(ongoingClients == clientList.Count)
                 {
                     currentClient.SetActive(true);
-                    isonTray = true;
-                    currentClient = clientList[ongoingClients];
-                    currentNMA = clientNMA[ongoingClients];
-                }
+                    ongoingClients = clientList.Count;
 
-                
+                }*/
+               
+
             }
             
+
+
         }
 
 
