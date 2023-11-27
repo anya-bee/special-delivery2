@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator1;
     public float rtquaternion;
     public bool isOnBus;
+    private InputAction newMovePlayer;
+    
 
     [Header("Taking Orders")]
     public float radius;
@@ -25,31 +27,34 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        glassTakeout = new InputManager();
+
+        
+        
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
-        takeglass = glassTakeout.Player.TakeGlass;
-        attack = glassTakeout.Player.Attack;
+        
         attack.Enable();
         attack.performed += attackAction;
         takeglass.Enable();
         takeglass.performed += takeGlass;
-    }
+    }*/
 
-    public void onMove(InputAction.CallbackContext context)
+    public void OnMove(InputValue context)
     {
-        
-        move = context.ReadValue<Vector2>();
-        
+
+        move = context.Get<Vector2>();
+        Debug.Log(move);
+
     }
 
-    public void attackAction(InputAction.CallbackContext context)
+    public void OnAttack()
     {
         
         if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().isOnBus == false)
         {
+
             animator1.SetTrigger("IsAttacking");
 
             GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().attackState();
@@ -57,7 +62,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void takeGlass(InputAction.CallbackContext context)
+    public void OnTakeGlass()
     {
         int numColliders2 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, glassHitColliders, glassLayer);
         if (numColliders2 == 1)

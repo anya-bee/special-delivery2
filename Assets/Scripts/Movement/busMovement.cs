@@ -11,10 +11,11 @@ public class busMovement : MonoBehaviour
     public float rtquaternion;
 
 
-    public void onMove(InputAction.CallbackContext context)
+    public void OnMoveBus(InputValue context)
     {
 
-        move = context.ReadValue<Vector2>();
+        move = context.Get<Vector2>();
+        Debug.Log(move);
 
     }
 

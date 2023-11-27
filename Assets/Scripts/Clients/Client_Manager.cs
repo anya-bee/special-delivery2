@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using TMPro;
 
 
 // This code is a Client Manager, which updates clients and their nav mesh, so they always go to the same tray to get their order. When a client finishes, 
@@ -28,19 +29,39 @@ public class Client_Manager : MonoBehaviour
     public int count;
 
     [Header("GameOver")]
+    public TextMeshProUGUI completedLevel;
+    public Image fadeToBlack;
     public Image gameOverBoard;
     public Button goToTravellBttn;
+
+   
 
     private void Start()
     {
         currentClient = clientList[0];
         currentNMA = clientNMA[0];
+        goToTravellBttn.gameObject.SetActive(false);
+        gameOverBoard.gameObject.SetActive(false);
+        fadeToBlack.gameObject.SetActive(false);
+        completedLevel.gameObject.SetActive(false);
+
+       
+
     }
 
     IEnumerator appearButton()
     {
+        fadeToBlack.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        completedLevel.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
+        gameOverBoard.gameObject.SetActive(true);
+        
+        yield return new WaitForSeconds(1.5f);
         goToTravellBttn.gameObject.SetActive(true);
+        gameOverBoard.GetComponent<starScoreDisplay>().callForStars();
+        
+
 
     }
 
@@ -71,7 +92,7 @@ public class Client_Manager : MonoBehaviour
             if(currentClient.GetComponent<clientOrder>().lastClient == true)
             {
                 ongoingClients = clientList.Count;
-                gameOverBoard.gameObject.SetActive(true);
+                
                 StartCoroutine(appearButton());
             }
             if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2 && currentClient.GetComponent<clientOrder>().lastClient == false)
@@ -105,6 +126,9 @@ public class Client_Manager : MonoBehaviour
 
         
     }
+    
+
+
 
 
 

@@ -63,19 +63,19 @@ public class EnemyHealth : MonoBehaviour
         
         if ( enemyString == "Strawberry_Enemy")
         {
-            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
+            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 2 });
         }
         else if (enemyString == "Lemon_Enemy")
         {
-            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
+            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 2 });
         }
         else if (enemyString == "Lime_Enemy")
         {
-            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 1 });
+            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 2 });
         }
         else if (enemyString == "Pitahaya_Enemy")
         {
-            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 1 });
+            fruitDrops.SpawnFruitDrops(new Vector3(this.gameObject.transform.position.x, 5, this.gameObject.transform.position.z), new Fruits { fruitType = Fruits.FruitTypes.Pitahaya, amount = 2 });
         }
 
 

@@ -8,12 +8,14 @@ public class enterLevel : MonoBehaviour
 {
 
     public GameObject lvlPopUp;
+    public GameObject startButton;
 
 
     // Start is called before the first frame update
     void Start()
     {
         lvlPopUp.SetActive(false);
+        startButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,11 +28,14 @@ public class enterLevel : MonoBehaviour
     {
 
         lvlPopUp.SetActive(true);
+        startButton.SetActive(true);
+        lvlPopUp.GetComponent<starScoreDisplay>().starsCoroutine();
     }
 
     private void OnTriggerExit(Collider other)
     {
         lvlPopUp.SetActive(false);
+        startButton.SetActive(false);
     }
 
 
