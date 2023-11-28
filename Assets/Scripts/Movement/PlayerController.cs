@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             carryingOrder = false;
             trayCollider[0].gameObject.GetComponent<orderChecked>().glassIsOnTray = true;
+            Script_AudioManager.instance.PlaySFX("Ding");
             currentGlass.GetComponent<juiceGlass>().leaveJuice(trayCollider[0].transform);
             trayCollider[0] = null;
             currentGlass = null;

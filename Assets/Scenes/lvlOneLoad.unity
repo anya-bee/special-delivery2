@@ -255,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1042177030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenetoLoad: 1
   loadingScreen: 1
-  blueScreen: {fileID: 0}
+  blueScreen: {fileID: 1042177029}
 --- !u!4 &1433076861
 Transform:
   m_ObjectHideFlags: 0
