@@ -9,6 +9,7 @@ public class enterLevel : MonoBehaviour
 
     public GameObject lvlPopUp;
     public GameObject startButton;
+    public Animator logoAnimator;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class enterLevel : MonoBehaviour
     {
         lvlPopUp.SetActive(false);
         startButton.SetActive(false);
+
     }
 
 

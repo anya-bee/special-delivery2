@@ -119,7 +119,7 @@ public class Script_AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayEnemySFX(string name)
+    /*public void PlayEnemySFX(string name)
     {
         foreach (AudioRef reference in enemyAudio){
 
@@ -131,7 +131,7 @@ public class Script_AudioManager : MonoBehaviour
             }
 
         }
-    }
+    }*/
 
     public void PlaySFX(string name)
     {

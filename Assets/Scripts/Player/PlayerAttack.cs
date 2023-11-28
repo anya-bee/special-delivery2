@@ -40,18 +40,20 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator attackInterval(Collider[] c)
     {
-
+        yield return new WaitForSeconds(0.3f);
+        Script_AudioManager.instance.PlaySFX("Stab");
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)
         {
             c[i].gameObject.GetComponent<EnemyHealth>().Damage(damagePlayer);
+            
         }
         if(c[0].gameObject.GetComponent<EnemyHealth>().currentLifeAmount <= 0)
         {
             c[0] = null;
         }
         Debug.Log("+1");
-        playerSword.SetActive(false);
+        
     }
 
 

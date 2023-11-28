@@ -56,8 +56,10 @@ public class PlayerController : MonoBehaviour
         {
 
             animator1.SetTrigger("IsAttacking");
+            
 
             GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().attackState();
+            
         }
         
     }

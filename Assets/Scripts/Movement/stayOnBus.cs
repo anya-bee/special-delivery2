@@ -15,6 +15,7 @@ public class stayOnBus : MonoBehaviour
             target = null;
             isInside = true;
             GameObject.FindWithTag("Player").GetComponent<PlayerController>().isOnBus = true;
+            GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().playerSword.SetActive(false);
         }
 
 
