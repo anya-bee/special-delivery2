@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,13 +17,20 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public float cellsize;
 
+    [Header("RetryMenu")]
+
+    public Image fadeToBlack;
+    public Image iconBorad;
+    
+
 
 
     private void Start()
     {
         currentLifeAmount = maxLifeAmount;
-        
-        
+        fadeToBlack.gameObject.SetActive(false);
+        iconBorad.gameObject.SetActive(false);
+
     }
 
     private void Update()
@@ -62,14 +70,11 @@ public class PlayerHealth : MonoBehaviour
     {
         currentLifeAmount -= amount;
 
-        if (currentLifeAmount <= 1)
-        {
-            currentLifeAmount = 1;
-        }
+        
 
         if (currentLifeAmount <= 0)
         {
-            Die();
+            StartCoroutine(loseScreen());
         }
     }
 
@@ -80,6 +85,18 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         Destroy(this.gameObject);
+    }
+
+
+    IEnumerator loseScreen()
+    {
+        fadeToBlack.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        iconBorad.gameObject.SetActive(true);
+
+
+
+
     }
 
 
