@@ -10,12 +10,6 @@ public class PlayerHealth : MonoBehaviour
     public float maxLifeAmount;
     public bool isDead;
 
-    [Header("UI_Display")]
-    public Transform heartSlot;
-    public Transform heartIcon;
-    public Image[] HeartSprite;
-    public Sprite fullHeart;
-    public float cellsize;
 
     [Header("RetryMenu")]
 
@@ -40,28 +34,7 @@ public class PlayerHealth : MonoBehaviour
             currentLifeAmount = maxLifeAmount;
         }
 
-        for (int i =0; i< HeartSprite.Length; i++)
-        {
-            if (i< currentLifeAmount)
-            {
-                HeartSprite[i].gameObject.SetActive(true);
-                HeartSprite[i].sprite = fullHeart;
-            }
-            else
-            {
-                HeartSprite[i].gameObject.SetActive(false);
-            }
 
-            if (i < maxLifeAmount)
-            {
-                HeartSprite[i].enabled = true;
-            }
-            else
-            {
-                HeartSprite[i].enabled = false;
-            }
-        }
-       
 
     }
 
