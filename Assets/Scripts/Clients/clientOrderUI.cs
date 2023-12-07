@@ -13,6 +13,9 @@ public class clientOrderUI : MonoBehaviour
     public bool boolNotebook = false;
 
     public Animator notebookAnimator;
+
+    [Header("Time For Orders")]
+    public Image bar;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +29,12 @@ public class clientOrderUI : MonoBehaviour
     void Update()
     {
         boolNotebook = !assignedTray.GetComponent<orderChecked>().clientEntered;
+        
         if (boolNotebook == false )
         {
+            
             notebookAnimator.SetBool("orderReady", false);
+            
             clientOrder = assignedTray.GetComponent<orderChecked>().clientOrder1;
             for (int i = 0; i < orderSprite.Length; i++)
             {

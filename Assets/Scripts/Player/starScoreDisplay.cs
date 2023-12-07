@@ -69,7 +69,7 @@ public class starScoreDisplay : MonoBehaviour
 
     public void callForStars()
     {
-        if (numberTotalScore >= 1)
+        if (numberTotalScore >= 0)
         {
             star1.gameObject.SetActive(true);
             almaImage.sprite = SadAlma;

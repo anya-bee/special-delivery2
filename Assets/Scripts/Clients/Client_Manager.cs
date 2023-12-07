@@ -28,6 +28,13 @@ public class Client_Manager : MonoBehaviour
     public int ongoingClients = 0;
     public int count;
 
+    [Header("Take Away Clients")]
+    public GameObject orderCheckedComponent;
+    public float clientsTimer;
+    public Image bar;
+    private float antiTimer;
+    public float timeRemainder;
+
     [Header("GameOver")]
     public TextMeshProUGUI completedLevel;
     public Image fadeToBlack;
@@ -45,7 +52,14 @@ public class Client_Manager : MonoBehaviour
         fadeToBlack.gameObject.SetActive(false);
         completedLevel.gameObject.SetActive(false);
 
-       
+        
+
+    }
+
+    IEnumerator clientGoAway(float t)
+    {
+        yield return new WaitForSeconds(t);
+        orderCheckedComponent.GetComponent<orderChecked>().orderFinished = true;
 
     }
 
@@ -67,20 +81,24 @@ public class Client_Manager : MonoBehaviour
 
     void Update()
     {
+
         
         currentAnimator = currentClient.GetComponent<Animator>();
         if (!isonTray)
         {
-            
+            antiTimer = clientsTimer + timeRemainder;
             currentNMA.SetDestination(enterStage.position);
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
                 isonTray = true;
+                StartCoroutine(clientGoAway(clientsTimer));
             }
             
         }
         if (isonTray)
         {
+            
+            bar.fillAmount = (antiTimer -= Time.deltaTime) / (clientsTimer + timeRemainder ) ;
             currentAnimator.SetBool("isStanding", true);
         }
         
@@ -89,6 +107,8 @@ public class Client_Manager : MonoBehaviour
             currentAnimator.SetBool("isStanding", false);
             
             currentNMA.SetDestination(exitStage.position);
+
+            
             if(currentClient.GetComponent<clientOrder>().lastClient == true)
             {
                 ongoingClients = clientList.Count;
@@ -106,6 +126,8 @@ public class Client_Manager : MonoBehaviour
                     ongoingClients++;
                     currentClient = clientList[ongoingClients];
                     currentNMA = clientNMA[ongoingClients];
+                    bar.fillAmount = 1;
+                    antiTimer = clientsTimer + timeRemainder;
 
                 }
                 /*if(ongoingClients == clientList.Count)

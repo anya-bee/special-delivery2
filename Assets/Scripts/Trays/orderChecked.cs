@@ -67,6 +67,18 @@ public class orderChecked : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
+    public void takeClientAway()
+    {
+        
+            StartCoroutine(destroyGlass(Glass));
+
+            clientEntered = false;
+            Glass = null;
+            glassOrder1 = null;
+
+
+        
+    }
 
     public void checkOrder()
     {
