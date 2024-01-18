@@ -51,6 +51,12 @@ public class EnemyHealth : MonoBehaviour
     protected void Die()
     {
         isDead = true;
+        
+
+    }
+
+    public void dieAction()
+    {
         spawnFruit();
         Destroy(this.gameObject);
     }

@@ -35,4 +35,13 @@ public class barColorCode : MonoBehaviour
         }
     }
 
+
+
+    public void resetColors()
+    {
+        yellowBar = 0;
+        redBar = 0;
+    }
+
 }
+

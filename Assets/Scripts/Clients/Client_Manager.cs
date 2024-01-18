@@ -60,6 +60,7 @@ public class Client_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         orderCheckedComponent.GetComponent<orderChecked>().orderFinished = true;
+        
 
     }
 
@@ -128,6 +129,8 @@ public class Client_Manager : MonoBehaviour
                     currentNMA = clientNMA[ongoingClients];
                     bar.fillAmount = 1;
                     antiTimer = clientsTimer + timeRemainder;
+                    bar.color = Color.green;
+                    bar.gameObject.GetComponent<barColorCode>().resetColors();
 
                 }
                 /*if(ongoingClients == clientList.Count)
