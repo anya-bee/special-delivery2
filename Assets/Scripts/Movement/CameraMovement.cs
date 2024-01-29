@@ -28,10 +28,12 @@ public class CameraMovement : MonoBehaviour
         if (isInside)
         {
             target = null;
+            //gameObject.GetComponent<PlayerAttack>().playerSword.SetActive(false);
         }
         else
         {
             target = player.transform;
+            
         }
 
         if (target != null)

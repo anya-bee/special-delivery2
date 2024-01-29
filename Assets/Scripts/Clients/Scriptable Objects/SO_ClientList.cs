@@ -11,6 +11,10 @@ public class SO_ClientList : ScriptableObject
     public List<Orders> levelOrders;
 
 
+
+    //call an order list based on a function
+
+
     
 }
 

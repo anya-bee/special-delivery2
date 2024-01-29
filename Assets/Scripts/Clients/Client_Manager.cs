@@ -14,6 +14,7 @@ public class Client_Manager : MonoBehaviour
 
     [Header("Client List ")]
     public List<GameObject> clientList;
+    public SO_ClientList orderLvlList;
 
     [Header("Clients NavMesh")]
     public List<NavMeshAgent> clientNMA;
@@ -40,6 +41,7 @@ public class Client_Manager : MonoBehaviour
     public Image fadeToBlack;
     public Image gameOverBoard;
     public Button goToTravellBttn;
+    
 
    
 
@@ -52,7 +54,12 @@ public class Client_Manager : MonoBehaviour
         fadeToBlack.gameObject.SetActive(false);
         completedLevel.gameObject.SetActive(false);
 
-        
+        /*foreach(GameObject client in clientList)
+        {
+            int i = 0;
+            //client.GetComponent<clientOrder>().glassOrder = orderLvlList.levelOrders[i].singleOrder;
+            i++;
+        }*/
 
     }
 

@@ -58,7 +58,16 @@ public class EnemyHealth : MonoBehaviour
     public void dieAction()
     {
         spawnFruit();
-        Destroy(this.gameObject);
+        if (enemyString == "Pitahaya_Enemy")
+        {
+            GetComponent<pitahaya_Explode>().explosion();
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        
     }
 
 

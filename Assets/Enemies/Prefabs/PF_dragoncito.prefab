@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 3090659028172312426}
   - component: {fileID: 3090659028172312424}
   - component: {fileID: 3090659028172312430}
+  - component: {fileID: 1446835706266922508}
   m_Layer: 10
   m_Name: PF_dragoncito
   m_TagString: Untagged
@@ -378,8 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9395bb976893e7e4d85c92a1ce62fb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLifeAmount: 4
-  maxLifeAmount: 10
+  currentLifeAmount: 1
+  maxLifeAmount: 1
   isDead: 0
   enemyString: Pitahaya_Enemy
 --- !u!195 &3090659028172312342
@@ -554,6 +555,21 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1446835706266922508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2748695314291339853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f7a8d0c46eb704da0edb71a75d82b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionObj: {fileID: 6122561074157142396, guid: 5a458adebcdc89745bd053337cf6769a,
+    type: 3}
+  expLocation: {fileID: 3273698563425429751}
 --- !u!1 &2810848303176303972
 GameObject:
   m_ObjectHideFlags: 0
