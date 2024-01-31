@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 3090659028172312340}
   - component: {fileID: 3090659028172312341}
   - component: {fileID: 3090659028172312426}
-  - component: {fileID: 3090659028172312424}
+  - component: {fileID: 4213303918220767895}
   - component: {fileID: 3090659028172312430}
   - component: {fileID: 1446835706266922508}
   m_Layer: 10
@@ -503,7 +503,7 @@ MonoBehaviour:
       FalseState: 
   - StateName: Attack
     Actions:
-    - {fileID: 3090659028172312424}
+    - {fileID: 4213303918220767895}
     Transitions:
     - Decision: {fileID: 3090659028172312430}
       TrueState: 
@@ -511,7 +511,7 @@ MonoBehaviour:
   BrainActive: 1
   TimeInThisState: 0
   Target: {fileID: 0}
---- !u!114 &3090659028172312424
+--- !u!114 &4213303918220767895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2748695314291339853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c5beec283ae8e489ada62c65d4723b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9619684b8c3d3be4e9dc656ed71529f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
@@ -533,9 +533,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   enemyAnimator: {fileID: 8903246662933164685}
-  dmg: 1
-  timeBetweenAttacks: 0.82
-  alreadyAttacked: 0
+  dmg: 2
 --- !u!114 &3090659028172312430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +549,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerInSight: 0
-  sightRange: 2.26
+  sightRange: 2.61
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8

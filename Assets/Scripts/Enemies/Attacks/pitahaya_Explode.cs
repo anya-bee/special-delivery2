@@ -26,7 +26,7 @@ public class pitahaya_Explode : MonoBehaviour
         
         expLocation.gameObject.SetActive(true);
         Debug.Log("a pitahaya exploded!!!!!! BOOOOOOM");
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
+        
 
     }
 
