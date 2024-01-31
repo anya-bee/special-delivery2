@@ -28,15 +28,6 @@ public class FN_ATK_Explode : MonoBehaviour
         {
           GetComponent<EnemyHealth>().dieAction();
         }
-    
-        if (groundInSight)
-        {
-            gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
-            playerHasEntered = true;
-            
-            //GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
-        }
-
         if (groundAndPlayer)
         {
             gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
@@ -44,6 +35,16 @@ public class FN_ATK_Explode : MonoBehaviour
 
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
         }
+
+        else if (groundInSight)
+        {
+            gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
+            playerHasEntered = true;
+            
+            //GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
+        }
+
+        
 
         if (!groundInSight)
         {

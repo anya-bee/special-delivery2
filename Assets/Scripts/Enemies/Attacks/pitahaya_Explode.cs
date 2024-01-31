@@ -7,9 +7,11 @@ public class pitahaya_Explode : MonoBehaviour
     // Start is called before the first frame update
     public Transform explosionObj;
     public Transform expLocation;
+    public GameObject particlesPitahaya;
     void Start()
     {
         expLocation = Instantiate(explosionObj, expLocation.position, Quaternion.identity);
+        particlesPitahaya = expLocation.gameObject;
         expLocation.gameObject.SetActive(false);
 
     }
@@ -31,6 +33,6 @@ public class pitahaya_Explode : MonoBehaviour
     }
 
 
-
+    
 
 }
