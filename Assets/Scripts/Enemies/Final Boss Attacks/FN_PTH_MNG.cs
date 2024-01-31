@@ -27,15 +27,16 @@ public class FN_PTH_MNG : MonoBehaviour
        
     }
 
-    /*public void randomSpawnPlaces(Transform t)
+    public void randomSpawnPlaces(Transform t)
     {
-        
-        
-        if (t.position == newLocPosition)
+
+
+        float randomZ = Random.Range(minorRange, mayorRange);
+        float randomx = Random.Range(minorRange,mayorRange);
         {
-            newLocPosition = new Vector3(Random.Range(minorRange, mayorRange), Random.Range(minorRange, mayorRange), Random.Range(minorRange, mayorRange));
+            newLocPosition = new Vector3(newLocPosition.x + randomx, newLocPosition.y,newLocPosition.z);
         }
-    }*/
+    }
 
     public void invokeFruitBombs()
     {

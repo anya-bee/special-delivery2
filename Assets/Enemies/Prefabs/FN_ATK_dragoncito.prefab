@@ -378,6 +378,7 @@ MonoBehaviour:
   explosionObj: {fileID: 6122561074157142396, guid: 5a458adebcdc89745bd053337cf6769a,
     type: 3}
   expLocation: {fileID: 3273698563425429751}
+  particlesPitahaya: {fileID: 0}
 --- !u!114 &6436427086511632557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +394,7 @@ MonoBehaviour:
   playerHasEntered: 0
   groundInSight: 0
   groundAndPlayer: 0
-  sightRange: 0.44
+  sightRange: 1.55
   dmg: 2
   whatisGround:
     serializedVersion: 2
