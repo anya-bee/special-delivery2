@@ -10,15 +10,18 @@ public class FN_PTH_MNG : MonoBehaviour
 
     [Header("Spawn Places")]
     public List<PitahayaSpawnLocator> spawnLocations;
-    public float minorRange, mayorRange;
 
-    public Vector3 newLocPosition;
+    [Header("Bomb Ranges")]
+    public Vector2 rangeX;
+    public Vector2 rangeY;
+    public Vector2 rangeZ;
+
 
     // Start is called before the first frame update
     void Start()
     {
         invokeFruitBombs();
-        newLocPosition = new Vector3(Random.Range(minorRange, mayorRange), Random.Range(minorRange, mayorRange), Random.Range(minorRange, mayorRange));
+        
     }
 
     // Update is called once per frame
@@ -31,19 +34,15 @@ public class FN_PTH_MNG : MonoBehaviour
     {
 
 
-        float randomZ = Random.Range(minorRange, mayorRange);
-        float randomx = Random.Range(minorRange,mayorRange);
-        {
-            newLocPosition = new Vector3(newLocPosition.x + randomx, newLocPosition.y,newLocPosition.z);
-        }
     }
 
     public void invokeFruitBombs()
     {
         foreach (PitahayaSpawnLocator Spawn in spawnLocations)
         {
-            
 
+            Vector3 randomBombSpawn = new Vector3(Random.Range(rangeX.x , rangeX.y), Random.Range(rangeY.x, rangeY.y), Random.Range(rangeZ.x, rangeZ.y));
+            Spawn.spawnLocation.position = randomBombSpawn;
             Spawn.currentBomb = Instantiate(pitahayaFN_PF, Spawn.spawnLocation.position, Quaternion.identity);
             
         }

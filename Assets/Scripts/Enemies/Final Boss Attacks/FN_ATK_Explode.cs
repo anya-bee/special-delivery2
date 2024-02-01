@@ -33,7 +33,7 @@ public class FN_ATK_Explode : MonoBehaviour
             gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
             playerHasEntered = true;
 
-            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
         }
 
         else if (groundInSight)
