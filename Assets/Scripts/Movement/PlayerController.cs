@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     public float rtquaternion;
     public bool isOnBus;
     private InputAction newMovePlayer;
+
+    [Header("Status Ailments")]
+    public bool dizzyState = false;
+    public bool stunnedState = false;
+    public float stunnedVar;
     
 
     [Header("Taking Orders")]
@@ -59,7 +64,8 @@ public class PlayerController : MonoBehaviour
             
 
             GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().attackState();
-            
+            Script_AudioManager.instance.PlaySFX("Stab");
+
         }
         
     }
@@ -114,11 +120,34 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(move.x, 0f, move.y);
         animator1.SetBool("isWalking", false);
 
+        /*if ( dizzyState == true)
+        {
+            movement =  new Vector3(-move.x, 0f, -move.y);
+            StartCoroutine(stunnedTime());
+        }*/
+        
+        if ( stunnedState == true)
+        {
+            movement = new Vector3(0f, 0f, 0f);
+            StartCoroutine(stunnedTime());
+        }
+        else
+        {
+            movement = new Vector3(move.x, 0f, move.y);
+        }
+
         if (movement != Vector3.zero)
         {
             animator1.SetBool("isWalking", true);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), rtquaternion);
         }
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
+    }
+
+
+    IEnumerator stunnedTime()
+    {
+        yield return new WaitForSeconds(stunnedVar);
+        stunnedState = false;
     }
 }

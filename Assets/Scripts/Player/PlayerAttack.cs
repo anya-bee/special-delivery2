@@ -12,6 +12,10 @@ public class PlayerAttack : MonoBehaviour
     public Collider[] enemyCollider = new Collider[1];
     public float damagePlayer;
     public bool attackMode = false;
+
+    [Header("Enemy")]
+    public bool enemyInrange;
+
     
 
     void Start()
@@ -44,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator attackInterval(Collider[] c)
     {
         yield return new WaitForSeconds(0.4f);
-        Script_AudioManager.instance.PlaySFX("Stab");
+        
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)
         {
