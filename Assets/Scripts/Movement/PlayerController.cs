@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             
 
             GameObject.FindWithTag("Player").GetComponent<PlayerAttack>().attackState();
-            Script_AudioManager.instance.PlaySFX("Stab");
+            //Script_AudioManager.instance.PlaySFX("Stab");
 
         }
         

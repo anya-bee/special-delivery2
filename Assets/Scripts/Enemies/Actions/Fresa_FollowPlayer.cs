@@ -11,6 +11,10 @@ public class Fresa_FollowPlayer : AIAction
     public LayerMask whatisground, whatisplayer;
     public Animator enemyAnimator;
 
+    [Header("Timer")]
+    public float timeBetweenAttacks;
+    public bool alreadyAttacked;
+
     protected override void Start()
     {
         base.Start();
@@ -23,6 +27,27 @@ public class Fresa_FollowPlayer : AIAction
     {
         enemy.SetDestination(this.transform.position);
         transform.LookAt(player);
-        //enemyAnimator.SetBool("attack", false);
+
+        if (!alreadyAttacked)
+        {
+
+            //enemyAnimator.SetBool("attack", true);
+            GetComponent<pulpifresa_Dash>().shootTornado();
+
+            alreadyAttacked = true;
+            Invoke(nameof(resetAction), timeBetweenAttacks);
+        }
+
+
+
     }
+
+    private void resetAction()
+    {
+        alreadyAttacked = false;
+
+    }
+    
+        //enemyAnimator.SetBool("attack", false);
+    
 }

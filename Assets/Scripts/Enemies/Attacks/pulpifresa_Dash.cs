@@ -8,7 +8,6 @@ public class pulpifresa_Dash : MonoBehaviour
 {
     public Transform spawnPoint;
     public Transform tornadoPF;
-    public Transform dashDirection;
     public float speed;
     public bool now = false;
 
@@ -35,16 +34,11 @@ public class pulpifresa_Dash : MonoBehaviour
     }
 
 
-    /*public void shootTornado()
+    public void shootTornado()
     {
-        tornadoStart = Instantiate(tornadoPF, transform.position, transform.rotation);
-        tornadoGameobject = tornadoStart.gameObject;
-
-        tornadoGameobject.SetActive(true);
-
-        Rigidbody tornadoRB = tornadoGameobject.GetComponent<Rigidbody>();
-        tornadoRB.AddForce(tornadoRB.transform.forward * speed);
-    }*/
+        var tornadoOne = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
+    }
 
 
 

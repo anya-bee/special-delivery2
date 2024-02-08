@@ -30,7 +30,7 @@ public class AttackPlayer_Pulpifresa : AIAction
 
     public override void PerformAction()
     {
-        enemy.SetDestination(transform.position);
+        enemy.SetDestination(this.transform.position);
         transform.LookAt(player);
         
         //isDizzy = true;
@@ -40,7 +40,7 @@ public class AttackPlayer_Pulpifresa : AIAction
         
 
 
-        GetComponent<pulpifresa_Dash>();
+        
 
         //dashDirection.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, player.position.z + offset.z);
         

@@ -128,6 +128,37 @@ Transform:
   m_Father: {fileID: 622025389103132555}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &679553799067947150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255105346654197977}
+  m_Layer: 10
+  m_Name: SpawnLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255105346654197977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679553799067947150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 0, z: 1.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8069959030095943499}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499748641966180201
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,14 +524,17 @@ GameObject:
   - component: {fileID: 4115846061697715514}
   - component: {fileID: 4115846061697715515}
   - component: {fileID: 4115846061697715512}
+  - component: {fileID: 4115846061697715506}
+  - component: {fileID: 5341606329305816454}
   - component: {fileID: 4115846061697715513}
   - component: {fileID: 4115846061697715510}
+  - component: {fileID: 3046405164870590147}
   - component: {fileID: 4115846061697715511}
   - component: {fileID: 4115846061697715508}
   - component: {fileID: 4115846061697715509}
-  - component: {fileID: 4115846061697715506}
   - component: {fileID: 4115846061697715507}
   - component: {fileID: 4115846061697715504}
+  - component: {fileID: 5252675801507882403}
   m_Layer: 10
   m_Name: PF_Pulpifresa
   m_TagString: Untagged
@@ -522,6 +556,7 @@ Transform:
   m_Children:
   - {fileID: 622025389103132555}
   - {fileID: 8870997826465873208}
+  - {fileID: 255105346654197977}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -588,6 +623,72 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.14
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4115846061697715506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256865080705502705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4fb0f0e97ac02458a2f65754f656e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  States:
+  - StateName: Patrol
+    Actions:
+    - {fileID: 4115846061697715509}
+    Transitions:
+    - Decision: {fileID: 4115846061697715508}
+      TrueState: Chase
+      FalseState: 
+  - StateName: Chase
+    Actions:
+    - {fileID: 3046405164870590147}
+    Transitions:
+    - Decision: {fileID: 4115846061697715508}
+      TrueState: 
+      FalseState: Patrol
+    - Decision: {fileID: 4115846061697715504}
+      TrueState: Attack
+      FalseState: 
+  - StateName: Attack
+    Actions:
+    - {fileID: 5341606329305816454}
+    Transitions:
+    - Decision: {fileID: 4115846061697715504}
+      TrueState: 
+      FalseState: Chase
+  BrainActive: 1
+  TimeInThisState: 0
+  Target: {fileID: 0}
+--- !u!114 &5341606329305816454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256865080705502705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ef0ea7fe047474cb798f60910901bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 4115846061697715510}
+  player: {fileID: 0}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyAnimator: {fileID: 4115846061697715505}
+  dmg: 0
+  timeBetweenAttacks: 0
+  alreadyAttacked: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &4115846061697715513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +727,7 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
---- !u!114 &4115846061697715511
+--- !u!114 &3046405164870590147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,6 +735,30 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7256865080705502705}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a06e5e5ff6a314ebf5665bdc793257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 4115846061697715510}
+  player: {fileID: 0}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyAnimator: {fileID: 4115846061697715505}
+  timeBetweenAttacks: 2
+  alreadyAttacked: 0
+--- !u!114 &4115846061697715511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256865080705502705}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 471d9c65adfa35645ae81400e491e69e, type: 3}
   m_Name: 
@@ -663,7 +788,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerinSight: 0
-  sightRange: 4.92
+  sightRange: 7.34
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -692,46 +817,6 @@ MonoBehaviour:
   Timer: 5
   safedistance: 3
   walkpointrange: 3
---- !u!114 &4115846061697715506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256865080705502705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4fb0f0e97ac02458a2f65754f656e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  States:
-  - StateName: Patrol
-    Actions:
-    - {fileID: 4115846061697715509}
-    Transitions:
-    - Decision: {fileID: 4115846061697715508}
-      TrueState: Chase
-      FalseState: 
-  - StateName: Chase
-    Actions:
-    - {fileID: 4115846061697715511}
-    Transitions:
-    - Decision: {fileID: 4115846061697715508}
-      TrueState: 
-      FalseState: Patrol
-    - Decision: {fileID: 4115846061697715504}
-      TrueState: Attack
-      FalseState: 
-  - StateName: Attack
-    Actions:
-    - {fileID: 4115846061697715507}
-    Transitions:
-    - Decision: {fileID: 4115846061697715504}
-      TrueState: 
-      FalseState: Chase
-  BrainActive: 1
-  TimeInThisState: 0
-  Target: {fileID: 0}
 --- !u!114 &4115846061697715507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +824,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7256865080705502705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c5beec283ae8e489ada62c65d4723b, type: 3}
   m_Name: 
@@ -772,10 +857,27 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerInSight: 0
-  sightRange: 1.92
+  sightRange: 3.84
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &5252675801507882403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256865080705502705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67753060693754e49a2966e34b0341ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 255105346654197977}
+  tornadoPF: {fileID: 6548411434340800718, guid: 5379809b66b1a184eac96649b00b9052,
+    type: 3}
+  speed: 2
+  now: 0
 --- !u!1 &7754534167730386039
 GameObject:
   m_ObjectHideFlags: 0
