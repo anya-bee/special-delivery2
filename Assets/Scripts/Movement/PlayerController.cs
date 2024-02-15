@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public bool dizzyState = false;
     public bool stunnedState = false;
     public float stunnedVar;
-    
+    private bool first=false;
 
     [Header("Taking Orders")]
     public float radius;
@@ -129,7 +129,15 @@ public class PlayerController : MonoBehaviour
         if ( stunnedState == true)
         {
             movement = new Vector3(0f, 0f, 0f);
-            StartCoroutine(stunnedTime());
+            if (!first)
+            {
+                GetComponent<Animator>().SetTrigger("isStunned");
+                first = true;
+                
+                StartCoroutine(stunnedTime());
+            }
+            
+            
         }
         else
         {
@@ -148,6 +156,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator stunnedTime()
     {
         yield return new WaitForSeconds(stunnedVar);
+        GetComponent<Animator>().SetTrigger("finishStun");
         stunnedState = false;
+        first = false;
     }
 }
