@@ -1178,6 +1178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dizzyState: 0
   stunnedState: 0
-  stunnedVar: 3
+  stunnedVar: 2
   player: {fileID: 0}
   orgSpeed: 6

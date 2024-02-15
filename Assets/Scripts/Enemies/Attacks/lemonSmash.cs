@@ -26,30 +26,34 @@ public class lemonSmash : MonoBehaviour
 
     public void stunPlayer()
     {
-        player.GetComponent<PlayerController>().stunnedState = true;
-        if (player.GetComponent<PlayerController>().stunnedState == true)
+        if (first == false)
         {
-            
-            if (first== false)
+            player.GetComponent<PlayerController>().stunnedState = true;
+            if (player.GetComponent<PlayerController>().stunnedState == true)
             {
+
+
                 player.GetComponent<PlayerController>().speed = 0;
                 player.GetComponent<Animator>().SetTrigger("isStunned");
                 first = true;
+                player.gameObject.GetComponent<PlayerHealth>().Damage(1);
 
                 StartCoroutine(stunnedTime());
+
+
+
             }
-
-
         }
         
     }
 
     IEnumerator stunnedTime()
     {
+        first = true;
         yield return new WaitForSeconds(stunnedVar);
         player.GetComponent<Animator>().SetTrigger("finishStun");
-        stunnedState = false;
-        first = true;
+        player.GetComponent<PlayerController>().stunnedState = false;
+        
         player.GetComponent<PlayerController>().speed = orgSpeed;
     }
 }

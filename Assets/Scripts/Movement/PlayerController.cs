@@ -120,11 +120,15 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(move.x, 0f, move.y);
         animator1.SetBool("isWalking", false);
 
-        /*if ( dizzyState == true)
+        if ( stunnedState == true)
         {
-            movement =  new Vector3(-move.x, 0f, -move.y);
-            StartCoroutine(stunnedTime());
-        }*/
+            movement =  new Vector3(0f, 0f, 0f);
+            
+        }
+        else if ( stunnedState == false)
+        {
+            movement = new Vector3(move.x, 0f, move.y);
+        }
         
         
 

@@ -32,7 +32,7 @@ public class lemonAttack : AIAction
         {
 
             enemyAnimator.SetBool("attack", true);
-            //player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
+            
             GetComponent<lemonSmash>().stunPlayer();
             enemy.speed = 0;
 
