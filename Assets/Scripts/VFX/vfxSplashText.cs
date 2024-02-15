@@ -9,6 +9,7 @@ public class vfxSplashText : MonoBehaviour
 
     public GameObject vfxtest;
     public VisualEffect v1;
+    public VisualEffect v2;
     [ColorUsage(true, true)]
     public Color color1;
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class vfxSplashText : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)){
             v1.Play();
+            v2.Play();
         }
 
         v1.SetVector4("Color01", color1);
