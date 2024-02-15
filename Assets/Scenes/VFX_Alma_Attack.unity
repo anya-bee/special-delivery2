@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfxtest: {fileID: 1050003904}
-  v1: {fileID: 0}
+  v1: {fileID: 1050003906}
   v2: {fileID: 1238084209}
   color1: {r: 0.2509804, g: 1.0980393, b: 0.10980392, a: 0}
 --- !u!4 &1910803541
