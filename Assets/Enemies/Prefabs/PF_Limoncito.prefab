@@ -863,6 +863,7 @@ GameObject:
   - component: {fileID: 8582486409191946798}
   - component: {fileID: 8582486409191946793}
   - component: {fileID: -8360977026038999241}
+  - component: {fileID: 6651775206359002266}
   m_Layer: 10
   m_Name: PF_Limoncito
   m_TagString: Untagged
@@ -1086,7 +1087,7 @@ MonoBehaviour:
       FalseState: 
   - StateName: Attack
     Actions:
-    - {fileID: 8582486409191946798}
+    - {fileID: -8360977026038999241}
     Transitions:
     - Decision: {fileID: 8582486409191946793}
       TrueState: 
@@ -1101,7 +1102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924573409037109094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c5beec283ae8e489ada62c65d4723b, type: 3}
   m_Name: 
@@ -1145,7 +1146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924573409037109094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 714400523687a4c488e78b6b1ad5cbdc, type: 3}
   m_Name: 
@@ -1163,3 +1164,20 @@ MonoBehaviour:
   dmg: 1
   timeBetweenAttacks: 3.5
   alreadyAttacked: 0
+--- !u!114 &6651775206359002266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924573409037109094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7c3035d17c6947b15adf5a9fe1cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dizzyState: 0
+  stunnedState: 0
+  stunnedVar: 3
+  player: {fileID: 0}
+  orgSpeed: 6

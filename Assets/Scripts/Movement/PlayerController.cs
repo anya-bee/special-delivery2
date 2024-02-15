@@ -126,23 +126,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(stunnedTime());
         }*/
         
-        if ( stunnedState == true)
-        {
-            movement = new Vector3(0f, 0f, 0f);
-            if (!first)
-            {
-                GetComponent<Animator>().SetTrigger("isStunned");
-                first = true;
-                
-                StartCoroutine(stunnedTime());
-            }
-            
-            
-        }
-        else
-        {
-            movement = new Vector3(move.x, 0f, move.y);
-        }
+        
 
         if (movement != Vector3.zero)
         {
@@ -153,11 +137,5 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    IEnumerator stunnedTime()
-    {
-        yield return new WaitForSeconds(stunnedVar);
-        GetComponent<Animator>().SetTrigger("finishStun");
-        stunnedState = false;
-        first = false;
-    }
+    
 }

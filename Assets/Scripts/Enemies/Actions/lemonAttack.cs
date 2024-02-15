@@ -31,12 +31,12 @@ public class lemonAttack : AIAction
         if (!alreadyAttacked)
         {
 
-            enemyAnimator.SetTrigger("attackTrigger");
-            player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
-            player.GetComponent<PlayerController>().stunnedState = true;
+            enemyAnimator.SetBool("attack", true);
+            //player.gameObject.GetComponent<PlayerHealth>().Damage(dmg);
+            GetComponent<lemonSmash>().stunPlayer();
+            enemy.speed = 0;
 
-            alreadyAttacked = true;
-            Invoke(nameof(resetAction), timeBetweenAttacks);
+            
         }
 
 
