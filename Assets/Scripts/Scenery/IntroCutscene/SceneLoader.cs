@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
+        blueScreen.SetActive(true);
         SceneManager.LoadScene(scenetoLoad);
     }
 
@@ -32,7 +33,7 @@ public class SceneLoader : MonoBehaviour
     public void changeFromMainScene()
     {
         StartCoroutine(mainScreenChange());
-        Time.timeScale = 1;
+        
     }
 
     IEnumerator mainScreenChange()
