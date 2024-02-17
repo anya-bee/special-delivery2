@@ -25,11 +25,11 @@ public class pulpifresa_Dash : MonoBehaviour
     {
 
 
-       if (Input.GetKeyDown(KeyCode.Space))
+       /*if (Input.GetKeyDown(KeyCode.Space))
         {
             var tornadoOne = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
             tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
-        }
+        }*/
 
     }
 

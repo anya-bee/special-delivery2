@@ -131,7 +131,7 @@ SkinnedMeshRenderer:
   - {fileID: 1494933402231704182}
   - {fileID: 3125474109013164421}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 776702468501596424}
+  m_RootBone: {fileID: 3043967475667494580}
   m_AABB:
     m_Center: {x: -0.29367936, y: -1.0134623, z: -0.30792987}
     m_Extent: {x: 1.5924697, y: 1.8175266, z: 1.5924714}
@@ -862,6 +862,8 @@ GameObject:
   - component: {fileID: 8582486409191946799}
   - component: {fileID: 8582486409191946798}
   - component: {fileID: 8582486409191946793}
+  - component: {fileID: -8360977026038999241}
+  - component: {fileID: 6651775206359002266}
   m_Layer: 10
   m_Name: PF_Limoncito
   m_TagString: Untagged
@@ -947,8 +949,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.59, y: 1.66, z: 1.45}
-  m_Center: {x: 0, y: 1.17, z: 0}
+  m_Size: {x: 0.75, y: 0.86, z: 0.93}
+  m_Center: {x: 0, y: 0.49, z: 0}
 --- !u!114 &8582486409191946800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,7 +976,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8924573409037109094}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.49999997
+  m_Radius: 0.43
   m_Speed: 4.3
   m_Acceleration: 8
   avoidancePriority: 50
@@ -983,8 +985,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.99999994
-  m_BaseOffset: 0.71
+  m_Height: 1.09
+  m_BaseOffset: 0.08
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
 --- !u!114 &8582486409191946802
@@ -1085,7 +1087,7 @@ MonoBehaviour:
       FalseState: 
   - StateName: Attack
     Actions:
-    - {fileID: 8582486409191946798}
+    - {fileID: -8360977026038999241}
     Transitions:
     - Decision: {fileID: 8582486409191946793}
       TrueState: 
@@ -1100,7 +1102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924573409037109094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c5beec283ae8e489ada62c65d4723b, type: 3}
   m_Name: 
@@ -1133,7 +1135,49 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerInSight: 0
-  sightRange: 2.09
+  sightRange: 1.21
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &-8360977026038999241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924573409037109094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714400523687a4c488e78b6b1ad5cbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 8582486409191946803}
+  player: {fileID: 0}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 8
+  enemyAnimator: {fileID: 2770145068063934374}
+  dmg: 1
+  timeBetweenAttacks: 3.5
+  alreadyAttacked: 0
+--- !u!114 &6651775206359002266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924573409037109094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7c3035d17c6947b15adf5a9fe1cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dizzyState: 0
+  stunnedState: 0
+  stunnedVar: 2
+  player: {fileID: 0}
+  orgSpeed: 6

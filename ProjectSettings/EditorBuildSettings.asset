@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvlTwoLoad.unity
     guid: cad363ee25df0c948940eefc0e60453e
+  - enabled: 1
+    path: Assets/Scenes/levelOne_Tests.unity
+    guid: b42e5fd3b31be3b40b1551c87daae793
   m_configObjects: {}
