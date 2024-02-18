@@ -1,0 +1,1413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &694945703549745464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366833783573870774}
+  m_Layer: 0
+  m_Name: Principal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366833783573870774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694945703549745464}
+  m_LocalRotation: {x: 0.69642204, y: -0.122459866, z: 0.12245991, w: 0.6964219}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1416165243897007505}
+  m_Father: {fileID: 3968838956090887588}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: -19.698397, z: 0}
+--- !u!1 &1165563225623280358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511377775045303565}
+  m_Layer: 0
+  m_Name: Cuerno 2 Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511377775045303565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165563225623280358}
+  m_LocalRotation: {x: -0.16972949, y: 0.0004029666, z: 0.037948783, w: 0.9847597}
+  m_LocalPosition: {x: 0.00000001716262, y: 0.4390502, z: 0.0000000016298145}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7367346265875601081}
+  m_Father: {fileID: 1416165243897007505}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -19.59435, y: -0.8656335, z: 4.8695574}
+--- !u!1 &1383606965159292317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4894290958679095598}
+  m_Layer: 0
+  m_Name: Cuerno 3 Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4894290958679095598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383606965159292317}
+  m_LocalRotation: {x: -0.18850125, y: -0.015473913, z: 0.15685475, w: 0.9693423}
+  m_LocalPosition: {x: -0.000000048428774, y: 0.7193925, z: -0.000000067055225}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1822005563316648912}
+  m_Father: {fileID: 2297643095293443030}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -21.287945, y: -5.8670783, z: 19.482237}
+--- !u!1 &1553557816363977980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5883036750750507596}
+  m_Layer: 0
+  m_Name: Cuerno Mayor Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5883036750750507596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553557816363977980}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.18519518, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2974690934658426596}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1666990682704026303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8518302175090142941}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Derecho Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8518302175090142941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666990682704026303}
+  m_LocalRotation: {x: 0.012057661, y: 0.015103325, z: 0.34938884, w: 0.9367785}
+  m_LocalPosition: {x: -0.00000014528632, y: 0.21407372, z: -0.000000033527613}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 71751925294100631}
+  m_Father: {fileID: 8788806520441721677}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.66173315, y: 2.1078417, z: 41.18919}
+--- !u!1 &1732494367705194650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035522351495330990}
+  m_Layer: 0
+  m_Name: Cuerno 4 Alce 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1035522351495330990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732494367705194650}
+  m_LocalRotation: {x: 0.02663654, y: 0.00000015840848, z: 0.016906884, w: 0.99950224}
+  m_LocalPosition: {x: 0.000000014901161, y: 0.2708536, z: 0.000000011175871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4662332820934162286}
+  m_Father: {fileID: 6942957714707294774}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 3.1833632, y: -0.0044235396, z: 1.8393291}
+--- !u!1 &1805856828520351819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4023556273365082241}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Izquierdo  Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4023556273365082241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805856828520351819}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.17027731, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7697519335184214120}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2284470205262161050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7539694994561669028}
+  m_Layer: 0
+  m_Name: Cuerno Mayor Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7539694994561669028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284470205262161050}
+  m_LocalRotation: {x: 0.13144563, y: -0.036947817, z: 0.13149048, w: 0.9818692}
+  m_LocalPosition: {x: 0.00000001716262, y: 0.4390502, z: 0.0000000016298145}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5769339886378537661}
+  m_Father: {fileID: 1416165243897007505}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 15.654484, y: 0.71697474, z: 24.200354}
+--- !u!1 &2657454273811658040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71751925294100631}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Derecho Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71751925294100631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657454273811658040}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.1440549, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8518302175090142941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3438678541094136510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3968838956090887588}
+  m_Layer: 0
+  m_Name: dragoncito
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3968838956090887588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438678541094136510}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.63153726, y: 0.63153726, z: 0.63153726}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1366833783573870774}
+  m_Father: {fileID: 5308377164456799043}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+--- !u!1 &3453858263815151893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791327592500290468}
+  m_Layer: 0
+  m_Name: Cuerno 4 Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1791327592500290468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453858263815151893}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.14530204, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4662332820934162286}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3796420562958713728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4941142231212651330}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Izquierdo Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4941142231212651330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796420562958713728}
+  m_LocalRotation: {x: -0.025985576, y: 0.044279415, z: 0.27569067, w: 0.9598744}
+  m_LocalPosition: {x: 0.000000018626451, y: 0.46809375, z: -0.000000029802322}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7697519335184214120}
+  m_Father: {fileID: 3124256284452130479}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -4.261039, y: 4.0641465, z: 31.898499}
+--- !u!1 &4005855375526490473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7367346265875601081}
+  m_Layer: 0
+  m_Name: Cuerno 2 Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7367346265875601081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4005855375526490473}
+  m_LocalRotation: {x: 0.0031016362, y: 0.0034287118, z: 0.20011897, w: 0.9797607}
+  m_LocalPosition: {x: -0.00000006821938, y: 0.7493824, z: -0.0000000018626451}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3245171770780094426}
+  m_Father: {fileID: 511377775045303565}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.2840325, y: 0.5354386, z: 22.750856}
+--- !u!1 &4047705031605273015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2297643095293443030}
+  m_Layer: 0
+  m_Name: Cuerno 3 Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2297643095293443030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047705031605273015}
+  m_LocalRotation: {x: -0.28702357, y: -0.03709329, z: -0.08070026, w: 0.95379716}
+  m_LocalPosition: {x: 0.00000001716262, y: 0.4390502, z: 0.0000000016298145}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4894290958679095598}
+  m_Father: {fileID: 1416165243897007505}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -33.811775, y: -1.9607657, z: -8.823989}
+--- !u!1 &4518354595896543327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825350790677985974}
+  m_Layer: 0
+  m_Name: Cuerno 4 Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825350790677985974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518354595896543327}
+  m_LocalRotation: {x: 0.27323267, y: 0.24229088, z: 0.13090558, w: 0.9216848}
+  m_LocalPosition: {x: 0.00000001716262, y: 0.4390502, z: 0.0000000016298145}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6942957714707294774}
+  m_Father: {fileID: 1416165243897007505}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 26.14443, y: 35.259785, z: 24.601501}
+--- !u!1 &4707047788701795108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3345839611085391228}
+  - component: {fileID: 2355010728414114358}
+  m_Layer: 0
+  m_Name: dragoncitoMalla
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3345839611085391228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707047788701795108}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.7949847, y: 0.5959649, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5308377164456799043}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &2355010728414114358
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707047788701795108}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5ab137ab7bd862a46a0750e48ffaa3a1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 3159104302607438882, guid: ef986ebea60cef14680bebc888500122, type: 3}
+  m_Bones:
+  - {fileID: 1366833783573870774}
+  - {fileID: 1416165243897007505}
+  - {fileID: 4226388512330019706}
+  - {fileID: 1575485516975087968}
+  - {fileID: 8788806520441721677}
+  - {fileID: 8518302175090142941}
+  - {fileID: 3124256284452130479}
+  - {fileID: 4941142231212651330}
+  - {fileID: 7697519335184214120}
+  - {fileID: 1825350790677985974}
+  - {fileID: 6942957714707294774}
+  - {fileID: 1035522351495330990}
+  - {fileID: 4662332820934162286}
+  - {fileID: 7539694994561669028}
+  - {fileID: 5769339886378537661}
+  - {fileID: 1860332651915981743}
+  - {fileID: 2974690934658426596}
+  - {fileID: 511377775045303565}
+  - {fileID: 7367346265875601081}
+  - {fileID: 3245171770780094426}
+  - {fileID: 1715148549223640584}
+  - {fileID: 2297643095293443030}
+  - {fileID: 4894290958679095598}
+  - {fileID: 1822005563316648912}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1366833783573870774}
+  m_AABB:
+    m_Center: {x: 0.4602267, y: 0.9193898, z: 0.008382738}
+    m_Extent: {x: 1.4247651, y: 1.5127993, z: 1.5383551}
+  m_DirtyAABB: 0
+--- !u!1 &4761488751986012585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3124256284452130479}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Izquierdo Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3124256284452130479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4761488751986012585}
+  m_LocalRotation: {x: -0.4346783, y: -0.06743285, z: 0.006207742, w: 0.89803624}
+  m_LocalPosition: {x: 0.00000009825453, y: 0.48489583, z: -0.0000000013969839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4941142231212651330}
+  m_Father: {fileID: 4226388512330019706}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -51.249264, y: -11.66071, z: 6.4000564}
+--- !u!1 &4786038420202378323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8788806520441721677}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Derecho Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8788806520441721677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786038420202378323}
+  m_LocalRotation: {x: -0.57390493, y: -0.0056261388, z: 0.027354745, w: 0.8184456}
+  m_LocalPosition: {x: -0.000000007450581, y: 0.63988864, z: 0.000000014901161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8518302175090142941}
+  m_Father: {fileID: 1575485516975087968}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -69.98852, y: -6.824108, z: 8.350679}
+--- !u!1 &4819120206117761529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5308377164456799043}
+  - component: {fileID: 2254905055448920377}
+  - component: {fileID: 5179082594271187504}
+  - component: {fileID: 8701014565662246647}
+  - component: {fileID: 8812211894972901804}
+  - component: {fileID: 8960072800660523071}
+  - component: {fileID: 9063939435790474104}
+  - component: {fileID: 7424104003464435950}
+  - component: {fileID: 2292991364611483174}
+  - component: {fileID: 780159361474076050}
+  - component: {fileID: 4989797455165872462}
+  - component: {fileID: 2881499295677028919}
+  - component: {fileID: 922177581112067681}
+  - component: {fileID: 581770750493389309}
+  m_Layer: 0
+  m_Name: new_Dragoncito_PF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5308377164456799043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.624783, y: 0, z: -18.989351}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3968838956090887588}
+  - {fileID: 3345839611085391228}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2254905055448920377
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ef986ebea60cef14680bebc888500122, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3e12fc1a81a270b49922d3d5aae2fff0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &5179082594271187504
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &8701014565662246647
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.35
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8812211894972901804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.48, z: 0}
+--- !u!114 &8960072800660523071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9395bb976893e7e4d85c92a1ce62fb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLifeAmount: 1
+  maxLifeAmount: 1
+  isDead: 0
+  enemyString: Pitahaya_Enemy
+--- !u!195 &9063939435790474104
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.49999997
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 300
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.99999994
+  m_BaseOffset: 0.49999997
+  m_WalkableMask: 8
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &7424104003464435950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471d9c65adfa35645ae81400e491e69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 9063939435790474104}
+  player: {fileID: 0}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyAnimator: {fileID: 2254905055448920377}
+--- !u!114 &2292991364611483174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f5a60b215c3b54993370aba879fa2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  playerHasEntered: 0
+  playerinSight: 0
+  sightRange: 4.92
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &780159361474076050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5705a4f81fc3f0344a787d5b4590d989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 9063939435790474104}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 0
+  walkPointTransform: {x: 0, y: 0, z: 0}
+  walkPointSet: 0
+  Timer: 5
+  safedistance: 3
+  walkpointrange: 3
+--- !u!114 &4989797455165872462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4fb0f0e97ac02458a2f65754f656e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  States:
+  - StateName: Patrol
+    Actions:
+    - {fileID: 780159361474076050}
+    Transitions:
+    - Decision: {fileID: 2292991364611483174}
+      TrueState: Chase
+      FalseState: 
+  - StateName: Chase
+    Actions:
+    - {fileID: 7424104003464435950}
+    Transitions:
+    - Decision: {fileID: 2292991364611483174}
+      TrueState: 
+      FalseState: Patrol
+    - Decision: {fileID: 922177581112067681}
+      TrueState: Attack
+      FalseState: 
+  - StateName: Attack
+    Actions:
+    - {fileID: 2881499295677028919}
+    Transitions:
+    - Decision: {fileID: 922177581112067681}
+      TrueState: 
+      FalseState: Chase
+  BrainActive: 1
+  TimeInThisState: 0
+  Target: {fileID: 0}
+--- !u!114 &2881499295677028919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9619684b8c3d3be4e9dc656ed71529f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 9063939435790474104}
+  player: {fileID: 0}
+  whatisground:
+    serializedVersion: 2
+    m_Bits: 64
+  whatisplayer:
+    serializedVersion: 2
+    m_Bits: 8
+  enemyAnimator: {fileID: 2254905055448920377}
+  dmg: 2
+--- !u!114 &922177581112067681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86df8748c9259349beb98095ac750b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  playerHasEntered: 0
+  playerInSight: 0
+  sightRange: 2.61
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &581770750493389309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819120206117761529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f7a8d0c46eb704da0edb71a75d82b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionObj: {fileID: 6122561074157142396, guid: 5a458adebcdc89745bd053337cf6769a,
+    type: 3}
+  expLocation: {fileID: 5308377164456799043}
+  particlesPitahaya: {fileID: 0}
+--- !u!1 &5110656422182723240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6942957714707294774}
+  m_Layer: 0
+  m_Name: Cuerno 4 Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6942957714707294774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5110656422182723240}
+  m_LocalRotation: {x: 0.075192146, y: 0.030730292, z: 0.017042061, w: 0.9965497}
+  m_LocalPosition: {x: -0.0000000088475645, y: 0.5032094, z: 0.000000023283064}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1035522351495330990}
+  m_Father: {fileID: 1825350790677985974}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 8.917133, y: 3.7974107, z: 2.3803887}
+--- !u!1 &5236079224432024762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416165243897007505}
+  m_Layer: 0
+  m_Name: Centro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416165243897007505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236079224432024762}
+  m_LocalRotation: {x: 0.02530717, y: -0.009591588, z: -0.35743356, w: 0.93354636}
+  m_LocalPosition: {x: -0.000000014901161, y: 0.62755924, z: 1.7763568e-15}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 511377775045303565}
+  - {fileID: 2297643095293443030}
+  - {fileID: 1825350790677985974}
+  - {fileID: 7539694994561669028}
+  - {fileID: 4226388512330019706}
+  m_Father: {fileID: 1366833783573870774}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.8281207, y: -1.2741206, z: -24.458347}
+--- !u!1 &5530217250693981326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7697519335184214120}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Izquierdo  Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7697519335184214120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530217250693981326}
+  m_LocalRotation: {x: 0.059321497, y: -0.0013704854, z: 0.16771014, w: 0.98404896}
+  m_LocalPosition: {x: -0.000000029802322, y: 0.19981752, z: -0.000000029802322}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4023556273365082241}
+  m_Father: {fileID: 4941142231212651330}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 6.7819424, y: 0.69364655, z: 19.138868}
+--- !u!1 &6084380589991203991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860332651915981743}
+  m_Layer: 0
+  m_Name: Cuerno Mayor Alce 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860332651915981743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084380589991203991}
+  m_LocalRotation: {x: -0.10232011, y: 0.031293955, z: -0.061831307, w: 0.9923347}
+  m_LocalPosition: {x: 0.000000012572855, y: 0.2555331, z: 0.000000055879354}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2974690934658426596}
+  m_Father: {fileID: 5769339886378537661}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -19.060505, y: -5.121374, z: 6.3009744}
+--- !u!1 &6364026795171708602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4226388512330019706}
+  m_Layer: 0
+  m_Name: "Secci\xF3n Trasera"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4226388512330019706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364026795171708602}
+  m_LocalRotation: {x: -0.025044039, y: 0.034315336, z: -0.44230598, w: 0.8958575}
+  m_LocalPosition: {x: 0.00000001716262, y: 0.4390502, z: 0.0000000016298145}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1575485516975087968}
+  - {fileID: 3124256284452130479}
+  m_Father: {fileID: 1416165243897007505}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -0.831736, y: 4.7981906, z: -52.58812}
+--- !u!1 &6646096642822553692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715148549223640584}
+  m_Layer: 0
+  m_Name: Cuerno 2 Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715148549223640584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646096642822553692}
+  m_LocalRotation: {x: 0.34710184, y: 0.0000000026567615, z: 0.0035472128, w: 0.93782073}
+  m_LocalPosition: {x: -0.000000084983185, y: 0.13833454, z: 0.000000026077032}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7246227569465604434}
+  m_Father: {fileID: 3245171770780094426}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 40.60819, y: 0.4550322, z: 1.0741289}
+--- !u!1 &6782955609224477781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6361838075608396447}
+  m_Layer: 0
+  m_Name: Cuerno 3 Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6361838075608396447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782955609224477781}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.16053137, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1822005563316648912}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7735301291456702145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2974690934658426596}
+  m_Layer: 0
+  m_Name: Cuerno Mayor Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2974690934658426596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735301291456702145}
+  m_LocalRotation: {x: 0.5983444, y: -0.03553374, z: -0.026238117, w: 0.8000206}
+  m_LocalPosition: {x: 0.00000012200326, y: 0.27968186, z: -0.000000067055225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5883036750750507596}
+  m_Father: {fileID: 1860332651915981743}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 66.94369, y: 4.811291, z: 15.978158}
+--- !u!1 &7893656665626829858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3245171770780094426}
+  m_Layer: 0
+  m_Name: Cuerno 2 Alce 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3245171770780094426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893656665626829858}
+  m_LocalRotation: {x: 0.023309961, y: -0.008821218, z: -0.19968383, w: 0.9795434}
+  m_LocalPosition: {x: -0.000000029802322, y: 0.18618396, z: -0.000000008381903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1715148549223640584}
+  m_Father: {fileID: 7367346265875601081}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.4464738, y: -1.5189788, z: -23.292542}
+--- !u!1 &8115219104849122652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7246227569465604434}
+  m_Layer: 0
+  m_Name: Cuerno 2 Punta_end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7246227569465604434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115219104849122652}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.09682341, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1715148549223640584}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8380497397172683502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822005563316648912}
+  m_Layer: 0
+  m_Name: Cuerno 3 Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1822005563316648912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8380497397172683502}
+  m_LocalRotation: {x: 0.2767549, y: 0.05048522, z: 0.27747306, w: 0.91862214}
+  m_LocalPosition: {x: -0.000000026077032, y: 0.21287961, z: -0.000000014901161}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6361838075608396447}
+  m_Father: {fileID: 4894290958679095598}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -22.817572, y: 8.375615, z: 12.797492}
+--- !u!1 &8584320442565282738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575485516975087968}
+  m_Layer: 0
+  m_Name: Cuerno Trasero Derecho Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1575485516975087968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584320442565282738}
+  m_LocalRotation: {x: 0.5567015, y: 0.13696116, z: 0.18326508, w: 0.79858565}
+  m_LocalPosition: {x: 0.00000009825453, y: 0.48489583, z: -0.0000000013969839}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8788806520441721677}
+  m_Father: {fileID: 4226388512330019706}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 57.029102, y: 50.977497, z: 54.89104}
+--- !u!1 &8854156445653933188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5769339886378537661}
+  m_Layer: 0
+  m_Name: Cuerno Mayor Alce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5769339886378537661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854156445653933188}
+  m_LocalRotation: {x: -0.23647077, y: 0.055254813, z: -0.2457564, w: 0.9384201}
+  m_LocalPosition: {x: 0.000000007450581, y: 0.868711, z: 0.000000009778887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1860332651915981743}
+  m_Father: {fileID: 7539694994561669028}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -24.62386, y: 14.000694, z: -32.420723}
+--- !u!1 &9028365069229892320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4662332820934162286}
+  m_Layer: 0
+  m_Name: Cuerno 4 Punta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4662332820934162286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028365069229892320}
+  m_LocalRotation: {x: -0.2926769, y: -0.055401444, z: -0.050277945, w: 0.9532802}
+  m_LocalPosition: {x: 0.000000014901161, y: 0.17421512, z: -0.000000040978193}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1791327592500290468}
+  m_Father: {fileID: 1035522351495330990}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 7.490797, y: -8.010095, z: 3.1509676}
