@@ -125,7 +125,7 @@ Material:
     - _gloss: 22.73
     - _rimTrheshol: -0.14
     m_Colors:
-    - _AmbientShadow: {r: 0.15018693, g: 0.44915062, b: 0.7075472, a: 0}
+    - _AmbientShadow: {r: 0.38113207, g: 0.7167154, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: 203dd70ffbc67654c91ee49efdb55c4c
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 08ebb60374754504cb1292c9a6cefdc0, type: 2}
+    second: {fileID: 2100000, guid: 542f6248f91e9a74c9b76453dfd8da5d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -70,7 +70,7 @@ ModelImporter:
       name: Attack
       takeName: Scene
       internalID: -8800838248204228948
-      firstFrame: 20
+      firstFrame: 21
       lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
@@ -103,7 +103,6 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
@@ -131,7 +130,6 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -164,7 +162,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
