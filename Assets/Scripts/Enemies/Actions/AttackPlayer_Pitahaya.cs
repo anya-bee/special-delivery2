@@ -24,13 +24,21 @@ public class AttackPlayer_Pitahaya : AIAction
     {
         enemy.SetDestination(transform.position);
         transform.LookAt(player);
+        GetComponent<Animator>().SetTrigger("explode");
+        StartCoroutine(waitToDie());
 
-        gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+        
 
 
 
     }
 
+
+    IEnumerator waitToDie()
+    {
+        yield return new WaitForSeconds(1.1f);
+        gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+    }
 
 }

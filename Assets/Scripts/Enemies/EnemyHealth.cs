@@ -60,6 +60,8 @@ public class EnemyHealth : MonoBehaviour
         spawnFruit();
         if (enemyString == "Pitahaya_Enemy")
         {
+            
+            
             GetComponent<pitahaya_Explode>().explosion();
             Destroy(this.gameObject);
         }
@@ -70,6 +72,7 @@ public class EnemyHealth : MonoBehaviour
         
     }
 
+    
 
 
     private void spawnFruit()

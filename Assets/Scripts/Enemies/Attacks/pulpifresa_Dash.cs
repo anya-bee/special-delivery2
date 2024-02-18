@@ -37,12 +37,16 @@ public class pulpifresa_Dash : MonoBehaviour
     public void shootTornado()
     {
         GetComponent<Animator>().SetTrigger("magicLeaf");
+        StartCoroutine(fresaDash());
+        
+    }
 
+    IEnumerator fresaDash()
+    {
+        yield return new WaitForSeconds(0.7f);
         var tornadoOne = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
         tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
     }
-
-
 
 
 }

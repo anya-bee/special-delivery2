@@ -32,7 +32,13 @@ public class pitahaya_Explode : MonoBehaviour
 
     }
 
+    IEnumerator waitToExplode()
+    {
 
-    
+        yield return new WaitForSeconds(1.1f);
+
+    }
+
+
 
 }
