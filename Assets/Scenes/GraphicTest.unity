@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &53876880
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.697365
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.916847
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_Name
+      value: Lemon With Textures (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e397a46b543ca6540af159aed1047270, type: 3}
 --- !u!1 &714046582
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +320,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b979655c48d19be48868dd1b889d6e30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b979655c48d19be48868dd1b889d6e30,
         type: 3}
@@ -315,6 +384,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b979655c48d19be48868dd1b889d6e30, type: 3}
+--- !u!1001 &1505477223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.113253
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.662802
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_Name
+      value: Lemon With Textures
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916231034764678356, guid: e397a46b543ca6540af159aed1047270,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49f5143b1849967499c675e67b43d375, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e397a46b543ca6540af159aed1047270, type: 3}
 --- !u!1001 &1576208632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,7 +473,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 35a2b1959cdc7fd409dead9c13d78998,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35a2b1959cdc7fd409dead9c13d78998,
         type: 3}
@@ -502,7 +650,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 49.278, y: -40.742, z: -1.876}
 --- !u!114 &1616858689
 MonoBehaviour:
@@ -534,7 +682,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 32673a1eba76ac64fb841fe3ee852e6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 32673a1eba76ac64fb841fe3ee852e6c,
         type: 3}
@@ -623,7 +771,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c8fe473812374b94b957bbea1e6cbb38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8fe473812374b94b957bbea1e6cbb38,
         type: 3}
@@ -679,7 +827,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c10b8de35bdcfdc4fa2be6bd750f8d16, type: 2}
+      objectReference: {fileID: 2100000, guid: 49f5143b1849967499c675e67b43d375, type: 2}
     - target: {fileID: 919132149155446097, guid: c8fe473812374b94b957bbea1e6cbb38,
         type: 3}
       propertyPath: m_Name
