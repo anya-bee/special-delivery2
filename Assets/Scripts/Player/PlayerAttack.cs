@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class PlayerAttack : MonoBehaviour
     [Header("Enemy")]
     public bool enemyInrange;
 
-    
+    [Header("VFX")]
+    public VisualEffect almaSlash;
+
+
 
     void Start()
     {
@@ -48,10 +52,12 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator attackInterval(Collider[] c)
     {
         yield return new WaitForSeconds(0.4f);
-        
+        almaSlash.Play();
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)
+            
         {
+            
             c[i].gameObject.GetComponent<EnemyHealth>().Damage(damagePlayer);
             
 

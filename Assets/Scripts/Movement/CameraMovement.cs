@@ -7,6 +7,7 @@ public class CameraMovement : MonoBehaviour
 
     public Transform target;
     public Vector3 originalPos;
+    public Vector3 introPos;
     public float smoothTime = 0.3f;
     public Vector3 offset;
     private Vector3 velocity = Vector3.zero;
@@ -19,6 +20,7 @@ public class CameraMovement : MonoBehaviour
         target = null;
         isInside = true;
         originalPos = GetComponentInChildren<Transform>().position;
+        introPos = new Vector3(originalPos.x, originalPos.y - 20, originalPos.z);
     }
 
     // Update is called once per frame

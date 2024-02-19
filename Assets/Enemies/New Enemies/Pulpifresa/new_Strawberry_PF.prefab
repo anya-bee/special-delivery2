@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 356815076585465551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L.Hoja_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8772851759445336234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: F.Hoja_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8270045941476360757}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R.Hoja_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8036574999017383858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B.Hoja_4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8298942888221018598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Punta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5678172045952418570}
   - component: {fileID: 2064980114179390588}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7895292851872620332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: F.Hoja_4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962932366869982674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2885217236481117561}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B.Hoja_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2919382831356950925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R.Hoja_4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1154272389866608314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Principal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8249230785264337749}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L.Hoja_4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7447231285282610016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R.Hoja_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954006632904995340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R.Hoja_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3688889820230215490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: F.Hoja_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506185728562740940}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: F.Hoja_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8701337722204909006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B.Hoja_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6986920871600742381}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B.Hoja_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7958401075632178573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Punta_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2426071542598989699}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: F.Hoja_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3467507862811482350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L.Hoja_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629331009662339094}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L.Hoja_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712708572107640353}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L.Hoja_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4173453621388502977}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Centro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260688167502173287}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R.Hoja_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8737214460024094110}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spawnLoc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,18 +913,18 @@ GameObject:
   - component: {fileID: 8209447150915501388}
   - component: {fileID: 2814182851653986102}
   - component: {fileID: 2814182851653986090}
-  - component: {fileID: 2814182851653986089}
-  - component: {fileID: 2814182851653986088}
+  - component: {fileID: 7068328641830833045}
   - component: {fileID: 2814182851653986095}
   - component: {fileID: 2814182851653986094}
+  - component: {fileID: 2814182851653986097}
   - component: {fileID: 2814182851653986093}
   - component: {fileID: 2814182851653986092}
   - component: {fileID: 2814182851653986099}
   - component: {fileID: 2814182851653986098}
-  - component: {fileID: 2814182851653986097}
   - component: {fileID: 2814182851653986096}
   - component: {fileID: 2814182851653986103}
-  m_Layer: 0
+  - component: {fileID: 6228785177892335478}
+  m_Layer: 10
   m_Name: new_Strawberry_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +978,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8837751441874053110}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 2000
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -986,7 +986,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2814182851653986089
+--- !u!65 &7068328641830833045
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -997,21 +997,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.69, z: 0}
---- !u!135 &2814182851653986088
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837751441874053110}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.14
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.28, y: 1.18, z: 1.76}
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!195 &2814182851653986095
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1021,17 +1008,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 8837751441874053110}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.49999997
+  m_Radius: 0.44
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 300
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.95
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.99999994
-  m_BaseOffset: 0.49999997
+  m_Height: 1.39
+  m_BaseOffset: 0.37
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2814182851653986094
@@ -1060,6 +1047,46 @@ MonoBehaviour:
   timeBetweenAttacks: 0
   alreadyAttacked: 0
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &2814182851653986097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837751441874053110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4fb0f0e97ac02458a2f65754f656e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  States:
+  - StateName: Patrol
+    Actions:
+    - {fileID: 2814182851653986098}
+    Transitions:
+    - Decision: {fileID: 2814182851653986099}
+      TrueState: Chase
+      FalseState: 
+  - StateName: Chase
+    Actions:
+    - {fileID: 2814182851653986092}
+    Transitions:
+    - Decision: {fileID: 2814182851653986099}
+      TrueState: 
+      FalseState: Patrol
+    - Decision: {fileID: 2814182851653986096}
+      TrueState: Attack
+      FalseState: 
+  - StateName: Attack
+    Actions:
+    - {fileID: 2814182851653986094}
+    Transitions:
+    - Decision: {fileID: 2814182851653986096}
+      TrueState: 
+      FalseState: Chase
+  BrainActive: 1
+  TimeInThisState: 0
+  Target: {fileID: 0}
 --- !u!114 &2814182851653986093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,46 +1171,6 @@ MonoBehaviour:
   Timer: 5
   safedistance: 3
   walkpointrange: 3
---- !u!114 &2814182851653986097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837751441874053110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4fb0f0e97ac02458a2f65754f656e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  States:
-  - StateName: Patrol
-    Actions:
-    - {fileID: 2814182851653986098}
-    Transitions:
-    - Decision: {fileID: 2814182851653986099}
-      TrueState: Chase
-      FalseState: 
-  - StateName: Chase
-    Actions:
-    - {fileID: 2814182851653986092}
-    Transitions:
-    - Decision: {fileID: 2814182851653986099}
-      TrueState: 
-      FalseState: Patrol
-    - Decision: {fileID: 2814182851653986096}
-      TrueState: Attack
-      FalseState: 
-  - StateName: Attack
-    Actions:
-    - {fileID: 2814182851653986094}
-    Transitions:
-    - Decision: {fileID: 2814182851653986096}
-      TrueState: 
-      FalseState: Chase
-  BrainActive: 1
-  TimeInThisState: 0
-  Target: {fileID: 0}
 --- !u!114 &2814182851653986096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1207,19 @@ MonoBehaviour:
     type: 3}
   speed: 2
   now: 0
+--- !u!135 &6228785177892335478
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837751441874053110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.77
+  m_Center: {x: 0, y: 0.92, z: 0}
 --- !u!1 &9044119040101330967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1036090124183703806}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B.Hoja_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

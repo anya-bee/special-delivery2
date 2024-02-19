@@ -30,7 +30,9 @@ public class AttackPlayer_Pulpifresa : AIAction
 
     public override void PerformAction()
     {
-        enemy.SetDestination(this.transform.position);
+        enemy.SetDestination(transform.position);
+        enemy.speed = 0;
+        enemy.acceleration = 0;
         transform.LookAt(player);
         
         //isDizzy = true;

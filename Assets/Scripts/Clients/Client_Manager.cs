@@ -53,6 +53,7 @@ public class Client_Manager : MonoBehaviour
         gameOverBoard.gameObject.SetActive(false);
         fadeToBlack.gameObject.SetActive(false);
         completedLevel.gameObject.SetActive(false);
+        clientsTimer = 80;
 
         /*foreach(GameObject client in clientList)
         {
@@ -108,6 +109,11 @@ public class Client_Manager : MonoBehaviour
             
             bar.fillAmount = (antiTimer -= Time.deltaTime) / (clientsTimer + timeRemainder ) ;
             currentAnimator.SetBool("isStanding", true);
+            if (currentClient.GetComponent<clientOrder>().orderFinished == false)
+            {
+                currentClient.transform.LookAt(GameObject.FindWithTag("Player").transform);
+            }
+            
         }
         
         if(currentClient.GetComponent<clientOrder>().orderFinished == true)
@@ -123,7 +129,7 @@ public class Client_Manager : MonoBehaviour
                 
                 StartCoroutine(appearButton());
             }
-            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2 && currentClient.GetComponent<clientOrder>().lastClient == false)
+            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 10 && currentClient.GetComponent<clientOrder>().lastClient == false)
             {
                 
                 isonTray = false;
@@ -131,8 +137,11 @@ public class Client_Manager : MonoBehaviour
                 {
                     
                     currentClient.SetActive(false);
+                    clientsTimer = 50f;
                     ongoingClients++;
                     currentClient = clientList[ongoingClients];
+                    currentClient.GetComponent<clientOrder>().orderFinished = false;
+                    isonTray = false;
                     currentNMA = clientNMA[ongoingClients];
                     bar.fillAmount = 1;
                     antiTimer = clientsTimer + timeRemainder;

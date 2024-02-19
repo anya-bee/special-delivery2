@@ -41,16 +41,27 @@ public class orderChecked : MonoBehaviour
             glassOrder1 = Glass.GetComponent<juiceGlass>().glassOrder;
         }
 
+        
+
         if(clientEntered && Glass != null)
         {
+            if (clientEntered == false)
+            {
+                StartCoroutine(destroyGlass(Glass));
+
+                clientEntered = false;
+                Glass = null;
+                glassOrder1 = null;
+            }
             checkOrder();
             
         }
         
         if(orderFinished == true)
         {
-            
+            orderFinished = false;
             StartCoroutine(destroyGlass(Glass));
+
             
             clientEntered = false;
             Glass = null;
@@ -119,15 +130,17 @@ public class orderChecked : MonoBehaviour
 
     IEnumerator destroyGlass(GameObject object1)
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         
         Glass = null;
         Destroy(object1);
         glassIsOnTray = false;
         points = 0;
         Client.GetComponent<clientOrder>().orderFinished = true;
-        
-        
+        yield return new WaitForSeconds(2f);
+        Client.GetComponent<clientOrder>().orderFinished = false;
+
+
 
 
 
