@@ -12,7 +12,8 @@ Material:
     type: 3}
   m_ValidKeywords:
   - _MAIN_LIGHT_SHADOWS_CASCADE
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -99,6 +100,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -130,7 +132,9 @@ Material:
     - _WindNoiseScale: 4.34
     - _WindNoiseSpeed: 1
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 0
+    - _ZWriteControl: 0
     - _alphathreshold: 0.5
     - _height: 2.03
     - _terrainOffset: 3.01
@@ -144,7 +148,7 @@ Material:
     - _WindNoiseScale: {r: 50, g: 100, b: 0, a: 0}
     - _WindSpeed: {r: -1, g: -1, b: 0, a: 0}
     - _bottomcolor: {r: 0.3669455, g: 0.5849056, b: 0.3764964, a: 0}
-    - _farColor: {r: 0.9254902, g: 0.5584818, b: 0.08235295, a: 0}
+    - _farColor: {r: 0.23402649, g: 0.41509432, b: 0.15076537, a: 0}
     - _farcolor: {r: 0.7406614, g: 0.8584906, b: 0.28751338, a: 0}
     - _nearColor: {r: 0.82136846, g: 0.9528302, b: 0.7685564, a: 1}
     - _near_Far: {r: 16.2, g: 53.7, b: 0, a: 0}
