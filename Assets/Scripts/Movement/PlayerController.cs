@@ -140,6 +140,21 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 
+    public void StunnedEffect()
+    {
 
-    
+        //speed = 0;
+        GetComponent<Animator>().SetTrigger("isStunned");
+        GetComponent<PlayerHealth>().Damage(1);
+
+        StartCoroutine(stunnedTime());
+    }
+    IEnumerator stunnedTime()
+    {
+
+        yield return new WaitForSeconds(stunnedVar);
+        GetComponent<Animator>().SetTrigger("finishStun");
+        stunnedState = false;
+        //GetComponent<PlayerController>().speed = orgSpeed;
+    }
 }

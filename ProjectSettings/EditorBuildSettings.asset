@@ -35,4 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1st Exam/TutorialLevelLoad.unity
     guid: bce4ac5074acef34c943f777e18f8a08
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 224bfe63e360013448a2e186e2400b3c,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: e130a89ef274d7b4db3cbb73aef601c2,
+      type: 2}

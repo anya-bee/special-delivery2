@@ -28,6 +28,9 @@ public class orderChecked : MonoBehaviour
     public Collider[] clientHitColliders = new Collider[1];
     public Collider[] glassHitColliders = new Collider[1];
 
+    [Header("Tutorial")]
+    [SerializeField] bool isTutorial = false;
+    [SerializeField] Script_ActionsTutorial actionActivate;
 
     private void Update()
     {
@@ -104,7 +107,18 @@ public class orderChecked : MonoBehaviour
         }
         GameObject.FindObjectOfType<Points>().pointsTracker(points);
         orderFinished = true;
+
+        if (isTutorial)
+        {
+            ActivateTip();
+            isTutorial= false;
+
+        }
         
+    }
+    public void ActivateTip()
+    {
+        actionActivate.Action();
     }
 
     private void OnTriggerEnter(Collider other)

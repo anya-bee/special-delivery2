@@ -20,7 +20,10 @@ public class Blender_Inventory : MonoBehaviour
     private Renderer fruitrender1;
     public GameObject blender;
     public Transform newLocation;
-    
+
+    [Header("Tutorial")]
+    [SerializeField] bool isTutorial=false;
+    [SerializeField] Script_ActionsTutorial actionActivate;
 
     private void Start()
     {
@@ -58,8 +61,18 @@ public class Blender_Inventory : MonoBehaviour
         juiceGlass1.juiceType = juiceGlass1.glassOrder[0]; 
         juiceGlass1.juiceColor = juiceGlass1.GetColor();
 
+        if(isTutorial)
+        {
+            ActivateTip();
+            isTutorial= false;
+        }
+
     }
 
+    public void ActivateTip()
+    {
+        actionActivate.Action();
+    }
 
 
     private void OnTriggerEnter(Collider collider)

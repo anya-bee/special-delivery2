@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 6651775206359002266}
   m_Layer: 10
   m_Name: PF_Limoncito
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,7 +918,7 @@ Rigidbody:
   m_GameObject: {fileID: 8924573409037109094}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 50
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1176,8 +1176,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad7c3035d17c6947b15adf5a9fe1cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dizzyState: 0
-  stunnedState: 0
-  stunnedVar: 2
+  stunnedTimeRecover: 0
   player: {fileID: 0}
-  orgSpeed: 6

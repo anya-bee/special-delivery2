@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tutorial Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tutorial
+  m_TableCollectionNameGuidString: 2fbf7fe8df4f3844eb1584a8ac45126f
+  m_Entries:
+  - m_Id: 13888753664
+    m_Key: FirstClient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112933048320
+    m_Key: OutOfTheTruck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198371020800
+    m_Key: WildFruits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 246999781376
+    m_Key: GrandmaTip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275466522624
+    m_Key: AllIngredients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321591283712
+    m_Key: GoToTheBlender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356416589824
+    m_Key: TheClientAsk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388226191360
+    m_Key: ItsReady
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423668060160
+    m_Key: AHappyClient
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4820960918898737176
+  references:
+    version: 2
+    RefIds:
+    - rid: 4820960918898737176
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1708392351025

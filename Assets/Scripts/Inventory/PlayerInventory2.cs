@@ -7,6 +7,18 @@ public class PlayerInventory2 : MonoBehaviour
 {
 
     private Inventory inventory;
+    public Inventory _inventory
+    {
+        get
+        {
+            return this.inventory;
+        }
+        set
+        {
+            this.inventory = value;
+        }
+    }
+
 
     [SerializeField] private UI_Inventory2 uiInventory; 
 

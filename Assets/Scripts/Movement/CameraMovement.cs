@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     public bool isInside;
     public GameObject player;
+    [SerializeField] bool isTutorial;
 
     // This code helps the camera follow the player depending if the player is inside or outside the bus
     void Start()
@@ -26,6 +27,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isTutorial) return;
         isInside = player.GetComponent<PlayerController>().isOnBus;
         if (isInside)
         {

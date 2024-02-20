@@ -7,7 +7,7 @@ public class Inventory
 {
 
     public event EventHandler onFruitListChanged;
-    [SerializeField]private List<Fruits> fruitsList;
+    [SerializeField] private List<Fruits> fruitsList;
     public int fruitAmount = 0;
 
     public Inventory()
@@ -16,7 +16,7 @@ public class Inventory
         //addFruit(new Fruits { fruitType = Fruits.FruitTypes.Lemon, amount = 1 });
         //addFruit(new Fruits { fruitType = Fruits.FruitTypes.Lime, amount = 1 });
         //addFruit(new Fruits { fruitType = Fruits.FruitTypes.Strawberry, amount = 1 });
-        Debug.Log(fruitsList.Count);
+        //Debug.Log(fruitsList.Count);
     }
 
 
@@ -50,15 +50,15 @@ public class Inventory
         if (f.isStackable())
         {
             bool fruitInInventory = false;
-            
+
             if (!fruitInInventory)
             {
                 fruitsList.Add(f);
-                
+
             }
-            
+
         }
-        
+
         onFruitListChanged?.Invoke(this, EventArgs.Empty);
 
     }
@@ -74,7 +74,7 @@ public class Inventory
             {
                 if (inventoryFruit.fruitType == f.fruitType)
                 {
-                    
+
                     inventoryFruit.amount -= 1;
 
                     if (f.amount == 0)
@@ -97,12 +97,9 @@ public class Inventory
                 fruitsList.Remove(f);
             }*/
         }
-        
+
         onFruitListChanged?.Invoke(this, EventArgs.Empty);
     }
-
-
-    
 
 
     public List<Fruits> getFruitsList()

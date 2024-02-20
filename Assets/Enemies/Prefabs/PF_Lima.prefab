@@ -731,9 +731,11 @@ GameObject:
   - component: {fileID: 4611120594832122944}
   - component: {fileID: 4611120594832122945}
   - component: {fileID: 4611120594832122957}
+  - component: {fileID: 128251127091325164}
+  - component: {fileID: 5705883251635915882}
   m_Layer: 10
   m_Name: PF_Lima
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,7 +787,7 @@ Rigidbody:
   m_GameObject: {fileID: 7085852953780249735}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 50
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -979,7 +981,7 @@ MonoBehaviour:
     Transitions:
     - Decision: {fileID: 4611120594832122948}
       TrueState: 
-      FalseState: Patrol
+      FalseState: BackToPatrol
     - Decision: {fileID: 4611120594832122944}
       TrueState: Attack
       FalseState: 
@@ -990,6 +992,16 @@ MonoBehaviour:
     - Decision: {fileID: 4611120594832122944}
       TrueState: 
       FalseState: Chase
+  - StateName: BackToPatrol
+    Actions:
+    - {fileID: 128251127091325164}
+    Transitions:
+    - Decision: {fileID: 4611120594832122948}
+      TrueState: Chase
+      FalseState: 
+    - Decision: {fileID: 5705883251635915882}
+      TrueState: Patrol
+      FalseState: 
   BrainActive: 1
   TimeInThisState: 0
   Target: {fileID: 0}
@@ -1006,6 +1018,33 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.35
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &128251127091325164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085852953780249735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bf30792a167634eba7169d490e64ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  enemy: {fileID: 0}
+--- !u!114 &5705883251635915882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085852953780249735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3c7d42a915b5a4ba4e630bf1c90acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
 --- !u!1 &7488471799895339041
 GameObject:
   m_ObjectHideFlags: 0

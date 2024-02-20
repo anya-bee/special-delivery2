@@ -11,7 +11,7 @@ public class PatrolAction : AIAction
     public LayerMask whatisground, whatisplayer;
 
     public Vector3 walkPointTransform;
-    Transform original;
+    Vector3 original;
     public bool walkPointSet;
     
     public float Timer ;
@@ -26,7 +26,8 @@ public class PatrolAction : AIAction
     {
         base.Start();
         enemy = GetComponent<NavMeshAgent>();
-        original = transform;
+        original = transform.position;
+        walkPointTransform= transform.position;
     }
 
     public override void PerformAction()
@@ -36,27 +37,14 @@ public class PatrolAction : AIAction
 
     public void Patrol()
     {
-        if (!walkPointSet)
+        
+        if (Vector3.Distance(transform.position,walkPointTransform) < 1f)
         {
-            
-                searchWalkPoint();
-            
+            Debug.Log("entro");
+            searchWalkPoint();
             
         }
-
-        if (walkPointSet)
-            enemy.SetDestination(walkPointTransform);
-
-        Vector3 distanceToWalkPoint = transform.position - walkPointTransform;
-
-        //walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-        {
-                
-                walkPointSet = false;
-
-        }
-           
+        enemy.SetDestination(walkPointTransform);
 
     }
 
@@ -67,23 +55,23 @@ public class PatrolAction : AIAction
         
         if (direccion)
         {
-            walkPointTransform = new Vector3(original.position.x + randomx, original.position.y, original.position.z);
+            walkPointTransform = new Vector3(original.x + randomx, original.y, original.z);
             
             direccion = false;
         }
         else
         {
-            walkPointTransform = new Vector3(original.position.x - randomx, original.position.y, original.position.z);
+            walkPointTransform = new Vector3(original.x - randomx, original.y, original.z);
             direccion = true;
         }
       
-        
+        /*
 
         if (Physics.Raycast(walkPointTransform, -transform.up, 2f, whatisground))
         {
 
             walkPointSet = true;
-        }
+        }*/
     
     }
 
