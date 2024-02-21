@@ -40,7 +40,7 @@ public class PatrolAction : AIAction
         
         if (Vector3.Distance(transform.position,walkPointTransform) < 1f)
         {
-            Debug.Log("entro");
+            
             searchWalkPoint();
             
         }

@@ -11,16 +11,19 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        blueScreen.SetActive(true);
+        Time.timeScale = 1;
+        //blueScreen.SetActive(true);
         SceneManager.LoadScene(scenetoLoad);
     }
 
     private void Update()
     {
+        /*
         if ( loadingScreen == true)
         {
             StartCoroutine(changetoMap());
         }
+        */
     }
 
     IEnumerator changetoMap()
@@ -39,7 +42,9 @@ public class SceneLoader : MonoBehaviour
     IEnumerator mainScreenChange()
     {
         blueScreen.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        
+        yield return new WaitForSecondsRealtime(3f);
+
         LoadScene();
 
     }

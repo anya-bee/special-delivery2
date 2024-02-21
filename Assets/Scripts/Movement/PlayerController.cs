@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
 
         move = context.Get<Vector2>();
-        Debug.Log(move);
+        //Debug.Log(move);
 
     }
 

@@ -33,7 +33,7 @@ public class Client_Manager : MonoBehaviour
     public GameObject orderCheckedComponent;
     public float clientsTimer;
     public Image bar;
-    private float antiTimer;
+    [SerializeField] float antiTimer;
     public float timeRemainder;
 
     [Header("GameOver")]
@@ -93,10 +93,13 @@ public class Client_Manager : MonoBehaviour
 
         
         currentAnimator = currentClient.GetComponent<Animator>();
+
+
         if (!isonTray)
         {
             antiTimer = clientsTimer + timeRemainder;
             currentNMA.SetDestination(enterStage.position);
+            
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
                 isonTray = true;
@@ -104,6 +107,8 @@ public class Client_Manager : MonoBehaviour
             }
             
         }
+
+
         if (isonTray)
         {
             
@@ -119,23 +124,27 @@ public class Client_Manager : MonoBehaviour
         if(currentClient.GetComponent<clientOrder>().orderFinished == true)
         {
             currentAnimator.SetBool("isStanding", false);
-            
+          
             currentNMA.SetDestination(exitStage.position);
 
             
             if(currentClient.GetComponent<clientOrder>().lastClient == true)
             {
+                
                 ongoingClients = clientList.Count;
                 
                 StartCoroutine(appearButton());
             }
+
             if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 10 && currentClient.GetComponent<clientOrder>().lastClient == false)
             {
                 
                 isonTray = false;
+
                 if (ongoingClients < (clientList.Count) )
                 {
                     
+
                     currentClient.SetActive(false);
                     clientsTimer = 50f;
                     ongoingClients++;

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Story_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c723709a80d052d48a8a48caab08e7f6, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9027555328
+    m_Localized: 'Magic has existed in the world for a long time, where various species
+      coexist in harmony. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62043557888
+    m_Localized: Everything was peaceful until one dark night where a toxic shard
+      fell into the jungle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85129007104
+    m_Localized: It corrupted everything around it, turning the fruits into evil
+      monsters that threaten the inhabitants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121774641152
+    m_Localized: My name is Alma. One day, while I was helping my grandmother in
+      the kitchen, we were attacked by a pulpi fresa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146370039808
+    m_Localized: I defended myself with my knife and discovered that I have magic
+      powers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179253383168
+    m_Localized: ', to defeat monsters and return them to their original fruit form. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203811033088
+    m_Localized: "Thanks to this, the family\u2019s Smoothie Shop became famous for
+      the healing effects of the smoothies made with magical fruits.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 231237586944
+    m_Localized: 'Now I travel the world in my smoothie truck, serving magical healing
+      smoothies and defeating fruit monsters, while searching for the origin of evil.
+
+'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

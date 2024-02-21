@@ -152,7 +152,7 @@ public class orderChecked : MonoBehaviour
         points = 0;
         Client.GetComponent<clientOrder>().orderFinished = true;
         yield return new WaitForSeconds(2f);
-        Client.GetComponent<clientOrder>().orderFinished = false;
+        //Client.GetComponent<clientOrder>().orderFinished = false;
 
 
 
