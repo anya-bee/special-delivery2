@@ -26,7 +26,7 @@ public class Fresa_FollowPlayer : AIAction
     public override void PerformAction()
     {
         enemy.SetDestination(transform.position);
-        enemy.speed = 0;
+        
         transform.LookAt(player);
 
         if (!alreadyAttacked)

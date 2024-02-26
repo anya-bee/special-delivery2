@@ -106,7 +106,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisplaceStrenght: 0.036
+    - _DisplaceStrenght: 0
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -128,7 +128,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _displacementBias: 0.5
+    - _displacementBias: 0.506
     - _emission: 0.05
     - _gloss: 22.73
     - _rimTrheshol: -0.14
