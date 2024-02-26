@@ -56,7 +56,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Dissolver_: 0.492
+    - Dissolver_: 0.611
     - NoisePower_: 0.28
     - NoiseScale_: 0.77
     - TwirlAmount_: 10
