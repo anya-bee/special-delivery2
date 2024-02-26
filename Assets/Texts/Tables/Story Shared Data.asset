@@ -55,6 +55,10 @@ MonoBehaviour:
     m_Key: story_41
     m_Metadata:
       m_Items: []
+  - m_Id: 2080383080865792
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

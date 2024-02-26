@@ -52,15 +52,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 231237586944
-    m_Localized: 'Now I travel the world in my smoothie truck, serving magical healing
-      smoothies and defeating fruit monsters, while searching for the origin of evil.
-
-'
+    m_Localized: Now I travel the world in my smoothie truck, serving magical healing
+      smoothies
     m_Metadata:
       m_Items: []
   - m_Id: 1860889771253760
-    m_Localized: My name is Alma. One day, while I was helping my grandmother in
-      the kitchen...
+    m_Localized: and defeating fruit monsters, while searching for the origin of
+      evil.
     m_Metadata:
       m_Items: []
   - m_Id: 1861946643587072
