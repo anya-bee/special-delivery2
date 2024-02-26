@@ -576,8 +576,9 @@ MonoBehaviour:
   m_text: 'Magic has existed in the world for a long time, where various species
     coexist in harmony. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268e621c5d94dba45b8e789464f67eaa, type: 2}
+  m_sharedMaterial: {fileID: 3547933198796789552, guid: 268e621c5d94dba45b8e789464f67eaa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -601,17 +602,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 62.18
+  m_fontSizeBase: 62.18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -2.74
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -863,7 +864,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: 5cbfaddb196a1884980ca590fcd3f3c2, type: 3}
+    image: {fileID: 21300000, guid: 48632b48b66ceb34ca3649fabef7a2c7, type: 3}
   - Name: story_3
     key:
       m_TableReference:
@@ -874,18 +875,18 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: 9b48aa9529d8b744d865a67706e66165, type: 3}
+    image: {fileID: 21300000, guid: 5f6cf8a788067484caaddfb40bcc1470, type: 3}
   - Name: story_4
     key:
       m_TableReference:
         m_TableCollectionName: GUID:c723709a80d052d48a8a48caab08e7f6
       m_TableEntryReference:
-        m_KeyId: 121774641152
+        m_KeyId: 1861946643587072
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: f82dfc5fc3c5a8f4080a3550427019c8, type: 3}
+    image: {fileID: 21300000, guid: 7f9ce6ed7f73e4a488dd0d5a0f02b9d5, type: 3}
   - Name: story_5
     key:
       m_TableReference:
@@ -896,7 +897,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: a3ced8f7044b9de4787602a9e9b20ea7, type: 3}
+    image: {fileID: 21300000, guid: 8d30a3e890a93b942ad64583d4e03f5b, type: 3}
   - Name: story_6
     key:
       m_TableReference:
@@ -907,7 +908,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: 838b4c55761b66045a5c5b12c2ca769f, type: 3}
+    image: {fileID: 21300000, guid: e1f34f02e90334248989220acd728e05, type: 3}
   - Name: story_7
     key:
       m_TableReference:
@@ -918,7 +919,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: 3a57804d3ed349345980524e06fa0da5, type: 3}
+    image: {fileID: 21300000, guid: 1c9184b9583f99e40ade15a8fe17eccb, type: 3}
   - Name: story_8
     key:
       m_TableReference:
@@ -929,7 +930,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    image: {fileID: 21300000, guid: ed47c81c8fe3daa4a9f5d3d05f369eb7, type: 3}
+    image: {fileID: 21300000, guid: 0ae65ea837e4c0f4fa8a1dfd5ec029f3, type: 3}
   localizedStringEvent: {fileID: 1195291021}
   imageComponent: {fileID: 553955282}
   AnimationTime: 0.8

@@ -35,26 +35,37 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 121774641152
     m_Localized: My name is Alma. One day, while I was helping my grandmother in
-      the kitchen, we were attacked by a pulpi fresa
+      the kitchen...
     m_Metadata:
       m_Items: []
   - m_Id: 146370039808
-    m_Localized: I defended myself with my knife and discovered that I have magic
-      powers
+    m_Localized: we were attacked by a Pulpifresa.
     m_Metadata:
       m_Items: []
   - m_Id: 179253383168
-    m_Localized: ', to defeat monsters and return them to their original fruit form. '
+    m_Localized: ' I defended myself with my knife and discovered that '
     m_Metadata:
       m_Items: []
   - m_Id: 203811033088
-    m_Localized: "Thanks to this, the family\u2019s Smoothie Shop became famous for
-      the healing effects of the smoothies made with magical fruits.\r\n"
+    m_Localized: "I could defeat monsters and return them to their original fruit
+      form. \n"
     m_Metadata:
       m_Items: []
   - m_Id: 231237586944
     m_Localized: 'Now I travel the world in my smoothie truck, serving magical healing
       smoothies and defeating fruit monsters, while searching for the origin of evil.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1860889771253760
+    m_Localized: My name is Alma. One day, while I was helping my grandmother in
+      the kitchen...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1861946643587072
+    m_Localized: 'My name is Alma. One day, while I was helping my grandmother in
+      the kitchen...
 
 '
     m_Metadata:
