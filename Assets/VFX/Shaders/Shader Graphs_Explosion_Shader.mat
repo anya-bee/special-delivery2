@@ -47,22 +47,22 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _DisolveSlider01: 0.254
-    - _DisolveSlider02: 0.059
+    - _DisolveSlider01: 0.26
+    - _DisolveSlider02: 0.16
     - _DstBlend: 0
     - _NoisePower: 3
-    - _NoiseScale: 2.36
+    - _NoiseScale: 5.09
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothstep: 2.91
+    - _Smoothstep: 2.77
     - _SrcBlend: 1
     - _Surface: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _DarkColor: {r: 2.0685074, g: 1.2363492, b: 0.24964744, a: 0}
-    - _FireColor: {r: 3.6014807, g: 0.9314174, b: 2.0905147, a: 0}
+    - _DarkColor: {r: 1.3039843, g: 0.79170483, b: 0, a: 0}
+    - _FireColor: {r: 2.79544, g: 0.10245068, b: 1.2733157, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2870786524466514929
 MonoBehaviour:
