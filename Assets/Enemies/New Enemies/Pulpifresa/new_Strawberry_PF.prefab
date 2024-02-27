@@ -962,7 +962,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ec3c481a142f6284f9af524af89640ea, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1018,7 +1018,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.39
-  m_BaseOffset: 0.2
+  m_BaseOffset: 0.41
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2814182851653986094
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerinSight: 0
-  sightRange: 7.34
+  sightRange: 6.17
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerInSight: 0
-  sightRange: 3.84
+  sightRange: 1.98
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1218,8 +1218,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.77
-  m_Center: {x: 0, y: 0.92, z: 0}
+  m_Radius: 1.19
+  m_Center: {x: 0, y: 0.64, z: 0}
 --- !u!1 &9044119040101330967
 GameObject:
   m_ObjectHideFlags: 0

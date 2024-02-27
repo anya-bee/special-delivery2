@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Fresa_FollowPlayer : AIAction
+public class limaFollowPlayer : AIAction
 {
 
     public NavMeshAgent enemy;
@@ -26,14 +26,14 @@ public class Fresa_FollowPlayer : AIAction
     public override void PerformAction()
     {
         enemy.SetDestination(transform.position);
-        
+
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
 
             //enemyAnimator.SetBool("attack", true);
-            GetComponent<pulpifresa_Dash>().shootTornado();
+            GetComponent<lima_AcidSplash>().acidSplash();
 
             alreadyAttacked = true;
             Invoke(nameof(resetAction), timeBetweenAttacks);
@@ -48,7 +48,7 @@ public class Fresa_FollowPlayer : AIAction
         alreadyAttacked = false;
 
     }
-    
-        //enemyAnimator.SetBool("attack", false);
-    
+
+    //enemyAnimator.SetBool("attack", false);
+
 }

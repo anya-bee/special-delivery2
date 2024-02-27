@@ -47,18 +47,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 356416589824
-    m_Localized: "The client asked for Limoncito, Limoncito ,and  Naranj\xEDn. The
-      recipe says \u201C Left Click the fruit icon to put fruits in the blender\u201D. "
+    m_Localized: "The recipe says \u201C Left Click the fruit icon to put fruits
+      in the blender\u201D. "
     m_Metadata:
       m_Items: []
   - m_Id: 388226191360
-    m_Localized: 'It ''s ready ! I can serve the smoothie now ! I think I have enough
-      SPACE to grab it. Press SPACE to grab and deliver smoothies. '
+    m_Localized: It 's ready !  I have enough SPACE to grab it.
     m_Metadata:
       m_Items: []
   - m_Id: 423668060160
-    m_Localized: 'A happy client, and more to come ! I should go and gather more
-      fruits by defeating enemies. '
+    m_Localized: 'I should go and gather more fruits by defeating enemies. '
     m_Metadata:
       m_Items: []
   references:

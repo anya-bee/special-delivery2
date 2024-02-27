@@ -68,9 +68,15 @@ public class orderChecked : MonoBehaviour
             
             clientEntered = false;
             Glass = null;
-            glassOrder1 = null;
-            
-            
+            for (int i = 0; i < 3; i++)
+            {
+                glassOrder1[i] = null;
+
+
+                
+
+            }
+
         }
         
     }
@@ -151,8 +157,8 @@ public class orderChecked : MonoBehaviour
         glassIsOnTray = false;
         points = 0;
         Client.GetComponent<clientOrder>().orderFinished = true;
-        yield return new WaitForSeconds(2f);
-        //Client.GetComponent<clientOrder>().orderFinished = false;
+        yield return new WaitForSeconds(3f);
+        Client.GetComponent<clientOrder>().orderFinished = false;
 
 
 
