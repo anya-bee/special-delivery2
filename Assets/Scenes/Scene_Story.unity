@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c59d08d7b3c38419b95212437997a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenetoLoad: 1
+  scenetoLoad: 2
   loadingScreen: 0
   blueScreen: {fileID: 0}
 --- !u!1 &1590842526
