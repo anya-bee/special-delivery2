@@ -53,7 +53,7 @@ public class Client_Manager : MonoBehaviour
         gameOverBoard.gameObject.SetActive(false);
         fadeToBlack.gameObject.SetActive(false);
         completedLevel.gameObject.SetActive(false);
-        clientsTimer = 80;
+        clientsTimer = 50;
 
         /*foreach(GameObject client in clientList)
         {
@@ -64,9 +64,9 @@ public class Client_Manager : MonoBehaviour
 
     }
 
-    IEnumerator clientGoAway(float t)
+    IEnumerator clientGoAway()
     {
-        yield return new WaitForSeconds(t);
+        yield return new WaitForSeconds(0.1f);
         orderCheckedComponent.GetComponent<orderChecked>().orderFinished = true;
         
 
@@ -103,7 +103,12 @@ public class Client_Manager : MonoBehaviour
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
                 isonTray = true;
-                StartCoroutine(clientGoAway(clientsTimer));
+                if ( antiTimer <= 0)
+                {
+                    Debug.Log("timer is Done");
+                    StartCoroutine(clientGoAway());
+                }
+                
             }
             
         }

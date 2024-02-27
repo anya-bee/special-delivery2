@@ -1142,7 +1142,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerinSight: 0
-  sightRange: 4.97
+  sightRange: 6.17
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
