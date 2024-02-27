@@ -26,7 +26,7 @@ public class acidSplashPlace : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 3;
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 2;
     }
 
     public void OnTriggerExit(Collider other)

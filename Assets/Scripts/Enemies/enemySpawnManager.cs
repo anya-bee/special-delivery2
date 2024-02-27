@@ -17,6 +17,7 @@ public class enemySpawnManager : MonoBehaviour
 
     [Header("Enemy List ")]
     public List<Transform> enemyTypeList;
+    public bool newEnemy;
 
     [Header("Enemies per Level")]
     [SerializeField] private int enemiesPerLevel;
@@ -62,6 +63,7 @@ public class enemySpawnManager : MonoBehaviour
                 
                 Spawn.enemyNumber = enemyCount;
 
+                
                 Spawn.currentEnemy = Instantiate(enemyTypeList[Spawn.enemyNumber], Spawn.spawnLocation.position, Quaternion.identity);
                 
 
@@ -97,6 +99,7 @@ public class enemySpawnManager : MonoBehaviour
     IEnumerator respawnEnemy()
     {
         yield return new WaitForSeconds(5f);
+        newEnemy = true;
 
     }
 
