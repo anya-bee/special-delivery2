@@ -19,10 +19,14 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("VFX")]
     public VisualEffect almaSlash;
+    public VisualEffect strawberryVFX;
+    public VisualEffect limeVFX;
+    public VisualEffect lemonVFX;
 
 
 
- 
+
+
 
     public void attackState()
     {
@@ -46,6 +50,18 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         almaSlash.Play();
+        if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Strawberry_Enemy")
+        {
+            strawberryVFX.Play();
+        }
+        else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lime_Enemy")
+        {
+            limeVFX.Play();
+        }
+        else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lemon_Enemy") 
+        {
+            lemonVFX.Play();
+        }
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)
             

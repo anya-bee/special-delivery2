@@ -40,7 +40,7 @@ public class script_ChangeTextAction : MonoBehaviour
     private void Start()
     {
         changetext();
-        Destroy(magicAnimator, 6);
+        Destroy(magicAnimator, 4);
 
     }
 
@@ -53,7 +53,7 @@ public class script_ChangeTextAction : MonoBehaviour
     {
         if (i >= Escenes.Length - 1)
         {
-            //scene.ChangeRoom();
+            GetComponent<SceneLoader>().LoadScene();
             return;
         }
         

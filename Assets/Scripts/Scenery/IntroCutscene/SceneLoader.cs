@@ -18,12 +18,12 @@ public class SceneLoader : MonoBehaviour
 
     private void Update()
     {
-        /*
+        
         if ( loadingScreen == true)
         {
             StartCoroutine(changetoMap());
         }
-        */
+        
     }
 
     IEnumerator changetoMap()

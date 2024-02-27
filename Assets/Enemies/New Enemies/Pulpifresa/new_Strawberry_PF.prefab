@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 8737214460024094110}
-  tornadoPF: {fileID: 6548411434340800718, guid: 5379809b66b1a184eac96649b00b9052,
+  tornadoPF: {fileID: 3772339687291306803, guid: ddec3cb11186c46458f6b3a581c7e6eb,
     type: 3}
   speed: 2
   now: 0

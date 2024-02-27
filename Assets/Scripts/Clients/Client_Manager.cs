@@ -64,9 +64,9 @@ public class Client_Manager : MonoBehaviour
 
     }
 
-    IEnumerator clientGoAway()
+    IEnumerator clientGoAway(float t)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(t);
         orderCheckedComponent.GetComponent<orderChecked>().orderFinished = true;
         
 
@@ -103,11 +103,7 @@ public class Client_Manager : MonoBehaviour
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
                 isonTray = true;
-                if ( antiTimer <= 0)
-                {
-                    Debug.Log("timer is Done");
-                    StartCoroutine(clientGoAway());
-                }
+                
                 
             }
             
@@ -119,6 +115,10 @@ public class Client_Manager : MonoBehaviour
             
             bar.fillAmount = (antiTimer -= Time.deltaTime) / (clientsTimer + timeRemainder ) ;
             currentAnimator.SetBool("isStanding", true);
+            if ( bar.fillAmount <= 0)
+            {
+                orderCheckedComponent.GetComponent<orderChecked>().orderFinished = true;
+            }
             if (currentClient.GetComponent<clientOrder>().orderFinished == false)
             {
                 currentClient.transform.LookAt(GameObject.FindWithTag("Player").transform);
