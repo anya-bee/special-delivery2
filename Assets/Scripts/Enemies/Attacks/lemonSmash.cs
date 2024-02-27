@@ -27,6 +27,7 @@ public class lemonSmash : MonoBehaviour
         if (first == false)
         {
             player.GetComponent<PlayerController>().stunnedState = true;
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
             player.GetComponent<PlayerController>().StunnedEffect();
             first = true;
 
