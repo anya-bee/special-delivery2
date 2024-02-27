@@ -6261,7 +6261,7 @@ MonoBehaviour:
     rgba: 14554362
   strawberry_string: Strawberry_Enemy
   lemon_string: Lemon_Enemy
-  lime_string: Lime_Enemy
+  lime_string: new_dragoncito
   pitahaya_string: Pitahaya_Enemy
 --- !u!1001 &1005769575
 PrefabInstance:
