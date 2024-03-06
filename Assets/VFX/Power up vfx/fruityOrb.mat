@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: water
+  m_Name: fruityOrb
   m_Shader: {fileID: -6465566751694194690, guid: 9a95c523af0b93a4d848d6ea770fb9f7,
     type: 3}
   m_ValidKeywords: []
@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _mainText:
-        m_Texture: {fileID: 2800000, guid: 9fc39fa4ced8385439ab59fbba7a8cae, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9c31e418b6378084cb3a62b3f860a1e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -56,11 +56,11 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _divide: 5.19
-    - _innerThreshold: 0.362
-    - _noiseScale: 3.57
-    - _outerThershold: 0.624
-    - _speed: -0.76
+    - _divide: 6.75
+    - _innerThreshold: 0.326
+    - _noiseScale: 2.47
+    - _outerThershold: 0.497
+    - _speed: 0.74
     m_Colors:
-    - _Color: {r: 13.76636, g: 11.027503, b: 1.6577293, a: 0}
+    - _Color: {r: 9.082411, g: 1.0936935, b: 1.1887972, a: 0}
   m_BuildTextureStacks: []

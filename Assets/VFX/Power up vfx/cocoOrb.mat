@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: water
+  m_Name: cocoOrb
   m_Shader: {fileID: -6465566751694194690, guid: 9a95c523af0b93a4d848d6ea770fb9f7,
     type: 3}
   m_ValidKeywords: []
@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _mainText:
-        m_Texture: {fileID: 2800000, guid: 9fc39fa4ced8385439ab59fbba7a8cae, type: 3}
+        m_Texture: {fileID: 2800000, guid: c96d2fda6e73ba045b46c2b4ad7a6da8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -56,11 +56,11 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _divide: 5.19
-    - _innerThreshold: 0.362
-    - _noiseScale: 3.57
-    - _outerThershold: 0.624
-    - _speed: -0.76
+    - _divide: 2.5
+    - _innerThreshold: 0.326
+    - _noiseScale: 2.47
+    - _outerThershold: 0.615
+    - _speed: 0.07
     m_Colors:
-    - _Color: {r: 13.76636, g: 11.027503, b: 1.6577293, a: 0}
+    - _Color: {r: 5.2565446, g: 3.8135717, b: 2.2056873, a: 0}
   m_BuildTextureStacks: []
