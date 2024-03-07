@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.VFX;
 
 public class Blender_Inventory : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Blender_Inventory : MonoBehaviour
     private Renderer fruitrender1;
     public GameObject blender;
     public Transform newLocation;
+    public VisualEffect blenderVFX;
 
     [Header("Tutorial")]
     [SerializeField] bool isTutorial=false;

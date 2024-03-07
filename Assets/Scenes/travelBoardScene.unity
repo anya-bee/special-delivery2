@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvl1Score: {fileID: 1914076763}
   lvl2Score: {fileID: 1744964939}
-  totalScoreDisplay: {fileID: 990530282}
+  totalCoinsDisplay: {fileID: 990530282}
 --- !u!1 &57599271
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &85422202
 AudioSource:
   m_ObjectHideFlags: 0

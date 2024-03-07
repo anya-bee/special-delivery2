@@ -14,6 +14,7 @@ public class UI_Inventory2 : MonoBehaviour
     public Transform itemSlots;
     public Transform slotTemplate;
     public float cellsize;
+    public float VFXTime;
 
 
     private void Start()
@@ -38,6 +39,13 @@ public class UI_Inventory2 : MonoBehaviour
         RefreshInventoryItems();
     }
 
+
+    IEnumerator loadJuice(List<string> fruitList)
+    {
+        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderVFX.Play();
+        yield return new WaitForSeconds(VFXTime);
+        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
+    }
 
 
     private void RefreshInventoryItems()
@@ -89,7 +97,8 @@ public class UI_Inventory2 : MonoBehaviour
                 if ( fruitAmount == 2)
                 {
                         fruitList[2] = f.GetString();
-                        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
+                        StartCoroutine(loadJuice(fruitList));
+                        //GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
 
 
 

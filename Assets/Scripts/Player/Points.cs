@@ -31,11 +31,12 @@ public class Points : MonoBehaviour
         
         Text1.text = "Points: " + totalPoints.ToString();
         gameBoardText.text = totalPoints.ToString();
+        
 
 
-
-        if(scene == 1)
+        if (scene == 1)
         {
+            
             if(totalPoints > levelScores.levelOneScore)
             {
                 levelScores.levelOneScore = totalPoints;
@@ -44,6 +45,7 @@ public class Points : MonoBehaviour
         }
         if (scene == 2)
         {
+            
             if (totalPoints > levelScores.levelTwoScore)
             {
                 levelScores.levelTwoScore = totalPoints;
@@ -60,7 +62,14 @@ public class Points : MonoBehaviour
 
     public void add20Points()
     {
+
         totalPoints += 20;
+        
+    }
+
+    public void addCoins()
+    {
+        levelScores.totalCoins += totalPoints;
     }
 
 }

@@ -9,10 +9,11 @@ public class levelScores : MonoBehaviour
     public static int levelOneScore;
     public static int levelTwoScore;
     public static int totalPoints;
+    public static int totalCoins;
 
     public TextMeshProUGUI lvl1Score;
     public TextMeshProUGUI lvl2Score;
-    public TextMeshProUGUI totalScoreDisplay;
+    public TextMeshProUGUI totalCoinsDisplay;
 
     private void Start()
     {
@@ -26,14 +27,14 @@ public class levelScores : MonoBehaviour
 
         
 
-        totalScoreDisplay.text = ("Coins : " + totalPoints.ToString());
+        totalCoinsDisplay.text = ("Coins : " + totalCoins.ToString());
         
     }
 
 
     public void buySomething(int money)
     {
-        totalPoints = totalPoints - money;
+        totalCoins = totalCoins - money;
         Debug.Log("Bought something by " +  money.ToString()  + " coins");
     }
 

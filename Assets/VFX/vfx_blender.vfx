@@ -36,18 +36,6 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614788}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614766}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614777}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614791}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614792}
-      id: 0
-      isStickyNote: 0
   - title: DARK PATH
     position:
       serializedVersion: 2
@@ -62,25 +50,10 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614646}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614648}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614651}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614666}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614668}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614711}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614673}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614686}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614688}
@@ -109,25 +82,13 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614555}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614600}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614558}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614580}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614611}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614583}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614604}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614609}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614625}
@@ -272,7 +233,7 @@ VisualEffectResource:
     m_UpdateMode: 0
     m_PreWarmDeltaTime: 0.05
     m_PreWarmStepCount: 0
-    m_InitialEventName: OnPlay
+    m_InitialEventName: 
 --- !u!114 &8926484042661614555
 MonoBehaviour:
   m_ObjectHideFlags: 0
