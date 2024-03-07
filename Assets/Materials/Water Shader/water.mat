@@ -59,7 +59,8 @@ Material:
     - _divide: 5.19
     - _innerThreshold: 0.362
     - _noiseScale: 3.57
-    - _outerThershold: 0.69
+    - _outerThershold: 0.624
     - _speed: -0.76
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 13.76636, g: 11.027503, b: 1.6577293, a: 0}
   m_BuildTextureStacks: []

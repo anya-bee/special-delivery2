@@ -58,4 +58,9 @@ public class Points : MonoBehaviour
     }
 
 
+    public void add20Points()
+    {
+        totalPoints += 20;
+    }
+
 }
