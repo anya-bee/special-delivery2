@@ -14,21 +14,26 @@ public class levelScores : MonoBehaviour
     public TextMeshProUGUI lvl2Score;
     public TextMeshProUGUI totalScoreDisplay;
 
+    private void Start()
+    {
+        
+    }
 
     private void Update()
     {
         lvl1Score.text =  levelOneScore.ToString();
         lvl2Score.text = levelTwoScore.ToString();
 
-        totalPoints = levelOneScore + levelTwoScore;
+        
 
         totalScoreDisplay.text = ("Coins : " + totalPoints.ToString());
+        
     }
 
 
-    public void buySomething(float money)
+    public void buySomething(int money)
     {
-        totalPoints -= 20;
+        totalPoints = totalPoints - money;
         Debug.Log("Bought something by " +  money.ToString()  + " coins");
     }
 
