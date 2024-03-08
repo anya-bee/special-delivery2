@@ -41,7 +41,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(float amount)
     {
-        currentLifeAmount -= amount;
+        if ( GetComponent<powerUps>().currentPowerUp != "cocoShieldMode")
+        {
+            currentLifeAmount -= amount;
+        }
+        
 
         
 

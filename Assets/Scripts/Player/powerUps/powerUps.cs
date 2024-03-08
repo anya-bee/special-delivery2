@@ -47,7 +47,7 @@ public class powerUps : MonoBehaviour
         else if (currentPowerUp == "cocoShieldMode")
         {
             StartCoroutine(cocoShieldMode());
-            currentPowerUp = " ";
+            
         }
         else if ( currentPowerUp == "fruitySwordMode")
         {
