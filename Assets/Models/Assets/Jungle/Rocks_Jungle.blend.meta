@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4bfdbba91f7eaeb4ea6f67598fe2744a
 ModelImporter:
   serializedVersion: 21300
@@ -24,6 +25,13 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Rock_03
     second: {fileID: 2100000, guid: ffa9cde23b0f17d4e86ef8e68be12bcc, type: 2}
+=======
+guid: ebe2b3bf60b614c47bae6cb14aa99d9a
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+>>>>>>> Hardcore_Week_VFX/Compositing
   materials:
     materialImportMode: 2
     materialName: 0
@@ -62,8 +70,13 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
+<<<<<<< HEAD
     importCameras: 1
     importLights: 1
+=======
+    importCameras: 0
+    importLights: 0
+>>>>>>> Hardcore_Week_VFX/Compositing
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
