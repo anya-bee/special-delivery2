@@ -13,7 +13,7 @@ public class PatrolAction : AIAction
     public Vector3 walkPointTransform;
     Vector3 original;
     public bool walkPointSet;
-    
+    public float originalSpeed;
     public float Timer ;
 
     [Header ("Movement Range")]
@@ -28,6 +28,7 @@ public class PatrolAction : AIAction
         enemy = GetComponent<NavMeshAgent>();
         original = transform.position;
         walkPointTransform= transform.position;
+        originalSpeed = enemy.speed;
     }
 
     public override void PerformAction()
@@ -38,6 +39,7 @@ public class PatrolAction : AIAction
     public void Patrol()
     {
         
+        enemy.speed = originalSpeed;
         if (Vector3.Distance(transform.position,walkPointTransform) < 1f)
         {
             

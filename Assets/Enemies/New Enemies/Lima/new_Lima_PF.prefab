@@ -215,6 +215,8 @@ GameObject:
   - component: {fileID: 6542344518744144242}
   - component: {fileID: 3110526459428406339}
   - component: {fileID: 4735753314662540351}
+  - component: {fileID: 1233111331678477883}
+  - component: {fileID: -1979758171416272604}
   m_Layer: 10
   m_Name: new_Lima_PF
   m_TagString: Untagged
@@ -375,6 +377,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -542,6 +545,35 @@ MonoBehaviour:
   enemyAnimator: {fileID: 1160348116611807089}
   timeBetweenAttacks: 2
   alreadyAttacked: 0
+--- !u!114 &1233111331678477883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079268464850653302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9803465f7194682428d7e3b60d7a6d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Force: 0
+--- !u!54 &-1979758171416272604
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079268464850653302}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2173603451193801054
 GameObject:
   m_ObjectHideFlags: 0

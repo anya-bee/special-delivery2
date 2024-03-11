@@ -129,7 +129,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _displacementBias: 0.506
-    - _emission: 0.05
+    - _emission: 0
     - _gloss: 22.73
     - _rimTrheshol: -0.14
     m_Colors:
@@ -141,7 +141,7 @@ Material:
     - _ShadowContrast: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}
-    - _emissionColor: {r: 0.45677975, g: 0.754717, b: 0.3232467, a: 0}
+    - _emissionColor: {r: 0.19274956, g: 1, b: 0.031372547, a: 0}
     - _fresnelColor: {r: 1, g: 0.7664153, b: 0, a: 0}
     - _glossColor: {r: 1, g: 0.3119208, b: 0.0047169924, a: 0}
   m_BuildTextureStacks: []

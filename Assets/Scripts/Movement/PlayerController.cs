@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
 
         //speed = 0;
         GetComponent<Animator>().SetTrigger("isStunned");
+        GetComponent<Rigidbody>().velocity = transform.forward * 100f;
         GetComponent<PlayerHealth>().Damage(1);
 
         StartCoroutine(stunnedTime());
