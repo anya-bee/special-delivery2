@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class lima_AcidSplash : MonoBehaviour
 {
     public Transform spawnPoint;
     public Transform splashPF;
+    public VisualEffect splashVFX;
     public float speed;
     public bool now = false;
 
@@ -32,7 +34,8 @@ public class lima_AcidSplash : MonoBehaviour
     IEnumerator fresaDash()
     {
         yield return new WaitForSeconds(0.7f);
-        var tornadoOne = Instantiate(splashPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        splashVFX.Play();
+        //var tornadoOne = Instantiate(splashPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
         
     }
 }

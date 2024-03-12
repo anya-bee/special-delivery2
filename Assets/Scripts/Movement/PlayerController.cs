@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    private float originalSpeed;
     private Vector2 move;
     public Animator animator1;
     public float rtquaternion;
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
 
-        
+        originalSpeed = speed;
         
     }
 
@@ -143,9 +144,9 @@ public class PlayerController : MonoBehaviour
     public void StunnedEffect()
     {
 
-        //speed = 0;
+        speed = 0;
         GetComponent<Animator>().SetTrigger("isStunned");
-        GetComponent<Rigidbody>().velocity = transform.forward * 100f;
+        //GetComponent<Rigidbody>().velocity = transform.forward * 100f;
         GetComponent<PlayerHealth>().Damage(1);
 
         StartCoroutine(stunnedTime());
@@ -156,6 +157,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(stunnedVar);
         GetComponent<Animator>().SetTrigger("finishStun");
         stunnedState = false;
+        speed = originalSpeed;
         //GetComponent<PlayerController>().speed = orgSpeed;
     }
 }
