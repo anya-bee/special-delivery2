@@ -32,6 +32,9 @@ public class powerUps : MonoBehaviour
     {
         originalSpeed = almaController.speed;
         originalAttack = GetComponent<PlayerAttack>().damagePlayer;
+        bananaVFX.gameObject.SetActive(false);
+        cocoVFX.gameObject.SetActive(false);
+        swordVFX.gameObject.SetActive(false);
 
     }
 
@@ -59,6 +62,7 @@ public class powerUps : MonoBehaviour
     IEnumerator bananaShoesMode()
     {
         Debug.Log(" BANANA EFFECT ");
+        bananaVFX.gameObject.SetActive(true);
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
         almaController.speed = originalSpeed + plusSpeed;
@@ -66,7 +70,7 @@ public class powerUps : MonoBehaviour
         yield return new WaitForSeconds(PowerUpDuration);
         currentSprite.gameObject.SetActive(false);
         currentSprite.sprite = null;
-
+        bananaVFX.gameObject.SetActive(false);
         almaController.speed = originalSpeed;
         isActivated = false;
         
@@ -76,6 +80,7 @@ public class powerUps : MonoBehaviour
     IEnumerator fruitySwordMode()
     {
         Debug.Log(" FRUITY SWOOOORD");
+        swordVFX.gameObject.SetActive(true);
         currentSprite.sprite = fruitySword;
         currentSprite.gameObject.SetActive(true);
         GetComponent<PlayerAttack>().damagePlayer = 7f;
@@ -85,6 +90,7 @@ public class powerUps : MonoBehaviour
         currentSprite.sprite = null;
         GetComponent<PlayerAttack>().damagePlayer = originalAttack;
         isActivated = false;
+        swordVFX.gameObject.SetActive(false);
         currentPowerUp = " ";
 
     }
@@ -92,11 +98,13 @@ public class powerUps : MonoBehaviour
     IEnumerator cocoShieldMode()
     {
         Debug.Log(" cocoshield");
+        cocoVFX.gameObject.SetActive(true);
         currentSprite.sprite = cocoShield;
         currentSprite.gameObject.SetActive(true);
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
         currentSprite.gameObject.SetActive(false);
+        cocoVFX.gameObject.SetActive(false);
         currentSprite.sprite = null;
         isActivated = false;
         currentPowerUp = " ";
