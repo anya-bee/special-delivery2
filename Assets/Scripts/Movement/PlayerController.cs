@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<Animator>().SetTrigger("isStunned");
         //GetComponent<Rigidbody>().velocity = transform.forward * 100f;
         GetComponent<PlayerHealth>().Damage(1);
-
+        GetComponent<Animator>().SetLayerWeight(1, 1f);
         StartCoroutine(stunnedTime());
     }
     IEnumerator stunnedTime()
@@ -156,8 +156,25 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(stunnedVar);
         GetComponent<Animator>().SetTrigger("finishStun");
+        GetComponent<Animator>().SetLayerWeight(1, 0f);
         stunnedState = false;
         speed = originalSpeed;
         //GetComponent<PlayerController>().speed = orgSpeed;
     }
+
+    public void startCoroutineForHits()
+    {
+        StartCoroutine(hitTaken());
+    }
+
+    IEnumerator hitTaken()
+    {
+        
+           GetComponent<Animator>().SetLayerWeight(1, 1f);
+           yield return new WaitForSeconds(2f);
+           GetComponent<Animator>().SetLayerWeight(1, 0f);
+
+        
+    }
+
 }

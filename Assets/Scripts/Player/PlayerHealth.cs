@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         currentLifeAmount = maxLifeAmount;
         fadeToBlack.gameObject.SetActive(false);
         iconBorad.gameObject.SetActive(false);
+        GetComponent<Animator>().SetLayerWeight(1, 0);
 
     }
 
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         if ( GetComponent<powerUps>().currentPowerUp != "cocoShieldMode")
         {
             currentLifeAmount -= amount;
+            
         }
         
 
