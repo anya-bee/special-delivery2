@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
         else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lime_Enemy")
         {
             limeVFX.Play();
+            c[0].gameObject.GetComponent<Animator>().SetTrigger("hitEnemy");
         }
         else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lemon_Enemy") 
         {

@@ -15,6 +15,7 @@ public class PatrolAction : AIAction
     public bool walkPointSet;
     public float originalSpeed;
     public float Timer ;
+    private bool limaOut;
 
     [Header ("Movement Range")]
     public float safedistance;
@@ -39,6 +40,10 @@ public class PatrolAction : AIAction
     public void Patrol()
     {
         
+        if (GetComponent<EnemyHealth>().enemyString == "Lime_Fruit")
+        {
+            GetComponent<lima_AcidSplash>().now = false;
+        }
         enemy.speed = originalSpeed;
         if (Vector3.Distance(transform.position,walkPointTransform) < 1f)
         {

@@ -32,7 +32,7 @@ public class AttackPlayer_Pulpifresa : AIAction
 
     public override void PerformAction()
     {
-        damaged = GetComponent<enemyPushed>().damaged;
+        
         enemy.SetDestination(transform.position);
         enemy.speed = 0;
         enemy.acceleration = 0;

@@ -573,6 +573,7 @@ MonoBehaviour:
   splashPF: {fileID: 0}
   splashVFX: {fileID: 9159978140411688936}
   speed: 0
+  limaAnimator: {fileID: 6637275158956334645}
   now: 0
 --- !u!1001 &970177443583058852
 PrefabInstance:
