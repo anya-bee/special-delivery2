@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour
     public float radius;
     public Collider[] glassHitColliders = new Collider[1];
     public Collider[] trayCollider = new Collider[1];
+    public Collider[] trashCollider = new Collider[1];
     public LayerMask glassLayer;
     public LayerMask trayLayer;
+    public LayerMask trashLayer;
     public InputManager glassTakeout;
     private InputAction takeglass;
     private InputAction attack;
@@ -95,6 +97,19 @@ public class PlayerController : MonoBehaviour
             glassHitColliders[0] = null;
 
         }
+
+        int numColliders4 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, trashCollider, trashLayer);
+        if (numColliders4 == 1)
+        {
+            carryingOrder = false;
+            currentGlass.GetComponent<juiceGlass>().destroyJuice();
+            trashCollider[0] = null;
+            currentGlass = null;
+            glassHitColliders[0] = null;
+
+        }
+
+
 
 
     }

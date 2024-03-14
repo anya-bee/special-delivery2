@@ -51,7 +51,7 @@ public class orderChecked : MonoBehaviour
             if (clientEntered == false)
             {
                 StartCoroutine(destroyGlass(Glass));
-
+               
                 clientEntered = false;
                 Glass = null;
                 glassOrder1 = null;
@@ -153,7 +153,7 @@ public class orderChecked : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         Glass = null;
-        Destroy(object1);
+        
         glassIsOnTray = false;
         points = 0;
         Client.GetComponent<clientOrder>().orderFinished = true;
