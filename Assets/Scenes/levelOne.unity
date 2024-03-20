@@ -3784,7 +3784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433507526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.92, y: 0, z: -16.8}
+  m_LocalPosition: {x: 2, y: 0, z: -16.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15539,12 +15539,17 @@ MonoBehaviour:
   - {fileID: 0}
   trayCollider:
   - {fileID: 0}
+  trashCollider:
+  - {fileID: 0}
   glassLayer:
     serializedVersion: 2
     m_Bits: 256
   trayLayer:
     serializedVersion: 2
     m_Bits: 512
+  trashLayer:
+    serializedVersion: 2
+    m_Bits: 0
   carryingOrder: 0
   currentGlass: {fileID: 0}
 --- !u!114 &2123671279
@@ -15683,10 +15688,13 @@ MonoBehaviour:
   damagePlayer: 4
   attackMode: 0
   enemyInrange: 0
+  pushForce: 0
   almaSlash: {fileID: 1291011626}
   strawberryVFX: {fileID: 572769231}
   limeVFX: {fileID: 411778114}
   lemonVFX: {fileID: 1557968600}
+  currentVfx: {fileID: 0}
+  strawberry: {fileID: 0}
 --- !u!1 &2130083179
 GameObject:
   m_ObjectHideFlags: 0
@@ -15998,6 +16006,7 @@ GameObject:
   - component: {fileID: 9054377937169556508}
   - component: {fileID: 9054377937169556507}
   - component: {fileID: 9054377937169556506}
+  - component: {fileID: 9054377937169556510}
   m_Layer: 0
   m_Name: Camion_base_01
   m_TagString: Untagged
@@ -24902,6 +24911,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 1.1778284, z: 1.2611196}
   m_Center: {x: -1.69, y: 0, z: 0.09}
+--- !u!114 &9054377937169556510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234179246911222249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMaterial: 0
 --- !u!1 &9216263438826920574
 GameObject:
   m_ObjectHideFlags: 0

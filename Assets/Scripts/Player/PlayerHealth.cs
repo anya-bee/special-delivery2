@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        maxLifeAmount = levelScores.almaLife;
         currentLifeAmount = maxLifeAmount;
         fadeToBlack.gameObject.SetActive(false);
         iconBorad.gameObject.SetActive(false);

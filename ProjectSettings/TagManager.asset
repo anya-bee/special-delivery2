@@ -12,6 +12,7 @@ TagManager:
   - blueScreen
   - AudioManager
   - Enemies
+  - storeManager
   layers:
   - Default
   - TransparentFX

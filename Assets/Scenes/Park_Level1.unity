@@ -14408,12 +14408,17 @@ MonoBehaviour:
   - {fileID: 0}
   trayCollider:
   - {fileID: 0}
+  trashCollider:
+  - {fileID: 0}
   glassLayer:
     serializedVersion: 2
     m_Bits: 256
   trayLayer:
     serializedVersion: 2
     m_Bits: 512
+  trashLayer:
+    serializedVersion: 2
+    m_Bits: 0
   carryingOrder: 0
   currentGlass: {fileID: 0}
 --- !u!114 &2123671279
@@ -14511,8 +14516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6c0bd827bdb6749934b12507ebe7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLifeAmount: 22
-  maxLifeAmount: 22
+  currentLifeAmount: 25
+  maxLifeAmount: 25
   isDead: 0
   fadeToBlack: {fileID: 65614822}
   iconBorad: {fileID: 1105836899}
@@ -14557,6 +14562,7 @@ MonoBehaviour:
   strawberryVFX: {fileID: 572769231}
   limeVFX: {fileID: 411778114}
   lemonVFX: {fileID: 1557968600}
+  currentVfx: {fileID: 0}
   strawberry: {fileID: 0}
 --- !u!1 &2130083179
 GameObject:
@@ -30071,9 +30077,10 @@ MonoBehaviour:
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: a5b233b78133c314991e904a322ba755, type: 3}
-  bananaVFX: {fileID: 0}
-  cocoVFX: {fileID: 0}
-  swordVFX: {fileID: 0}
+  powerUpVFX: {fileID: 0}
+  bananaShoesColor: {r: 0, g: 0, b: 0, a: 0}
+  cocoColor: {r: 0, g: 0, b: 0, a: 0}
+  swordColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &5866666020709052149
 Rigidbody:
   m_ObjectHideFlags: 0

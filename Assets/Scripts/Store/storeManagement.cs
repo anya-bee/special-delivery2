@@ -36,18 +36,9 @@ public class storeManagement : MonoBehaviour
 
     private void Awake()
     {
-        thisBus = FindObjectOfType<almaCurrentBus>();
-        busRenderer = thisBus.GetComponent<Renderer>();
+        
 
-        for ( int i = 0; i < busMaterial.Count; i++)
-        {
-           if(currentBusMaterial == i)
-            {
-                busRenderer.material = busMaterial[i];
-            }
-        }
-
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("storeManagement");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("storeManager");
         if (objs.Length > 1)
         {
             Destroy(this.gameObject);
@@ -62,5 +53,20 @@ public class storeManagement : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        thisBus = FindObjectOfType<almaCurrentBus>();
+        busRenderer = thisBus.GetComponent<Renderer>();
+
+        for (int i = 0; i < busMaterial.Count; i++)
+        {
+            if (currentBusMaterial == i)
+            {
+                busRenderer.material = busMaterial[i];
+            }
+        }
+    }
+
+    
 
 }

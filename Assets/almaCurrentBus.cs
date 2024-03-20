@@ -16,6 +16,6 @@ public class almaCurrentBus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentMaterial = storeManagement.currentBusMaterial;
     }
 }
