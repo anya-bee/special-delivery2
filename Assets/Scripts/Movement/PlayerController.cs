@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    private float originalSpeed;
     private Vector2 move;
     public Animator animator1;
     public float rtquaternion;
@@ -22,8 +23,10 @@ public class PlayerController : MonoBehaviour
     public float radius;
     public Collider[] glassHitColliders = new Collider[1];
     public Collider[] trayCollider = new Collider[1];
+    public Collider[] trashCollider = new Collider[1];
     public LayerMask glassLayer;
     public LayerMask trayLayer;
+    public LayerMask trashLayer;
     public InputManager glassTakeout;
     private InputAction takeglass;
     private InputAction attack;
@@ -33,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
 
-        
+        originalSpeed = speed;
         
     }
 
@@ -95,6 +98,19 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        int numColliders4 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, trashCollider, trashLayer);
+        if (numColliders4 == 1)
+        {
+            carryingOrder = false;
+            currentGlass.GetComponent<juiceGlass>().destroyJuice();
+            trashCollider[0] = null;
+            currentGlass = null;
+            glassHitColliders[0] = null;
+
+        }
+
+
+
 
     }
 
@@ -143,10 +159,11 @@ public class PlayerController : MonoBehaviour
     public void StunnedEffect()
     {
 
-        //speed = 0;
+        speed = 0;
         GetComponent<Animator>().SetTrigger("isStunned");
+        //GetComponent<Rigidbody>().velocity = transform.forward * 100f;
         GetComponent<PlayerHealth>().Damage(1);
-
+        GetComponent<Animator>().SetLayerWeight(1, 1f);
         StartCoroutine(stunnedTime());
     }
     IEnumerator stunnedTime()
@@ -154,7 +171,25 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(stunnedVar);
         GetComponent<Animator>().SetTrigger("finishStun");
+        GetComponent<Animator>().SetLayerWeight(1, 0f);
         stunnedState = false;
+        speed = originalSpeed;
         //GetComponent<PlayerController>().speed = orgSpeed;
     }
+
+    public void startCoroutineForHits()
+    {
+        StartCoroutine(hitTaken());
+    }
+
+    IEnumerator hitTaken()
+    {
+        
+           GetComponent<Animator>().SetLayerWeight(1, 1f);
+           yield return new WaitForSeconds(2f);
+           GetComponent<Animator>().SetLayerWeight(1, 0f);
+
+        
+    }
+
 }

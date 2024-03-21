@@ -10,10 +10,12 @@ public class AttackPlayer_Pulpifresa : AIAction
     public LayerMask whatisground, whatisplayer;
     public Animator enemyAnimator;
     public int dmg = 0;
+    public Transform knockBack;
 
     [Header("PulpiAttack")]
     public float timeBetweenAttacks;
     public bool alreadyAttacked;
+    public bool damaged = false;
 
     
     public Vector3 offset;
@@ -30,6 +32,7 @@ public class AttackPlayer_Pulpifresa : AIAction
 
     public override void PerformAction()
     {
+        
         enemy.SetDestination(transform.position);
         enemy.speed = 0;
         enemy.acceleration = 0;
@@ -38,7 +41,10 @@ public class AttackPlayer_Pulpifresa : AIAction
         //isDizzy = true;
 
         
-        
+        if(damaged == true)
+        {
+            StartCoroutine(dizzyState());
+        }
         
 
 
@@ -54,8 +60,10 @@ public class AttackPlayer_Pulpifresa : AIAction
     IEnumerator dizzyState()
     {
         Debug.Log("pulpifresa is dizzy ! ");
-        yield return new WaitForSeconds(7);
+        enemy.SetDestination(knockBack.position);
+        yield return new WaitForSeconds(1);
         Debug.Log("Its not dizzy anymore");
+        damaged = false;
     }
 
 

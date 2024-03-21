@@ -1563,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 1424267049265920147, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424267049372794712, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
@@ -10068,7 +10068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1364515301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10803,7 +10803,7 @@ RectTransform:
   m_Children:
   - {fileID: 2000844567}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11653,7 +11653,7 @@ Transform:
   - {fileID: 643042770}
   - {fileID: 1286985843}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1746882562
 MonoBehaviour:
@@ -11669,7 +11669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypeList:
   - {fileID: 8209447150915501388, guid: 850e45afad2b2944f8d0b9cefd8bf8d5, type: 3}
-  - {fileID: 5308377164456799043, guid: 60fd73b4d7361c3448e79d08cb94565b, type: 3}
+  - {fileID: 8111445375325150684, guid: 0c08cd9664e29ee4abdc99e9ac1f1cd5, type: 3}
   newEnemy: 0
   enemiesPerLevel: 0
   enemyCount: 0
@@ -14408,12 +14408,17 @@ MonoBehaviour:
   - {fileID: 0}
   trayCollider:
   - {fileID: 0}
+  trashCollider:
+  - {fileID: 0}
   glassLayer:
     serializedVersion: 2
     m_Bits: 256
   trayLayer:
     serializedVersion: 2
     m_Bits: 512
+  trashLayer:
+    serializedVersion: 2
+    m_Bits: 0
   carryingOrder: 0
   currentGlass: {fileID: 0}
 --- !u!114 &2123671279
@@ -14511,8 +14516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6c0bd827bdb6749934b12507ebe7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLifeAmount: 22
-  maxLifeAmount: 22
+  currentLifeAmount: 25
+  maxLifeAmount: 25
   isDead: 0
   fadeToBlack: {fileID: 65614822}
   iconBorad: {fileID: 1105836899}
@@ -14552,10 +14557,13 @@ MonoBehaviour:
   damagePlayer: 4
   attackMode: 0
   enemyInrange: 0
+  pushForce: 0
   almaSlash: {fileID: 1291011626}
   strawberryVFX: {fileID: 572769231}
   limeVFX: {fileID: 411778114}
   lemonVFX: {fileID: 1557968600}
+  currentVfx: {fileID: 0}
+  strawberry: {fileID: 0}
 --- !u!1 &2130083179
 GameObject:
   m_ObjectHideFlags: 0
@@ -15427,6 +15435,7 @@ GameObject:
   - component: {fileID: 9054377937169556508}
   - component: {fileID: 9054377937169556507}
   - component: {fileID: 9054377937169556506}
+  - component: {fileID: 9054377937169556510}
   m_Layer: 0
   m_Name: Camion_base_01
   m_TagString: Untagged
@@ -30069,9 +30078,10 @@ MonoBehaviour:
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: a5b233b78133c314991e904a322ba755, type: 3}
-  bananaVFX: {fileID: 0}
-  cocoVFX: {fileID: 0}
-  swordVFX: {fileID: 0}
+  powerUpVFX: {fileID: 0}
+  bananaShoesColor: {r: 0.8396226, g: 0.757342, b: 0.24871837, a: 0}
+  cocoColor: {r: 0, g: 0, b: 0, a: 0}
+  swordColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &5866666020709052149
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33639,6 +33649,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 1.1778284, z: 1.2611196}
   m_Center: {x: -1.69, y: 0, z: 0.09}
+--- !u!114 &9054377937169556510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234179246911222249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMaterial: 0
 --- !u!23 &9060583554308448325
 MeshRenderer:
   m_ObjectHideFlags: 0

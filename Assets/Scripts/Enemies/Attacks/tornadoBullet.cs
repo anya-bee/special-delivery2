@@ -23,7 +23,12 @@ public class tornadoBullet : MonoBehaviour
         if (playerinSight)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
+            GameObject.FindWithTag("Player").GetComponent<Animator>().SetLayerWeight(1, 1f);
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().startCoroutineForHits();
+
+
             Destroy(this.gameObject);
+
         }
         
     }
@@ -40,4 +45,7 @@ public class tornadoBullet : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
+
+
+    
 }

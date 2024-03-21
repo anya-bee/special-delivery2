@@ -25,19 +25,22 @@ public class lemonAttack : AIAction
 
     public override void PerformAction()
     {
-        enemy.SetDestination(transform.position);
-        transform.LookAt(player);
+        //enemy.SetDestination(transform.position);
+        //transform.LookAt(player);
 
-        if (!alreadyAttacked)
+        if (alreadyAttacked==false)
         {
 
             enemyAnimator.SetBool("attack", true);
-            
+            alreadyAttacked = true;
             GetComponent<lemonSmash>().stunPlayer();
             enemy.speed = 0;
-
+            GetComponent<PatrolAction>().originalSpeed = 0;
+            transform.LookAt(null);
+            enemy.SetDestination(new Vector3(0,0,0));
             
         }
+
 
 
 

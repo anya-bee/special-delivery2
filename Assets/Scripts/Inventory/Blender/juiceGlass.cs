@@ -67,7 +67,10 @@ public class juiceGlass : MonoBehaviour
         transform.localScale = new Vector3(0.4f, 0.5f, 0.4f);
     }
             
-
+    public void destroyJuice()
+    {
+        Destroy(this.gameObject);
+    }
 
 
 

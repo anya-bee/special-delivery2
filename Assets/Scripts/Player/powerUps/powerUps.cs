@@ -22,9 +22,13 @@ public class powerUps : MonoBehaviour
     public Sprite fruitySword;
 
     [Header("Power Ups VFX")]
-    public VisualEffect bananaVFX;
-    public VisualEffect cocoVFX;
-    public VisualEffect swordVFX;
+    public VisualEffect powerUpVFX;
+    [ColorUsage(true, true)]
+    public Color bananaShoesColor;
+    [ColorUsage(true, true)]
+    public Color cocoColor;
+    [ColorUsage(true, true)]
+    public Color swordColor;
 
 
 
@@ -32,7 +36,7 @@ public class powerUps : MonoBehaviour
     {
         originalSpeed = almaController.speed;
         originalAttack = GetComponent<PlayerAttack>().damagePlayer;
-
+        powerUpVFX.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,12 +65,16 @@ public class powerUps : MonoBehaviour
         Debug.Log(" BANANA EFFECT ");
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
+        powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
+        powerUpVFX.gameObject.SetActive(true);
+
         almaController.speed = originalSpeed + plusSpeed;
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
+
         currentSprite.gameObject.SetActive(false);
         currentSprite.sprite = null;
-
+        powerUpVFX.gameObject.SetActive(false);
         almaController.speed = originalSpeed;
         isActivated = false;
         
@@ -78,9 +86,13 @@ public class powerUps : MonoBehaviour
         Debug.Log(" FRUITY SWOOOORD");
         currentSprite.sprite = fruitySword;
         currentSprite.gameObject.SetActive(true);
+        powerUpVFX.SetVector4("ParticlesColor", swordColor);
+        powerUpVFX.gameObject.SetActive(true);
+
         GetComponent<PlayerAttack>().damagePlayer = 7f;
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
+        powerUpVFX.gameObject.SetActive(false);
         currentSprite.gameObject.SetActive(false);
         currentSprite.sprite = null;
         GetComponent<PlayerAttack>().damagePlayer = originalAttack;
@@ -94,9 +106,12 @@ public class powerUps : MonoBehaviour
         Debug.Log(" cocoshield");
         currentSprite.sprite = cocoShield;
         currentSprite.gameObject.SetActive(true);
+        powerUpVFX.SetVector4("ParticlesColor", cocoColor);
+        powerUpVFX.gameObject.SetActive(true);
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
         currentSprite.gameObject.SetActive(false);
+        powerUpVFX.gameObject.SetActive(false);
         currentSprite.sprite = null;
         isActivated = false;
         currentPowerUp = " ";
