@@ -15,6 +15,7 @@ public class Blender_Inventory : MonoBehaviour
     public Animator blenderAnimator;
 
 
+
     [Header("juiceGenerator")]
     public Transform prefabJuice;
     public string juiceType;
@@ -43,6 +44,8 @@ public class Blender_Inventory : MonoBehaviour
 
     private void Update()
     {
+
+
         if (isOnBlender && fruitsOnBlender == 0)
         {
             blenderAnimator.SetBool("openBlender", true);

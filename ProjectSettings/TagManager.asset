@@ -12,6 +12,8 @@ TagManager:
   - blueScreen
   - AudioManager
   - Enemies
+  - storeManager
+  - storeImage
   layers:
   - Default
   - TransparentFX
@@ -25,9 +27,9 @@ TagManager:
   - trays
   - enemies
   - terrain
-  - 
-  - 
-  - 
+  - trashCan
+  - almaBus
+  - storeManager
   - 
   - 
   - 

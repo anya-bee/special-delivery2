@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.VFX;
+using UnityEditor.ShaderGraph;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -16,14 +17,24 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Enemy")]
     public bool enemyInrange;
+    public float pushForce;
 
-    [Header("VFX")]
+    [Header("VFX Reference")]
     public VisualEffect almaSlash;
     public VisualEffect strawberryVFX;
     public VisualEffect limeVFX;
     public VisualEffect lemonVFX;
+    public Transform currentVfx;
 
 
+
+    [Header("Emission")]
+    public ComputeShader strawberry;
+
+    private void Start()
+    {
+        
+    }
 
 
 
@@ -52,21 +63,25 @@ public class PlayerAttack : MonoBehaviour
         almaSlash.Play();
         if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Strawberry_Enemy")
         {
+
             strawberryVFX.Play();
+            c[0].gameObject.GetComponent<Animator>().SetTrigger("hitEnemy");
         }
         else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lime_Enemy")
         {
             limeVFX.Play();
+            c[0].gameObject.GetComponent<Animator>().SetTrigger("hitEnemy");
         }
         else if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Lemon_Enemy") 
         {
             lemonVFX.Play();
+            c[0].gameObject.GetComponentInChildren<Animator>().SetTrigger("hitEnemy");
         }
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)
             
         {
-            
+           
             c[i].gameObject.GetComponent<EnemyHealth>().Damage(damagePlayer);
             
 

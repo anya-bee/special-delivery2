@@ -53,7 +53,7 @@ public class Client_Manager : MonoBehaviour
         gameOverBoard.gameObject.SetActive(false);
         fadeToBlack.gameObject.SetActive(false);
         completedLevel.gameObject.SetActive(false);
-        clientsTimer = 50;
+        clientsTimer = levelScores.clientsNewTimer;
 
         /*foreach(GameObject client in clientList)
         {
@@ -151,7 +151,7 @@ public class Client_Manager : MonoBehaviour
                     
 
                     currentClient.SetActive(false);
-                    clientsTimer = 50f;
+                    clientsTimer = levelScores.clientsNewTimer;
                     ongoingClients++;
                     currentClient = clientList[ongoingClients];
                     currentClient.GetComponent<clientOrder>().orderFinished = false;

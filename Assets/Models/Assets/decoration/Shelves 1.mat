@@ -71,19 +71,23 @@ Material:
     m_Ints: []
     m_Floats:
     - _DisplaceStrenght: 0
+    - _Dissolve: 0
+    - _FresnelGlow: 2.5
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Rim: 0.41
+    - _displacementBias: 0.5
     - _emission: 0.25
     - _gloss: 46.2
     - _rimTrheshol: -0.19
     m_Colors:
-    - _AmbientShadow: {r: 0.38679248, g: 0.016814217, b: 0.008757554, a: 1}
-    - _Color: {r: 0.4528302, g: 0.061319366, b: 0.040156618, a: 0}
+    - _AmbientShadow: {r: 0.7735849, g: 0.5366761, b: 0.14887857, a: 0}
+    - _Color: {r: 0.764151, g: 0.7092865, b: 0.31286937, a: 0}
+    - _Glow: {r: 1, g: 1, b: 1, a: 0}
     - _Light_color: {r: 0.94509804, g: 0.59533554, b: 0.39607847, a: 0}
-    - _MainShadow: {r: 0.6132076, g: 0.15272339, b: 0.15272339, a: 0}
+    - _MainShadow: {r: 0.8662206, g: 0.8773585, b: 0.15229617, a: 0}
     - _ShadowContrast: {r: 0, g: 0, b: 0, a: 0}
     - _dark_color: {r: 0, g: 0.07757022, b: 0.41568628, a: 0}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}

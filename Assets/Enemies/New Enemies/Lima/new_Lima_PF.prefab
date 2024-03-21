@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 6542344518744144242}
   - component: {fileID: 3110526459428406339}
   - component: {fileID: 4735753314662540351}
+  - component: {fileID: -1979758171416272604}
   m_Layer: 10
   m_Name: new_Lima_PF
   m_TagString: Untagged
@@ -237,6 +238,7 @@ Transform:
   - {fileID: 7719185538540100178}
   - {fileID: 7555945864995146983}
   - {fileID: 2911151257441265421}
+  - {fileID: 2198483834902391512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,7 +274,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.34, y: 1.38, z: 1}
+  m_Size: {x: 1.3, y: 1.38, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2079268464850653305
 MonoBehaviour:
@@ -375,6 +377,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -473,7 +476,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.35
+  m_Radius: 0.88
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6542344518744144242
 MonoBehaviour:
@@ -498,8 +501,10 @@ MonoBehaviour:
     m_Bits: 0
   enemyAnimator: {fileID: 1160348116611807089}
   dmg: 0
+  knockBack: {fileID: 0}
   timeBetweenAttacks: 0
   alreadyAttacked: 0
+  damaged: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &3110526459428406339
 MonoBehaviour:
@@ -516,7 +521,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 2911151257441265421}
   splashPF: {fileID: 6213677676846597018, guid: 8c1f48782e3844e48b71a96477dfc66b,
     type: 3}
+  splashVFX: {fileID: 944193758979812932}
   speed: 0
+  limaAnimator: {fileID: 1160348116611807089}
   now: 0
 --- !u!114 &4735753314662540351
 MonoBehaviour:
@@ -542,6 +549,22 @@ MonoBehaviour:
   enemyAnimator: {fileID: 1160348116611807089}
   timeBetweenAttacks: 2
   alreadyAttacked: 0
+--- !u!54 &-1979758171416272604
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079268464850653302}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2173603451193801054
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +693,116 @@ Transform:
   m_Father: {fileID: 5902616660896218653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3786912392581982534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2198483834902391512}
+  - component: {fileID: 944193758979812932}
+  - component: {fileID: 2955055025582609521}
+  m_Layer: 0
+  m_Name: vfx_lima_attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2198483834902391512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786912392581982534}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.201, y: -0.49727, z: 0.64347}
+  m_LocalScale: {x: 1.2927495, y: 1.2927495, z: 1.2927495}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1698097902404504268}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!2083052967 &944193758979812932
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786912392581982534}
+  m_Enabled: 1
+  m_Asset: {fileID: 8926484042661614526, guid: 8e378cf0f9926974ea3b17c526ad57fa, type: 3}
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array: []
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array: []
+    m_Vector4f:
+      m_Array: []
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array: []
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array: []
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array: []
+    m_Bool:
+      m_Array: []
+--- !u!73398921 &2955055025582609521
+VFXRenderer:
+  serializedVersion: 1
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786912392581982534}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3892947295024115253
 GameObject:
   m_ObjectHideFlags: 0
