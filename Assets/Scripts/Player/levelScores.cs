@@ -15,7 +15,16 @@ public class levelScores : MonoBehaviour
     public Image storeImage;
     public bool display;
     public static float almaLife;
+    public static float clientsNewTimer;
 
+
+
+
+    [Header("blenderGolden")]
+    public static bool blenderIsGolden = false;
+
+
+    [Header("levelScores")]
     public TextMeshProUGUI lvl1Score;
     public TextMeshProUGUI lvl2Score;
     public TextMeshProUGUI totalCoinsDisplay;
@@ -24,7 +33,7 @@ public class levelScores : MonoBehaviour
     {
         storeImage.gameObject.SetActive(false);
         display = false;
-        almaLife = 22;
+        
 
     }
 
@@ -32,7 +41,7 @@ public class levelScores : MonoBehaviour
     {
         lvl1Score.text =  levelOneScore.ToString();
         lvl2Score.text = levelTwoScore.ToString();
-
+        
         
 
         totalCoinsDisplay.text = ("Coins : " + totalCoins.ToString());
@@ -43,6 +52,7 @@ public class levelScores : MonoBehaviour
             if ( display == false)
             {
                 storeImage.gameObject.SetActive(true);
+
                 display = true;
             }
             else if(display == true)
@@ -78,4 +88,17 @@ public class levelScores : MonoBehaviour
         almaLife = 25;
     }
 
+
+    public void buyClientsTime(int money)
+    {
+        totalCoins = totalCoins - money;
+        clientsNewTimer = 100;
+    }
+
+
+    public void blenderGolden(int money)
+    {
+        totalCoins = totalCoins - money;
+        blenderIsGolden = true;
+    }
 }

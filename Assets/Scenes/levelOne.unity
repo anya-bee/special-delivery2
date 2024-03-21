@@ -1120,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 1424267048243830842, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424267048243830842, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
@@ -1161,6 +1161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: pauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424267048243830842, guid: 3cb7e395a931cf14291bb412cc4b8013,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1424267048243830842, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}

@@ -4043,6 +4043,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fd30584aa1848a342b6ad7d1e7769d8e, type: 2}
   - {fileID: 2100000, guid: 68879ecbee0973147ab0a42c4ba8c88d, type: 2}
   thisBus: {fileID: 0}
+  thisClientManager: {fileID: 0}
 --- !u!1 &605958404
 GameObject:
   m_ObjectHideFlags: 0

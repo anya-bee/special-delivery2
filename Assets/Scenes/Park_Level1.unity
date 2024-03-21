@@ -1563,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 1424267049265920147, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424267049372794712, guid: 3cb7e395a931cf14291bb412cc4b8013,
         type: 3}
@@ -10068,7 +10068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1364515301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15435,6 +15435,7 @@ GameObject:
   - component: {fileID: 9054377937169556508}
   - component: {fileID: 9054377937169556507}
   - component: {fileID: 9054377937169556506}
+  - component: {fileID: 9054377937169556510}
   m_Layer: 0
   m_Name: Camion_base_01
   m_TagString: Untagged
@@ -30078,7 +30079,7 @@ MonoBehaviour:
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: a5b233b78133c314991e904a322ba755, type: 3}
   powerUpVFX: {fileID: 0}
-  bananaShoesColor: {r: 0, g: 0, b: 0, a: 0}
+  bananaShoesColor: {r: 0.8396226, g: 0.757342, b: 0.24871837, a: 0}
   cocoColor: {r: 0, g: 0, b: 0, a: 0}
   swordColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &5866666020709052149
@@ -33648,6 +33649,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 1.1778284, z: 1.2611196}
   m_Center: {x: -1.69, y: 0, z: 0.09}
+--- !u!114 &9054377937169556510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234179246911222249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMaterial: 0
 --- !u!23 &9060583554308448325
 MeshRenderer:
   m_ObjectHideFlags: 0
