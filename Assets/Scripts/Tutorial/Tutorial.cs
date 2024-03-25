@@ -24,10 +24,16 @@ public class Tutorial : MonoBehaviour
             return _instance;
         }
     }
+    private void Awake()
+    {
+        levelScores.almaLife = 22;
+        levelScores.clientsNewTimer = 60;
+    }
 
     public void ActivateTutorialBox(ScriptableObject_TutorialTip tutorialTip)
     {
         Debug.Log("activatecall");
+        
         if (uiBox.gameObject.activeSelf)
         {
             Debug.Log("emtrp");

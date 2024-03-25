@@ -106,8 +106,10 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DisplaceStrenght: 0
+    - _Dissolve: 0.074
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _FresnelGlow: 4.07
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -127,16 +129,17 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _displacementBias: 0.422
-    - _emission: 0.12
+    - _emission: 0.2
     - _gloss: 31.8
     - _rimTrheshol: 2.8
     m_Colors:
-    - _AmbientShadow: {r: 0, g: 0, b: 0, a: 0}
+    - _AmbientShadow: {r: 0.1758989, g: 0.764151, b: 0.30118808, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.29086602, g: 0.7921569, b: 0.054901946, a: 1}
+    - _Color: {r: 0.14418192, g: 0.5377358, b: 0.09841577, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainShadow: {r: 0.2711449, g: 0.3301887, b: 0.047970798, a: 0}
-    - _ShadowContrast: {r: 0.66, g: -0.39, b: 0, a: 0}
+    - _Glow: {r: 1, g: 1, b: 1, a: 0}
+    - _MainShadow: {r: 0.24731213, g: 0.32941177, b: 0.04705882, a: 0}
+    - _ShadowContrast: {r: 0.67, g: -0.45, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}
     - _emissionColor: {r: 0.21553807, g: 0.6792453, b: 0.021787068, a: 0}

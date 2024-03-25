@@ -3,7 +3,17 @@ guid: 3565176f784699f4d8421d34ce33b9a4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cone
+    second: {fileID: 2100000, guid: 98db9fcc5e4365c49a77a7664a2b1e0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stripes
+    second: {fileID: 2100000, guid: e9aa2bb4d7c10d64c983e0f034660b2c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
