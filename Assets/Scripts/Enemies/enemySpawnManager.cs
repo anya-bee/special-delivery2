@@ -63,8 +63,8 @@ public class enemySpawnManager : MonoBehaviour
                 
                 Spawn.enemyNumber = enemyCount;
 
-                
-                Spawn.currentEnemy = Instantiate(enemyTypeList[Spawn.enemyNumber], Spawn.spawnLocation.position, Quaternion.identity);
+                StartCoroutine(respawnEnemy(Spawn));
+                //Spawn.currentEnemy = Instantiate(enemyTypeList[Spawn.enemyNumber], Spawn.spawnLocation.position, Quaternion.identity);
                 
 
                 //Spawn.currentEnemy = Spawn.spawnLocation.GetComponentInChildren<EnemyHealth>().gameObject;
@@ -74,6 +74,7 @@ public class enemySpawnManager : MonoBehaviour
 
             if (Spawn.currentEnemy.GetComponent<EnemyHealth>().isDead == true)
             {
+                
                 if (enemyCount < (enemyTypeList.Count - 1))
                 {
                     enemyCount++;
@@ -96,10 +97,14 @@ public class enemySpawnManager : MonoBehaviour
 
 
 
-    IEnumerator respawnEnemy()
+    IEnumerator respawnEnemy(SpawnLocator Spawn)
     {
-        yield return new WaitForSeconds(5f);
-        newEnemy = true;
+        Spawn.currentEnemy = Instantiate(enemyTypeList[Spawn.enemyNumber], Spawn.spawnLocation.position, Quaternion.identity);
+        Spawn.currentEnemy.gameObject.SetActive(false);
+        yield return new WaitForSeconds(3f);
+        Spawn.currentEnemy.gameObject.SetActive(true);
+
+
 
     }
 

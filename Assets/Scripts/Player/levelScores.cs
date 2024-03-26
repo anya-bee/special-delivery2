@@ -8,6 +8,7 @@ public class levelScores : MonoBehaviour
 {
     public static int levelOneScore;
     public static int levelTwoScore;
+    public static int parkLevelTwoScore;
     public static int totalPoints;
     public static int totalCoins;
 
@@ -27,6 +28,7 @@ public class levelScores : MonoBehaviour
     [Header("levelScores")]
     public TextMeshProUGUI lvl1Score;
     public TextMeshProUGUI lvl2Score;
+    public TextMeshProUGUI parklvl2Score;
     public TextMeshProUGUI totalCoinsDisplay;
 
     private void Start()

@@ -52,6 +52,18 @@ public class Points : MonoBehaviour
             }
                 
         }
+
+
+        if (scene == 4) // park level 2
+        {
+
+            if (totalPoints > levelScores.parkLevelTwoScore)
+            {
+                levelScores.parkLevelTwoScore = totalPoints;
+            }
+
+        }
+
     }
 
     public void pointsTracker(int number)

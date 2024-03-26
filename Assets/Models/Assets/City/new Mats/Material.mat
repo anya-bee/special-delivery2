@@ -137,10 +137,10 @@ Material:
     m_Colors:
     - _AmbientShadow: {r: 0, g: 1, b: 0.9278846, a: 0}
     - _BaseColor: {r: 0.33729655, g: 0.3220336, b: 0.33705294, a: 1}
-    - _Color: {r: 0.05108579, g: 0.084157154, b: 0.09433961, a: 1}
+    - _Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Glow: {r: 1, g: 1, b: 1, a: 0}
-    - _MainShadow: {r: 0.9528302, g: 0.74069065, b: 0.74069065, a: 0}
+    - _MainShadow: {r: 0.7411765, g: 0.9529412, b: 0.924084, a: 0}
     - _ShadowContrast: {r: -0.4, g: -1.12, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}

@@ -23,6 +23,8 @@ public class powerUps : MonoBehaviour
 
     [Header("Power Ups VFX")]
     public VisualEffect powerUpVFX;
+    public GameObject bananaTrail;
+    public GameObject fruitySwordVFX;
     [ColorUsage(true, true)]
     public Color bananaShoesColor;
     [ColorUsage(true, true)]
@@ -37,6 +39,8 @@ public class powerUps : MonoBehaviour
         originalSpeed = almaController.speed;
         originalAttack = GetComponent<PlayerAttack>().damagePlayer;
         powerUpVFX.gameObject.SetActive(false);
+        bananaTrail.SetActive(false);
+        fruitySwordVFX.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,6 +69,7 @@ public class powerUps : MonoBehaviour
         Debug.Log(" BANANA EFFECT ");
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
+        bananaTrail.SetActive(true);
         powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
         powerUpVFX.gameObject.SetActive(true);
 
@@ -73,6 +78,8 @@ public class powerUps : MonoBehaviour
         yield return new WaitForSeconds(PowerUpDuration);
 
         currentSprite.gameObject.SetActive(false);
+        bananaTrail.SetActive(false);
+        
         currentSprite.sprite = null;
         powerUpVFX.gameObject.SetActive(false);
         almaController.speed = originalSpeed;
@@ -86,13 +93,16 @@ public class powerUps : MonoBehaviour
         Debug.Log(" FRUITY SWOOOORD");
         currentSprite.sprite = fruitySword;
         currentSprite.gameObject.SetActive(true);
+        fruitySwordVFX.SetActive(true);
         powerUpVFX.SetVector4("ParticlesColor", swordColor);
         powerUpVFX.gameObject.SetActive(true);
 
         GetComponent<PlayerAttack>().damagePlayer = 7f;
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
+
         powerUpVFX.gameObject.SetActive(false);
+        fruitySwordVFX.SetActive(false);
         currentSprite.gameObject.SetActive(false);
         currentSprite.sprite = null;
         GetComponent<PlayerAttack>().damagePlayer = originalAttack;
