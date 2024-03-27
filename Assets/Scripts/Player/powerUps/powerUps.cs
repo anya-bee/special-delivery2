@@ -6,6 +6,8 @@ using UnityEngine.VFX;
 
 public class powerUps : MonoBehaviour
 {
+    public bool isTutorial ;
+
     [Header("Current Power Up")]
     public PlayerController almaController;
     public string currentPowerUp;
@@ -36,11 +38,15 @@ public class powerUps : MonoBehaviour
 
     void Start()
     {
-        originalSpeed = almaController.speed;
-        originalAttack = GetComponent<PlayerAttack>().damagePlayer;
-        powerUpVFX.gameObject.SetActive(false);
-        bananaTrail.SetActive(false);
-        fruitySwordVFX.SetActive(false);
+        if (isTutorial == false)
+        {
+            originalSpeed = almaController.speed;
+            originalAttack = GetComponent<PlayerAttack>().damagePlayer;
+            powerUpVFX.gameObject.SetActive(false);
+            bananaTrail.SetActive(false);
+            fruitySwordVFX.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame

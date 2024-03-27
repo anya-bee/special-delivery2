@@ -68,6 +68,7 @@ public class orderChecked : MonoBehaviour
             
             clientEntered = false;
             Glass = null;
+
             for (int i = 0; i < 3; i++)
             {
                 glassOrder1[i] = null;

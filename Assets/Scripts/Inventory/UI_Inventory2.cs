@@ -43,7 +43,9 @@ public class UI_Inventory2 : MonoBehaviour
     IEnumerator loadJuice(List<string> fruitList)
     {
         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderVFX.Play();
+        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderAnimator.SetBool("openBlender", false);
         yield return new WaitForSeconds(VFXTime);
+        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderAnimator.SetBool("openBlender", true);
         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
     }
 

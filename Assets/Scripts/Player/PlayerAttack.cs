@@ -61,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         almaSlash.Play();
+        Script_AudioManager.instance.PlaySFX("stab");
         if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Strawberry_Enemy")
         {
 
