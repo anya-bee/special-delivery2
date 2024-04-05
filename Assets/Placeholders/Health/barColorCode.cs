@@ -10,10 +10,11 @@ public class barColorCode : MonoBehaviour
     public float yellowBar, redBar;
     public Color32 targetYellowColor;
     public Color32 targetRedColor;
+    public Color32 targetGreenColor;
 
     void Start()
     {
-        
+        thisBar.color = targetGreenColor;
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class barColorCode : MonoBehaviour
         if (barFillAmount < 0.6f)
         {
             yellowBar += (Time.deltaTime * 0.6f) ;
-            thisBar.color = Color.Lerp(Color.green, targetYellowColor, yellowBar);
+            thisBar.color = Color.Lerp(targetGreenColor, targetYellowColor, yellowBar);
         }
 
         if (barFillAmount < 0.35f)

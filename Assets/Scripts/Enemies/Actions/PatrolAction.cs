@@ -14,6 +14,7 @@ public class PatrolAction : AIAction
     Vector3 original;
     public bool walkPointSet;
     public float originalSpeed;
+    public float originalAcceleration;
     public float Timer ;
     private bool limaOut;
 
@@ -30,6 +31,7 @@ public class PatrolAction : AIAction
         original = transform.position;
         walkPointTransform= transform.position;
         originalSpeed = enemy.speed;
+        originalAcceleration = enemy.acceleration;
     }
 
     public override void PerformAction()
@@ -39,7 +41,8 @@ public class PatrolAction : AIAction
 
     public void Patrol()
     {
-        
+
+        enemy.acceleration = originalAcceleration;
         if (GetComponent<EnemyHealth>().enemyString == "Lime_Fruit")
         {
             GetComponent<lima_AcidSplash>().now = false;

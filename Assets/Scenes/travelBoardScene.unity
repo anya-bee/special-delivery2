@@ -476,6 +476,7 @@ MonoBehaviour:
   display: 0
   lvl1Score: {fileID: 1914076763}
   lvl2Score: {fileID: 1744964939}
+  parklvl2Score: {fileID: 0}
   totalCoinsDisplay: {fileID: 990530282}
 --- !u!225 &47806018
 CanvasGroup:
@@ -5346,7 +5347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c59d08d7b3c38419b95212437997a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenetoLoad: 1
+  scenetoLoad: 3
   loadingScreen: 0
   blueScreen: {fileID: 324952930}
 --- !u!114 &1760166948

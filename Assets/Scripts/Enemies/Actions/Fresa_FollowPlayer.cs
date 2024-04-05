@@ -33,7 +33,15 @@ public class Fresa_FollowPlayer : AIAction
         {
 
             //enemyAnimator.SetBool("attack", true);
-            GetComponent<pulpifresa_Dash>().shootTornado();
+            
+            if (GetComponent<EnemyHealth>().enemyString == "Lime_Enemy")
+            {
+                GetComponent<lima_AcidSplash>().shootAcid();
+            }
+            else
+            {
+                GetComponent<pulpifresa_Dash>().shootTornado();
+            }
 
             alreadyAttacked = true;
             Invoke(nameof(resetAction), timeBetweenAttacks);

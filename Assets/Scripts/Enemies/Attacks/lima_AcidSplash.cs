@@ -5,42 +5,49 @@ using UnityEngine.VFX;
 
 public class lima_AcidSplash : MonoBehaviour
 {
-    
-    public VisualEffect splashVFX;
+
+    public Transform spawnPoint;
+    public Transform acidPF;
+    public VisualEffect originalSplash;
     public float speed;
-    public Animator limaAnimator;
     public bool now = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( now == false)
-        {
-            splashVFX.Stop();
-        }
+
+
+        /*if (Input.GetKeyDown(KeyCode.Space))
+         {
+             var tornadoOne = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
+             tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
+         }*/
+
     }
 
 
-    public void acidSplash()
+    public void shootAcid()
     {
-        now = true;
-        limaAnimator.SetTrigger("acidS");
+        GetComponent<Animator>().SetTrigger("magicLeaf");
         StartCoroutine(fresaDash());
 
     }
 
     IEnumerator fresaDash()
     {
-
-        yield return new WaitForSeconds(0.7f);
-        splashVFX.Play();
-        //var tornadoOne = Instantiate(splashPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
-        
+        originalSplash.Play();
+        yield return new WaitForSeconds(0.3f);
+        var tornadoOne = Instantiate(acidPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        //tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
     }
+
 }

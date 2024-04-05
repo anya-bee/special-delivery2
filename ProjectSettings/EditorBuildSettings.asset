@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/gameStartScene/gameStartScene.unity
     guid: dd9dcb2728d85ba46b52963174049685
   - enabled: 1
-    path: Assets/Scenes/TutorialLevel.unity
+    path: Assets/Scenes/GAME LEVELS/TutorialLevel.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/travelBoardScene.unity
@@ -24,26 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Park Levels/Park_Level1.unity
     guid: 82401dd1aac070047886b0629f0c92bd
   - enabled: 1
-    path: Assets/Scenes/Park Levels/Park_Level2.unity
+    path: Assets/Scenes/GAME LEVELS/Park_Level2.unity
     guid: dbf46ac31b6715f418b47650ea2d8ef1
-  - enabled: 0
-    path: Assets/Scenes/Loading Screens/loadingScreen.unity
-    guid: 5cbc34f06635cfd46b4c45dfebfe8d19
-  - enabled: 0
-    path: Assets/Scenes/levelTwo.unity
-    guid: 6e34d4d337209b34394b124761911e95
-  - enabled: 0
-    path: Assets/Scenes/Loading Screens/lvlTwoLoad.unity
-    guid: cad363ee25df0c948940eefc0e60453e
-  - enabled: 0
-    path: Assets/Scenes/levelOne_Tests.unity
-    guid: b42e5fd3b31be3b40b1551c87daae793
-  - enabled: 0
-    path: Assets/Scenes/1st Exam/tutorial Level.unity
-    guid: ddbb973473b01954eb8d24b5d4fa5056
-  - enabled: 0
-    path: Assets/Scenes/1st Exam/TutorialLevelLoad.unity
-    guid: bce4ac5074acef34c943f777e18f8a08
+  - enabled: 1
+    path: Assets/Scenes/GAME LEVELS/City Level 1.unity
+    guid: e278d1e28af95714fa8cbe365e297a5b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 224bfe63e360013448a2e186e2400b3c,
       type: 2}

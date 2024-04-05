@@ -71,10 +71,7 @@ public class orderChecked : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                glassOrder1[i] = null;
-
-
-                
+                glassOrder1[i] = "";
 
             }
 
@@ -152,8 +149,12 @@ public class orderChecked : MonoBehaviour
     IEnumerator destroyGlass(GameObject object1)
     {
         yield return new WaitForSeconds(1f);
-        
+        if ( glassHitColliders[0] != null)
+        {
+            object1.GetComponent<juiceGlass>().destroyJuice();
+        }
         Glass = null;
+        glassHitColliders[0] = null;
         
         glassIsOnTray = false;
         points = 0;

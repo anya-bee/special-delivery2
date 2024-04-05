@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class acidSplashPlace : MonoBehaviour
 {
-
+    public VisualEffect acidVFX;
     public bool playerinSight;
     public float sightRange;
     public LayerMask whatisPlayer;
@@ -20,26 +21,28 @@ public class acidSplashPlace : MonoBehaviour
     void Update()
     {
         StartCoroutine(destroySelf());
-        
+        playerinSight = Physics.CheckSphere(transform.position, sightRange, whatisPlayer);
+        if (playerinSight)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 2;
+            
 
-    }
+        }
+        else
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 6;
+        }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 2;
-    }
 
-    public void OnTriggerExit(Collider other)
-    {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 6;
     }
 
     IEnumerator destroySelf()
     {
-        yield return new WaitForSeconds(8);
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().speed = 6;
+        yield return new WaitForSeconds(10f);
+
         Destroy(this.gameObject);
     }
+
 
     private void OnDrawGizmosSelected()
     {

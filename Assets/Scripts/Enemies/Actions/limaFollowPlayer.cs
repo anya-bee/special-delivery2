@@ -26,14 +26,12 @@ public class limaFollowPlayer : AIAction
     public override void PerformAction()
     {
         enemy.SetDestination(transform.position);
-        enemy.speed = 0;
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
 
-            enemyAnimator.SetBool("attack", true);
-            GetComponent<lima_AcidSplash>().acidSplash();
+            GetComponent<lima_AcidSplash>().shootAcid();
 
             alreadyAttacked = true;
             Invoke(nameof(resetAction), timeBetweenAttacks);

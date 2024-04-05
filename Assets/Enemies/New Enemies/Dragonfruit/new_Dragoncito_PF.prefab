@@ -859,7 +859,8 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
-  originalSpeed: 0
+  originalSpeed: 3.5
+  originalAcceleration: 8
   Timer: 5
   safedistance: 3
   walkpointrange: 3
