@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Fresa_FollowPlayer : AIAction
+public class boss_Fresa_Follow : AIAction
 {
 
     public NavMeshAgent enemy;
@@ -34,14 +34,11 @@ public class Fresa_FollowPlayer : AIAction
 
             //enemyAnimator.SetBool("attack", true);
             
-            if (GetComponent<EnemyHealth>().enemyString == "Lime_Enemy")
-            {
-                GetComponent<lima_AcidSplash>().shootAcid();
-            }
+            
 
-            else
+            
             {
-                GetComponent<pulpifresa_Dash>().shootTornado();
+                GetComponent<boss_PulpiDash>().shootTornado();
             }
 
             alreadyAttacked = true;

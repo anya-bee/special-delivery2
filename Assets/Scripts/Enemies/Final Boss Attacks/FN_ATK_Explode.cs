@@ -18,10 +18,17 @@ public class FN_ATK_Explode : MonoBehaviour
         pitahayaRG.AddForce(transform.up * 10f);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+        
+    }
+
     private void Update()
         
     {
-        groundInSight = Physics.CheckSphere(transform.position, sightRange, whatisGround);
+        groundInSight = Physics.CheckSphere(new Vector3(transform.position.x,transform.position.y + 0.5f,transform.position.z) , sightRange, whatisGround);
         groundAndPlayer = Physics.CheckSphere(transform.position, sightRange, groundAndPlayerLayer);
 
         if (GetComponent<EnemyHealth>().isDead == true)

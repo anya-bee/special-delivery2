@@ -785,7 +785,7 @@ MonoBehaviour:
   playerHasEntered: 0
   groundInSight: 0
   groundAndPlayer: 0
-  sightRange: 1.55
+  sightRange: 0.93
   dmg: 2
   whatisGround:
     serializedVersion: 2
