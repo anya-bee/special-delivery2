@@ -5,8 +5,9 @@ using UnityEngine;
 public class FN_PTH_MNG : MonoBehaviour
 {
 
-    [Header("Pitahaya_Prefab")]
+    [Header("Prefab")]
     public Transform pitahayaFN_PF;
+    public string fruitType;
 
     [Header("Spawn Places")]
     public List<PitahayaSpawnLocator> spawnLocations;
@@ -20,7 +21,7 @@ public class FN_PTH_MNG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        invokeFruitBombs();
+        
         
     }
 
