@@ -24,6 +24,10 @@ public class boss_PulpiDash : MonoBehaviour
     void Update()
     {
 
+        if (GetComponent<EnemyHealth>().isDead == true)
+        {
+            GetComponent<EnemyHealth>().dieAction();
+        }
 
        /*if (Input.GetKeyDown(KeyCode.Space))
         {

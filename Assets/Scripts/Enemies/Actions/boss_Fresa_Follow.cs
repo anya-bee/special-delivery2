@@ -29,6 +29,9 @@ public class boss_Fresa_Follow : AIAction
         
         transform.LookAt(player);
 
+
+        
+
         if (!alreadyAttacked)
         {
 

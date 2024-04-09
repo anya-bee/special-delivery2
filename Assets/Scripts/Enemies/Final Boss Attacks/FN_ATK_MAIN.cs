@@ -9,7 +9,6 @@ public class FN_ATK_MAIN : MonoBehaviour
     public List<string> fruitAttackManagers;
 
     [Header("Dragon State")]
-    public string dragonState;
     public bool alreadyAttacked;
     public Animator dragonAnimator;
     public int randomPitahayaStraw;
@@ -26,7 +25,13 @@ public class FN_ATK_MAIN : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!alreadyAttacked)
+        {
+            randomPitahayaStraw = Random.Range(0, 2);
+            spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
+            alreadyAttacked = true;
+            StartCoroutine(resetAttack());
+        }
             
     }
 
@@ -50,11 +55,11 @@ public class FN_ATK_MAIN : MonoBehaviour
         
     }
 
-    IEnumerator startAttack()
+    IEnumerator resetAttack()
     {
         
-        yield return new WaitForSeconds(6);
-
+        yield return new WaitForSeconds(15);
+        alreadyAttacked = false;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
         
     }
