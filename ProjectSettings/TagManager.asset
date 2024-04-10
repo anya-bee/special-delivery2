@@ -14,6 +14,8 @@ TagManager:
   - Enemies
   - storeManager
   - storeImage
+  - dragonSmoke
+  - lime_Generator
   layers:
   - Default
   - TransparentFX

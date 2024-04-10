@@ -63,8 +63,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: AttackLEFT
-      takeName: AttackLEFT
+      name: Armature|AttackRIGHT (1)
+      takeName: Armature|AttackRIGHT
       internalID: -4045874545117156875
       firstFrame: 0
       lastFrame: 80

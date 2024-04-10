@@ -10,6 +10,7 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     [Header("Dragon State")]
     public bool alreadyAttacked;
+    public bool citricAttack;
     public Animator dragonAnimator;
     public int randomPitahayaStraw;
 
@@ -31,6 +32,13 @@ public class FN_ATK_MAIN : MonoBehaviour
             spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
             alreadyAttacked = true;
             StartCoroutine(resetAttack());
+        }
+
+        if (!citricAttack)
+        {
+            StartCoroutine(limeAttack());
+            citricAttack = true;
+            StartCoroutine(resetLimes());
         }
             
     }
@@ -62,5 +70,27 @@ public class FN_ATK_MAIN : MonoBehaviour
         alreadyAttacked = false;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
         
+    }
+    IEnumerator resetLimes()
+    {
+
+        yield return new WaitForSeconds(15);
+        citricAttack = false;
+        //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
+
+    }
+
+    IEnumerator limeAttack()
+    {
+        dragonAnimator.SetTrigger("limes_ATK");
+        yield return new WaitForSeconds(1.2f);
+        attackManagers[2].invokeCitrics();
+        yield return new WaitForSeconds(0.7f);
+        attackManagers[2].invokeCitrics();
+        yield return new WaitForSeconds(0.45f);
+        attackManagers[2].invokeCitrics();
+
+
+
     }
 }

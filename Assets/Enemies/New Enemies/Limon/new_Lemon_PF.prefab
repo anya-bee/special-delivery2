@@ -697,6 +697,7 @@ MonoBehaviour:
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
   originalSpeed: 0
+  originalAcceleration: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -798,6 +799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunnedTimeRecover: 0
   player: {fileID: 0}
+  darkLines: {fileID: 0}
+  stars: {fileID: 0}
 --- !u!1 &5895212724014213866
 GameObject:
   m_ObjectHideFlags: 0

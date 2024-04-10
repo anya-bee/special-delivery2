@@ -9,6 +9,7 @@ public class FN_PTH_MNG : MonoBehaviour
     public Transform pitahayaFN_PF;
     public string fruitType;
 
+
     [Header("Spawn Places")]
     public List<PitahayaSpawnLocator> spawnLocations;
 
@@ -31,11 +32,7 @@ public class FN_PTH_MNG : MonoBehaviour
        
     }
 
-    public void randomSpawnPlaces(Transform t)
-    {
 
-
-    }
 
     public void invokeFruitBombs()
     {
@@ -48,6 +45,14 @@ public class FN_PTH_MNG : MonoBehaviour
             
         }
     }
+
+    public void invokeCitrics()
+    {
+        
+        var citricBomb = Instantiate(pitahayaFN_PF, GameObject.FindWithTag("lime_Generator").transform.position , Quaternion.identity);
+        
+    }
+
 
 }
 
