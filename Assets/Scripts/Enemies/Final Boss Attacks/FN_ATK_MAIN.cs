@@ -14,6 +14,14 @@ public class FN_ATK_MAIN : MonoBehaviour
     public Animator dragonAnimator;
     public int randomPitahayaStraw;
 
+    [Header("Citric Spawn Attack")]
+    public List<Transform> lemonSpawnPlaces;
+
+    [Header("Dragon DMG")]
+    public LayerMask dmgLayer;
+    public Collider[] lemonColliders = new Collider[3];
+    public float radius;
+
     void Start()
     {
         dragonAnimator = GetComponent<Animator>();
@@ -24,8 +32,31 @@ public class FN_ATK_MAIN : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
     void Update()
     {
+
+        int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
+        if (insideLemons == 1)
+        {
+
+            
+            if (lemonColliders[0].GetComponent<FN_Lemon_Bomb>().bossLemon == "bossLemon")
+            {
+                for (int i =0; i <3; i++)
+                {
+                    lemonColliders[i].GetComponent<FN_Lemon_Bomb>().destroySelf();
+                }
+            }
+            
+        }
+
+
         if (!alreadyAttacked)
         {
             randomPitahayaStraw = Random.Range(0, 2);
@@ -83,12 +114,12 @@ public class FN_ATK_MAIN : MonoBehaviour
     IEnumerator limeAttack()
     {
         dragonAnimator.SetTrigger("limes_ATK");
-        yield return new WaitForSeconds(1.2f);
-        attackManagers[2].invokeCitrics();
-        yield return new WaitForSeconds(0.7f);
-        attackManagers[2].invokeCitrics();
-        yield return new WaitForSeconds(0.45f);
-        attackManagers[2].invokeCitrics();
+        yield return new WaitForSeconds(1.1f);
+        attackManagers[2].invokeCitrics(lemonSpawnPlaces[0]);
+        yield return new WaitForSeconds(1f);
+        attackManagers[2].invokeCitrics(lemonSpawnPlaces[1]);
+        yield return new WaitForSeconds(0.5f);
+        attackManagers[2].invokeCitrics(lemonSpawnPlaces[2]);
 
 
 

@@ -16,6 +16,7 @@ TagManager:
   - storeImage
   - dragonSmoke
   - lime_Generator
+  - sword
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - trashCan
   - almaBus
   - storeManager
-  - 
+  - swordLayer
   - 
   - 
   - 

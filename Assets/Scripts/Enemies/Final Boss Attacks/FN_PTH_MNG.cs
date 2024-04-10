@@ -46,10 +46,11 @@ public class FN_PTH_MNG : MonoBehaviour
         }
     }
 
-    public void invokeCitrics()
+    public void invokeCitrics(Transform place)
     {
         
-        var citricBomb = Instantiate(pitahayaFN_PF, GameObject.FindWithTag("lime_Generator").transform.position , Quaternion.identity);
+        var citricBomb = Instantiate(pitahayaFN_PF, place.position , Quaternion.identity);
+        citricBomb.GetComponent<FN_Lemon_Bomb>().direction = place;
         
     }
 

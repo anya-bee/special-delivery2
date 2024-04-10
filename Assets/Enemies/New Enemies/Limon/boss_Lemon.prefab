@@ -5043,8 +5043,8 @@ Transform:
   m_GameObject: {fileID: 8924573409037109094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.7953968, y: -7.541646, z: 12.661514}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8116678655778560036}
   - {fileID: 3893095742197918655}
@@ -5060,9 +5060,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924573409037109094}
   serializedVersion: 2
-  m_Mass: 82.12
+  m_Mass: 121.59
   m_Drag: 10.56
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5079,8 +5079,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.77
-  m_Center: {x: -0.04, y: 0.51, z: 0}
+  m_Radius: 0.69
+  m_Center: {x: 0.03, y: 0.51, z: 0.19}
 --- !u!65 &8582486409191946795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5092,8 +5092,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.86, z: 0.93}
-  m_Center: {x: 0, y: 0.49, z: 0}
+  m_Size: {x: 0.46, y: 1.03, z: 1.13}
+  m_Center: {x: 0.07, y: 0.47, z: 0.18}
 --- !u!114 &8582486409191946800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,7 +5106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9395bb976893e7e4d85c92a1ce62fb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLifeAmount: 4
+  currentLifeAmount: 6
   maxLifeAmount: 10
   isDead: 0
   enemyString: Lemon_Enemy
@@ -5154,7 +5154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5433cdbfb5fb034c9d3d86700a6853b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  bossLemon: bossLemon
+  speed: 8
+  sightRange: 0.99
+  swordLayer:
+    serializedVersion: 2
+    m_Bits: 32768
+  checkSword: 0
+  direction: {fileID: 0}
 --- !u!1001 &8587948078341849039
 PrefabInstance:
   m_ObjectHideFlags: 0

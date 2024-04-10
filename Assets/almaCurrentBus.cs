@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class almaCurrentBus : MonoBehaviour
 {
-
+    public LayerMask enemyLayer;
     public  int currentMaterial;
+    public bool bossStage;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,14 @@ public class almaCurrentBus : MonoBehaviour
     void Update()
     {
         currentMaterial = storeManagement.currentBusMaterial;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (bossStage == true)
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
