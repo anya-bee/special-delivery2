@@ -398,6 +398,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -3083,6 +3084,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -4910,10 +4912,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 543450651576353026}
   originalPos: {x: 0, y: 0, z: 0}
+  introPos: {x: 0, y: 0, z: 0}
   smoothTime: 0.3
   offset: {x: -2.8, y: -1.22, z: 8.29}
   isInside: 0
   player: {fileID: 919132147923131320}
+  isTutorial: 0
 --- !u!1 &457336819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +5653,7 @@ MonoBehaviour:
   - {fileID: 1027155227}
   boolNotebook: 0
   notebookAnimator: {fileID: 605958409}
+  bar: {fileID: 0}
 --- !u!95 &605958409
 Animator:
   serializedVersion: 5
@@ -13280,6 +13285,7 @@ MonoBehaviour:
   - {fileID: 116198868}
   - {fileID: 1668047400}
   - {fileID: 1037470108}
+  orderLvlList: {fileID: 0}
   clientNMA:
   - {fileID: 1367758131}
   - {fileID: 116198872}
@@ -13293,6 +13299,11 @@ MonoBehaviour:
   currentAnimator: {fileID: 0}
   ongoingClients: 0
   count: 0
+  orderCheckedComponent: {fileID: 0}
+  clientsTimer: 0
+  bar: {fileID: 0}
+  antiTimer: 0
+  timeRemainder: 0
   completedLevel: {fileID: 1197095487}
   fadeToBlack: {fileID: 1813820810}
   gameOverBoard: {fileID: 696485806}
@@ -15732,6 +15743,9 @@ MonoBehaviour:
   juiceType: 
   blender: {fileID: 0}
   newLocation: {fileID: 2074082060}
+  blenderVFX: {fileID: 0}
+  isTutorial: 0
+  actionActivate: {fileID: 0}
 --- !u!65 &1557683666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18862,6 +18876,7 @@ MonoBehaviour:
   itemSlots: {fileID: 0}
   slotTemplate: {fileID: 0}
   cellsize: 84
+  VFXTime: 0
 --- !u!1 &1807460899
 GameObject:
   m_ObjectHideFlags: 0
@@ -19223,6 +19238,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
@@ -19509,6 +19525,8 @@ MonoBehaviour:
   - {fileID: 0}
   glassHitColliders:
   - {fileID: 0}
+  isTutorial: 0
+  actionActivate: {fileID: 0}
 --- !u!23 &1829549501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20422,6 +20440,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1307029881}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2019586928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019586930}
+  - component: {fileID: 2019586929}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2019586929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019586928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 36d8ba2060ae2e345b201a6449380554, type: 2}
+--- !u!4 &2019586930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019586928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.807138, y: 6.2591424, z: -18.365828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2036867661
 PrefabInstance:
@@ -21685,10 +21752,15 @@ MonoBehaviour:
   animator1: {fileID: 5866666019922385784}
   rtquaternion: 0.6
   isOnBus: 0
+  dizzyState: 0
+  stunnedState: 0
+  stunnedVar: 0
   radius: 2.7
   glassHitColliders:
   - {fileID: 0}
   trayCollider:
+  - {fileID: 0}
+  trashCollider:
   - {fileID: 0}
   glassLayer:
     serializedVersion: 2
@@ -21696,6 +21768,9 @@ MonoBehaviour:
   trayLayer:
     serializedVersion: 2
     m_Bits: 512
+  trashLayer:
+    serializedVersion: 2
+    m_Bits: 0
   carryingOrder: 0
   currentGlass: {fileID: 0}
 --- !u!114 &2123671279
@@ -21796,31 +21871,6 @@ MonoBehaviour:
   currentLifeAmount: 20
   maxLifeAmount: 20
   isDead: 0
-  heartSlot: {fileID: 0}
-  heartIcon: {fileID: 0}
-  HeartSprite:
-  - {fileID: 347273531}
-  - {fileID: 94727652}
-  - {fileID: 1582811806}
-  - {fileID: 202397559}
-  - {fileID: 1045822079}
-  - {fileID: 576592228}
-  - {fileID: 1264526625}
-  - {fileID: 1781622958}
-  - {fileID: 415022061}
-  - {fileID: 1497765341}
-  - {fileID: 310692070}
-  - {fileID: 895739251}
-  - {fileID: 171833753}
-  - {fileID: 620445525}
-  - {fileID: 1947888452}
-  - {fileID: 1413797761}
-  - {fileID: 953106072}
-  - {fileID: 351914535}
-  - {fileID: 537847082}
-  - {fileID: 183292267}
-  fullHeart: {fileID: 21300000, guid: 35a520bc09f02d845828ce6609e99ac2, type: 3}
-  cellsize: 75
   fadeToBlack: {fileID: 658707552}
   iconBorad: {fileID: 1409266404}
 --- !u!114 &2123671282
@@ -21858,6 +21908,14 @@ MonoBehaviour:
   - {fileID: 0}
   damagePlayer: 4
   attackMode: 0
+  enemyInrange: 0
+  pushForce: 0
+  almaSlash: {fileID: 0}
+  strawberryVFX: {fileID: 0}
+  limeVFX: {fileID: 0}
+  lemonVFX: {fileID: 0}
+  currentVfx: {fileID: 0}
+  strawberry: {fileID: 0}
 --- !u!1 &2132414989
 GameObject:
   m_ObjectHideFlags: 0
@@ -25716,6 +25774,7 @@ MonoBehaviour:
     m_Bits: 0
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  originalSpeed: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
