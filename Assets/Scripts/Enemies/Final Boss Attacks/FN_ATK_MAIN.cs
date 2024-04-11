@@ -59,7 +59,7 @@ public class FN_ATK_MAIN : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            randomPitahayaStraw = Random.Range(0, 2);
+            randomPitahayaStraw = Random.Range(0, 1);
             spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
             alreadyAttacked = true;
             StartCoroutine(resetAttack());

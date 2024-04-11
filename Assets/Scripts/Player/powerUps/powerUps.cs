@@ -76,8 +76,8 @@ public class powerUps : MonoBehaviour
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
         bananaTrail.SetActive(true);
-        powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
-        powerUpVFX.gameObject.SetActive(true);
+        //powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
+        //powerUpVFX.gameObject.SetActive(true);
 
         almaController.speed = originalSpeed + plusSpeed;
         isActivated = true;
@@ -100,8 +100,8 @@ public class powerUps : MonoBehaviour
         currentSprite.sprite = fruitySword;
         currentSprite.gameObject.SetActive(true);
         fruitySwordVFX.SetActive(true);
-        powerUpVFX.SetVector4("ParticlesColor", swordColor);
-        powerUpVFX.gameObject.SetActive(true);
+        //powerUpVFX.SetVector4("ParticlesColor", swordColor);
+        //powerUpVFX.gameObject.SetActive(true);
 
         GetComponent<PlayerAttack>().damagePlayer = 7f;
         isActivated = true;

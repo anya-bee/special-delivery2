@@ -51,11 +51,19 @@ public class PlayerAttack : MonoBehaviour
 
             if (bossBattle)
             {
-                if(enemyCollider[0].GetComponent<FN_Lemon_Bomb>().bossLemon == "bossLemon")
+                StartCoroutine(attackInterval(enemyCollider));
+
+                transform.LookAt(enemyCollider[0].gameObject.transform);
+
+                if (enemyCollider[0].GetComponent<FN_Lemon_Bomb>().bossLemon == "bossLemon")
                 {
                     enemyCollider[0].GetComponent<FN_Lemon_Bomb>().checkSword = true;
                     enemyCollider[0] = null;
                 }
+                
+                
+                    
+                
             }
             else
             {
@@ -72,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
     }
     IEnumerator playVFX()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.6f);
         almaSlash.Play();
     }
 

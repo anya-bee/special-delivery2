@@ -1147,7 +1147,7 @@ MonoBehaviour:
   Label: 
   playerHasEntered: 0
   playerinSight: 0
-  sightRange: 6.17
+  sightRange: 77.01
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1282,7 +1282,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   enemyAnimator: {fileID: 2814182851653986102}
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 6
   alreadyAttacked: 0
 --- !u!1 &9044119040101330967
 GameObject:
