@@ -144,7 +144,7 @@ Material:
     - _ShadowContrast: {r: 0.8, g: -0.24, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}
-    - _emissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _emissionColor: {r: 0.15294115, g: 0.52441484, b: 0.7921569, a: 0}
     - _fresnelColor: {r: 1, g: 1, b: 1, a: 0}
     - _glossColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

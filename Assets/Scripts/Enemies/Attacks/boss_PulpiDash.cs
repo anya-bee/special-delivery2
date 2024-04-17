@@ -24,6 +24,7 @@ public class boss_PulpiDash : MonoBehaviour
     void Update()
     {
 
+        StartCoroutine(destroyAfteraWhile());
         if (GetComponent<EnemyHealth>().isDead == true)
         {
             GetComponent<EnemyHealth>().dieAction();
@@ -60,6 +61,11 @@ public class boss_PulpiDash : MonoBehaviour
 
 
     }
+    IEnumerator destroyAfteraWhile()
+    {
 
+        yield return new WaitForSeconds(10);
+        Destroy(this.gameObject);
+    }
 
 }

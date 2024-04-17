@@ -16,6 +16,10 @@ public class FN_Lemon_Bomb : MonoBehaviour
     {
         
     }
+    public void changeLayer()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,7 +45,7 @@ public class FN_Lemon_Bomb : MonoBehaviour
     {
         
 
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     IEnumerator destroyAfteraWhile()

@@ -80,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
     }
     IEnumerator playVFX()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.5f);
         almaSlash.Play();
     }
 
@@ -104,6 +104,10 @@ public class PlayerAttack : MonoBehaviour
         {
             lemonVFX.Play();
             c[0].gameObject.GetComponentInChildren<Animator>().SetTrigger("hitEnemy");
+        }
+        else
+        {
+            Debug.Log("boss Lemon");
         }
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < c.Length; i++)

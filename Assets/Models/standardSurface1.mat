@@ -148,11 +148,11 @@ Material:
     - _WindNoiseScale: {r: 50, g: 100, b: 0, a: 0}
     - _WindSpeed: {r: -1, g: -1, b: 0, a: 0}
     - _bottomcolor: {r: 0.3669455, g: 0.5849056, b: 0.3764964, a: 0}
-    - _farColor: {r: 0.23402649, g: 0.41509432, b: 0.15076537, a: 0}
+    - _farColor: {r: 0.14901961, g: 0.41568628, b: 0.16855805, a: 0}
     - _farcolor: {r: 0.7406614, g: 0.8584906, b: 0.28751338, a: 0}
-    - _nearColor: {r: 0.82136846, g: 0.9528302, b: 0.7685564, a: 1}
+    - _nearColor: {r: 0.7296229, g: 0.990566, b: 0.62985045, a: 1}
     - _near_Far: {r: 16.2, g: 53.7, b: 0, a: 0}
-    - _terrainOffset: {r: 0.4, g: -0.3, b: 0, a: 0}
+    - _terrainOffset: {r: 0.41, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3814834180715940657
 MonoBehaviour:
