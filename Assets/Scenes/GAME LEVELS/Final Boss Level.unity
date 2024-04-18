@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 330585546}
-  _positionStrenght: {x: 0.5, y: 0.5, z: 0.5}
+  _positionStrenght: {x: 1, y: 1, z: 1}
   _rotationStrenght: {x: 1, y: 0, z: 1}
   posStrenght: 0.3
   rotStrenght: 0.3
