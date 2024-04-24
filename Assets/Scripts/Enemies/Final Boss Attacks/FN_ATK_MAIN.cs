@@ -25,10 +25,14 @@ public class FN_ATK_MAIN : MonoBehaviour
     [Header("Citric Spawn Attack")]
     public List<Transform> lemonSpawnPlaces;
 
+    [Header("Pulpidash")]
+    List<GameObject> pulpifresas;
+
     [Header("Dragon DMG")]
     public LayerMask dmgLayer;
     public Collider[] lemonColliders = new Collider[3];
     public float radius;
+    public bool strawberriesField = false;
 
     void Start()
     {
@@ -51,7 +55,13 @@ public class FN_ATK_MAIN : MonoBehaviour
     {
         healthBar.fillAmount = health / 100;
         int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
-        
+
+
+        attackManagers[1].checkStrawberry(dragonAnimator);
+
+        if (strawberriesField == true) ;
+        attackManagers[2].checkStrawberry(dragonAnimator);
+
         if ( insideLemons >0)
         {
             for ( int i = 0; i<3; i++)
@@ -73,9 +83,10 @@ public class FN_ATK_MAIN : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            randomPitahayaStraw = Random.Range(0, 1);
+            randomPitahayaStraw = Random.Range(1, 2);
             spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
             alreadyAttacked = true;
+            strawberriesField = true;
             StartCoroutine(resetAttack());
         }
 
@@ -121,6 +132,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         
         yield return new WaitForSeconds(15);
         alreadyAttacked = false;
+        strawberriesField = false;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
         
     }

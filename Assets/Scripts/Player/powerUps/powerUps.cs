@@ -22,6 +22,8 @@ public class powerUps : MonoBehaviour
     public float plusSpeed;
     public Sprite cocoShield;
     public Sprite fruitySword;
+    public Image PowerUpBar;
+    public float powerUpTimer;
 
     [Header("Power Ups VFX")]
     public VisualEffect powerUpVFX;
@@ -34,6 +36,9 @@ public class powerUps : MonoBehaviour
     [ColorUsage(true, true)]
     public Color swordColor;
 
+    
+
+
 
 
     void Start()
@@ -45,6 +50,8 @@ public class powerUps : MonoBehaviour
             powerUpVFX.gameObject.SetActive(false);
             bananaTrail.SetActive(false);
             fruitySwordVFX.SetActive(false);
+            PowerUpBar.gameObject.SetActive(false);
+            PowerUpBar.fillAmount = 1;
         }
         
     }
@@ -76,9 +83,14 @@ public class powerUps : MonoBehaviour
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
         bananaTrail.SetActive(true);
+        PowerUpBar.gameObject.SetActive(true);
         //powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
         //powerUpVFX.gameObject.SetActive(true);
-
+        PowerUpBar.fillAmount = (powerUpTimer - Time.deltaTime) / PowerUpDuration;
+        if(powerUpTimer <= 0)
+        {
+            powerUpTimer = 0;
+        }
         almaController.speed = originalSpeed + plusSpeed;
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);

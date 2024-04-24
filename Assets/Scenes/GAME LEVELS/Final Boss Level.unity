@@ -172,6 +172,7 @@ MonoBehaviour:
   pitahayaFN_PF: {fileID: 8111445375325150684, guid: da9f508737c88e848b44b380c7d8154d,
     type: 3}
   fruitType: lemon_ATK
+  noStrawberry: 0
   spawnLocations: []
   rangeX: {x: 0, y: 0}
   rangeY: {x: 0, y: 0}
@@ -1264,6 +1265,82 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 143614102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &147106949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147106950}
+  - component: {fileID: 147106952}
+  - component: {fileID: 147106951}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &147106950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147106949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 249010932}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -365.6}
+  m_SizeDelta: {x: 1251.2, y: 214}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &147106951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147106949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 716187c94932c8545aa1a748feeb3f28, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &147106952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147106949}
+  m_CullTransparentMesh: 1
 --- !u!1 &149352190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,7 +1973,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02d10aeea818fdf48b59e9c87e6542ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2508,6 +2585,7 @@ RectTransform:
   - {fileID: 1468008724}
   - {fileID: 47404706}
   - {fileID: 1762435977}
+  - {fileID: 147106950}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2563,7 +2641,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.41, y: 1.41, z: 1.41}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1610721869}
   m_Father: {fileID: 605958405}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3931,7 +4010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447688268}
   m_LocalRotation: {x: 0.028497906, y: -0, z: -0, w: 0.9995939}
-  m_LocalPosition: {x: -13.68, y: -0.89521027, z: -0.6396189}
+  m_LocalPosition: {x: -13.68, y: -1.66, z: -0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4411,7 +4490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605958405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4421,7 +4500,7 @@ RectTransform:
   m_GameObject: {fileID: 605958404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3200002, y: 3.3200002, z: 3.3200002}
+  m_LocalScale: {x: 2.53, y: 2.53, z: 2.53}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 149352191}
@@ -4431,7 +4510,6 @@ RectTransform:
   - {fileID: 250765237}
   - {fileID: 368026196}
   - {fileID: 1455871008}
-  - {fileID: 2083850027}
   m_Father: {fileID: 249010932}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4460,7 +4538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4497,6 +4575,8 @@ MonoBehaviour:
   - {fileID: 647406129}
   - {fileID: 1027155227}
   boolNotebook: 0
+  isBossBattle: 1
+  blankFruit: {fileID: 0}
   notebookAnimator: {fileID: 605958409}
   bar: {fileID: 368026197}
 --- !u!95 &605958409
@@ -5135,7 +5215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99355bb05f5b4eb47920f14a024a64ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6354,7 +6434,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 247396261}
-  - {fileID: 1610721869}
   m_Father: {fileID: 249010932}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7512,7 +7591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02d10aeea818fdf48b59e9c87e6542ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7745,6 +7824,7 @@ MonoBehaviour:
   pitahayaFN_PF: {fileID: 8209447150915501388, guid: aa9b94066750d30478e2c755437beff5,
     type: 3}
   fruitType: fresa_ATK
+  noStrawberry: 0
   spawnLocations:
   - spawnLocation: {fileID: 1327597314}
     currentBomb: {fileID: 0}
@@ -8027,13 +8107,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173285022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.98, y: 6.21, z: -16.72}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5714278, y: 3.5714288, z: 3.5714278}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1877236799}
-  m_RootOrder: 0
+  m_Father: {fileID: 543450651576353026}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1186347750 stripped
 MonoBehaviour:
@@ -11126,6 +11206,7 @@ MonoBehaviour:
   pitahayaFN_PF: {fileID: 5308377164456799043, guid: 57d2736e4b47420438f4aa811eb98c4a,
     type: 3}
   fruitType: pitahaya_ATK
+  noStrawberry: 0
   spawnLocations:
   - spawnLocation: {fileID: 1327597314}
     currentBomb: {fileID: 0}
@@ -12292,17 +12373,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610721868}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.22, y: 1.22, z: 1.22}
+  m_LocalScale: {x: 0.27359626, y: 0.27359626, z: 0.27359626}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 950552501}
-  m_RootOrder: 1
+  m_Father: {fileID: 250765237}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.52, y: -69.2}
+  m_AnchoredPosition: {x: -2.4, y: 36.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610721870
@@ -12860,7 +12941,7 @@ GameObject:
   - component: {fileID: 1762435979}
   - component: {fileID: 1762435978}
   m_Layer: 5
-  m_Name: Image
+  m_Name: bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12883,8 +12964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.05, y: -411.2}
-  m_SizeDelta: {x: 936.7, y: 100}
+  m_AnchoredPosition: {x: -32.9, y: -411.2}
+  m_SizeDelta: {x: 1115.35, y: 43.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762435978
 MonoBehaviour:
@@ -13883,7 +13964,7 @@ GameObject:
   - component: {fileID: 1877236800}
   m_Layer: 0
   m_Name: PowerUpManager
-  m_TagString: Untagged
+  m_TagString: powerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13899,8 +13980,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1173285023}
+  m_Children: []
   m_Father: {fileID: 1307029881}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13919,6 +13999,11 @@ MonoBehaviour:
   powerOrbInstance: {fileID: 0}
   orbSpawnPlace: {fileID: 1173285023}
   randomOrb: 0
+  clientOrderCode: {fileID: 605958408}
+  fruitPowerOrb:
+  - 
+  - 
+  - 
   orbTypeList:
   - {fileID: 7220234760528338505, guid: 85c4eccbbd7d6b24f91e0b16cd50d872, type: 3}
   - {fileID: 7110617946062456829, guid: 9efa702f47a510e4381d3e024177d879, type: 3}
@@ -14522,7 +14607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabFruit: {fileID: 2864771666871996761, guid: 22ee9b6fbf70ff443b9ab46b1ecb907c,
     type: 3}
-  lemonSprite: {fileID: 21300000, guid: 02d10aeea818fdf48b59e9c87e6542ad, type: 3}
+  lemonSprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   limeSprite: {fileID: 21300000, guid: 99355bb05f5b4eb47920f14a024a64ab, type: 3}
   strawberrySprite: {fileID: 21300000, guid: e53ae4195cf1e5e4b9bbf7d73a2eb1fd, type: 3}
   pitahayaSprite: {fileID: 21300000, guid: 225628b5ad764e8408603eccd86293b1, type: 3}
@@ -15893,82 +15978,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077719139}
   m_CullTransparentMesh: 1
---- !u!1 &2083850026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2083850027}
-  - component: {fileID: 2083850029}
-  - component: {fileID: 2083850028}
-  m_Layer: 5
-  m_Name: Icon Power Up
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2083850027
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083850026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 605958405}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59, y: 53.28}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2083850028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083850026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2083850029
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083850026}
-  m_CullTransparentMesh: 1
 --- !u!1 &2098030227
 GameObject:
   m_ObjectHideFlags: 0
@@ -16794,6 +16803,7 @@ Transform:
   - {fileID: 781189811}
   - {fileID: 1291011628}
   - {fileID: 1484972240}
+  - {fileID: 1173285023}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -20988,12 +20998,14 @@ MonoBehaviour:
   isActivated: 0
   originalSpeed: 0
   originalAttack: 0
-  PowerUpDuration: 5
+  PowerUpDuration: 10
   currentSprite: {fileID: 1610721870}
   bananaShoe: {fileID: 21300000, guid: 4df4f69fd2d60ef4ab55182f2e541150, type: 3}
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: 27f805628619e994684486d9acc10dc5, type: 3}
+  PowerUpBar: {fileID: 368026197}
+  powerUpTimer: 0
   powerUpVFX: {fileID: 5476953731551771043}
   bananaTrail: {fileID: 6597391274015560867}
   fruitySwordVFX: {fileID: 350178368}
@@ -26683,6 +26695,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   radius: 3.37
+  strawberriesField: 0
 --- !u!114 &7077990892370908631
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4795,7 +4795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433507526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.42, y: 0, z: -14.2}
+  m_LocalPosition: {x: 8.64, y: 0, z: -14.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5427,6 +5427,8 @@ MonoBehaviour:
   - {fileID: 647406129}
   - {fileID: 1027155227}
   boolNotebook: 0
+  isBossBattle: 0
+  blankFruit: {fileID: 0}
   notebookAnimator: {fileID: 605958409}
   bar: {fileID: 368026197}
 --- !u!95 &605958409
@@ -5863,7 +5865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643042769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: 0, z: -21.12}
+  m_LocalPosition: {x: 15.05, y: 0, z: -20.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14963,6 +14965,7 @@ MonoBehaviour:
   slotTemplate: {fileID: 0}
   cellsize: 84
   VFXTime: 0
+  isOnBattle: 0
 --- !u!1 &1807460899
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,6 +18445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSword: {fileID: 648525019}
+  bossBattle: 0
   attackRange: {fileID: 139829654}
   radius: 0.9
   enemiesLayer:
@@ -18483,7 +18487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130083179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: -5.2}
+  m_LocalPosition: {x: 12.65, y: 0, z: -10.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22317,6 +22321,8 @@ MonoBehaviour:
   plusSpeed: 0
   cocoShield: {fileID: 0}
   fruitySword: {fileID: 0}
+  PowerUpBar: {fileID: 0}
+  powerUpTimer: 0
   powerUpVFX: {fileID: 0}
   bananaTrail: {fileID: 0}
   fruitySwordVFX: {fileID: 0}
@@ -27179,7 +27185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   currentMaterial: 0
+  bossStage: 0
 --- !u!1 &9216263439834275070
 GameObject:
   m_ObjectHideFlags: 0

@@ -103,8 +103,9 @@ public class Client_Manager : MonoBehaviour
             if(Vector3.Distance(currentClient.transform.position,enterStage.position) <2)
             {
                 isonTray = true;
-                
-                
+                Script_AudioManager.instance.PlaySFX("clientEnter");
+
+
             }
             
         }
@@ -128,6 +129,7 @@ public class Client_Manager : MonoBehaviour
         
         if(currentClient.GetComponent<clientOrder>().orderFinished == true)
         {
+            
             currentAnimator.SetBool("isStanding", false);
           
             currentNMA.SetDestination(exitStage.position);
@@ -139,6 +141,7 @@ public class Client_Manager : MonoBehaviour
                 ongoingClients = clientList.Count;
                 
                 StartCoroutine(appearButton());
+                Script_AudioManager.instance.PlaySFX("levelFinish");
             }
 
             if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 10 && currentClient.GetComponent<clientOrder>().lastClient == false)

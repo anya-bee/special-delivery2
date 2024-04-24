@@ -8,7 +8,7 @@ public class FN_PTH_MNG : MonoBehaviour
     [Header("Prefab")]
     public Transform pitahayaFN_PF;
     public string fruitType;
-
+    public int noStrawberry;
 
     [Header("Spawn Places")]
     public List<PitahayaSpawnLocator> spawnLocations;
@@ -42,7 +42,20 @@ public class FN_PTH_MNG : MonoBehaviour
             Vector3 randomBombSpawn = new Vector3(Random.Range(rangeX.x , rangeX.y), Random.Range(rangeY.x, rangeY.y), Random.Range(rangeZ.x, rangeZ.y));
             Spawn.spawnLocation.position = randomBombSpawn;
             Spawn.currentBomb = Instantiate(pitahayaFN_PF, Spawn.spawnLocation.position, Quaternion.identity);
-            
+            if (Spawn.currentBomb == null)
+            {
+                noStrawberry++;
+            }
+        }
+    }
+
+    public void checkStrawberry(Animator anim1)
+    {
+        
+       
+        if (noStrawberry == 3)
+        {
+            anim1.SetLayerWeight(1, 1f);
         }
     }
 

@@ -11,6 +11,8 @@ public class clientOrderUI : MonoBehaviour
     public GameObject assignedTray;
     public Image[] orderSprite;
     public bool boolNotebook = false;
+    public bool isBossBattle;
+    public Sprite blankFruit;
 
     public Animator notebookAnimator;
 
@@ -23,14 +25,32 @@ public class clientOrderUI : MonoBehaviour
         clientOrder.Add("");
         clientOrder.Add("");
         notebookAnimator.SetBool("orderReady", true);
+        blankFruitsIcon();
+        
+    }
+    public void blankFruitsIcon()
+    {
+        for (int i = 0; i < orderSprite.Length; i++)
+        {
+            orderSprite[i].sprite = blankFruit;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        boolNotebook = !assignedTray.GetComponent<orderChecked>().clientEntered;
+        if (isBossBattle == true)
+        {
+            notebookAnimator.SetBool("orderReady", true);
+            boolNotebook = false;
+        }
+        else
+        {
+            boolNotebook = !assignedTray.GetComponent<orderChecked>().clientEntered;
+        }
         
-        if (boolNotebook == false )
+        
+        if (boolNotebook == false && isBossBattle==false)
         {
             
             notebookAnimator.SetBool("orderReady", false);
@@ -40,6 +60,16 @@ public class clientOrderUI : MonoBehaviour
             {
                 orderSprite[i].sprite = GetOrderSprite(clientOrder[i]);
             }
+        }
+        else if(isBossBattle == true && boolNotebook == false)
+        {
+            notebookAnimator.SetBool("orderReady", false);
+            for (int i = 0; i < orderSprite.Length; i++)
+            {
+
+                orderSprite[i].sprite = GetOrderSprite(GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitList[i]);
+            }
+            
         }
 
         if (boolNotebook == true)
@@ -68,6 +98,7 @@ public class clientOrderUI : MonoBehaviour
             case "Lime_Fruit": return fruitImageReference.Instance.limeSprite;
             case "Strawberry_Fruit": return fruitImageReference.Instance.strawberrySprite;
             case "Pitahaya_Fruit": return fruitImageReference.Instance.pitahayaSprite;
+            
         }
     }
 

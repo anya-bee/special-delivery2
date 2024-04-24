@@ -24,6 +24,12 @@ public class Tutorial : MonoBehaviour
             return _instance;
         }
     }
+    private void Start()
+    {
+
+        levelScores.almaLife = 22;
+        levelScores.clientsNewTimer = 60;
+    }
     private void Awake()
     {
         levelScores.almaLife = 22;
@@ -44,6 +50,7 @@ public class Tutorial : MonoBehaviour
         dialogue.StringReference = tutorialTip._textToDisplay;
         deactivateBox = StartCoroutine(DeactivateTutorialBox(tutorialTip._timeToShow));
     }
+    
 
     IEnumerator DeactivateTutorialBox(float time)
     {

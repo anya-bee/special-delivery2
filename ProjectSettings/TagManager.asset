@@ -17,6 +17,7 @@ TagManager:
   - dragonSmoke
   - lime_Generator
   - sword
+  - powerUp
   layers:
   - Default
   - TransparentFX
