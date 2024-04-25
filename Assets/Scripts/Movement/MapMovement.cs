@@ -9,9 +9,18 @@ public class MapMovement : MonoBehaviour
     public Image busImage;
     public int station = 0;
 
+    
+
+
+
     void Start()
     {
         busAnimator = busImage.GetComponent<Animator>();
+    }
+
+    public void goToParkAction()
+    {
+        busAnimator.SetTrigger("Forward");
     }
 
     // Update is called once per frame

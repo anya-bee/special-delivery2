@@ -28,17 +28,26 @@ public class enterLevel : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("enter");
         lvlPopUp.SetActive(true);
         startButton.SetActive(true);
         lvlPopUp.GetComponent<starScoreDisplay>().starsCoroutine();
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         lvlPopUp.SetActive(false);
         startButton.SetActive(false);
-
     }
-
 
 }

@@ -57,10 +57,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
 
 
-        attackManagers[1].checkStrawberry(dragonAnimator);
-
-        if (strawberriesField == true) ;
-        attackManagers[2].checkStrawberry(dragonAnimator);
+        if ( fruitAttackManagers[2].)
 
         if ( insideLemons >0)
         {
@@ -96,6 +93,8 @@ public class FN_ATK_MAIN : MonoBehaviour
             citricAttack = true;
             StartCoroutine(resetLimes());
         }
+
+
             
     }
 

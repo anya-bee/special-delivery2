@@ -14965,7 +14965,6 @@ MonoBehaviour:
   slotTemplate: {fileID: 0}
   cellsize: 84
   VFXTime: 0
-  isOnBattle: 0
 --- !u!1 &1807460899
 GameObject:
   m_ObjectHideFlags: 0
@@ -16390,10 +16389,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabFruit: {fileID: 2864771666871996761, guid: 22ee9b6fbf70ff443b9ab46b1ecb907c,
     type: 3}
-  lemonSprite: {fileID: 21300000, guid: 02d10aeea818fdf48b59e9c87e6542ad, type: 3}
-  limeSprite: {fileID: 21300000, guid: 99355bb05f5b4eb47920f14a024a64ab, type: 3}
-  strawberrySprite: {fileID: 21300000, guid: e53ae4195cf1e5e4b9bbf7d73a2eb1fd, type: 3}
-  pitahayaSprite: {fileID: 21300000, guid: 225628b5ad764e8408603eccd86293b1, type: 3}
+  lemonSprite: {fileID: 21300000, guid: d87e5a804ee997944a1f66bb39bd9794, type: 3}
+  limeSprite: {fileID: 21300000, guid: 99bebbdd5953f884bb795a13a27a75d0, type: 3}
+  strawberrySprite: {fileID: 21300000, guid: d8255cddbee350d45be0f54701683d76, type: 3}
+  pitahayaSprite: {fileID: 21300000, guid: dea7c79bbf9310741b93ff86381361e4, type: 3}
   strawberryColor:
     serializedVersion: 2
     rgba: 255

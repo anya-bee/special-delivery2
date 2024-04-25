@@ -22,8 +22,12 @@ public class FN_PTH_MNG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        foreach (PitahayaSpawnLocator Spawn in spawnLocations)
+        {
+
+            Spawn.isDead = false;
+        }
+
     }
 
     // Update is called once per frame
@@ -44,7 +48,7 @@ public class FN_PTH_MNG : MonoBehaviour
             Spawn.currentBomb = Instantiate(pitahayaFN_PF, Spawn.spawnLocation.position, Quaternion.identity);
             if (Spawn.currentBomb == null)
             {
-                noStrawberry++;
+                Spawn.isDead = true;
             }
         }
     }
@@ -75,5 +79,5 @@ public class PitahayaSpawnLocator
 {
     public Transform spawnLocation;
     public Transform currentBomb;
-    
+    public bool isDead;
 }
