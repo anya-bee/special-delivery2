@@ -3807,6 +3807,10 @@ MonoBehaviour:
   sfxSource: {fileID: 411960387}
   playerSource: {fileID: 0}
   enemySource: {fileID: 0}
+  minPitch: 0
+  maxPitch: 0
+  minVol: 0
+  maxVol: 0
   bgAudio:
   - name: forestStage
     audioClip: {fileID: 8300000, guid: 120f7acac5089f44194e6a197b9b3535, type: 3}
@@ -4505,6 +4509,8 @@ MonoBehaviour:
   - {fileID: 647406129}
   - {fileID: 1027155227}
   boolNotebook: 0
+  isBossBattle: 0
+  blankFruit: {fileID: 0}
   notebookAnimator: {fileID: 605958409}
   bar: {fileID: 368026197}
 --- !u!95 &605958409
@@ -13063,6 +13069,8 @@ MonoBehaviour:
   powerOrbInstance: {fileID: 0}
   orbSpawnPlace: {fileID: 1173285023}
   randomOrb: 0
+  clientOrderCode: {fileID: 0}
+  fruitPowerOrb: []
   orbTypeList:
   - {fileID: 7220234760528338505, guid: 85c4eccbbd7d6b24f91e0b16cd50d872, type: 3}
   - {fileID: 7110617946062456829, guid: 9efa702f47a510e4381d3e024177d879, type: 3}
@@ -15439,17 +15447,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSword: {fileID: 648525019}
+  bossBattle: 0
   attackRange: {fileID: 139829654}
   radius: 1.29
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 1024
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 0
   enemyCollider:
   - {fileID: 0}
   damagePlayer: 4
   attackMode: 0
   enemyInrange: 0
   pushForce: 0
+  dragonHit:
+    m_PersistentCalls:
+      m_Calls: []
   almaSlash: {fileID: 1291011626}
   strawberryVFX: {fileID: 1564061703}
   limeVFX: {fileID: 1256907828}
@@ -29953,6 +29968,8 @@ MonoBehaviour:
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: 27f805628619e994684486d9acc10dc5, type: 3}
+  PowerUpBar: {fileID: 0}
+  powerUpTimer: 0
   powerUpVFX: {fileID: 5476953731551771043}
   bananaTrail: {fileID: 6597391274015560867}
   fruitySwordVFX: {fileID: 350178368}
@@ -38087,7 +38104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   currentMaterial: 0
+  bossStage: 0
 --- !u!23 &9060583554308448325
 MeshRenderer:
   m_ObjectHideFlags: 0

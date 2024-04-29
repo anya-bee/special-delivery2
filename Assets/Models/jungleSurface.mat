@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _terraintexture:
-        m_Texture: {fileID: 2800000, guid: 3c9d82617de166b42aa44cfadc3d65af, type: 3}
+        m_Texture: {fileID: 2800000, guid: eac2c4836c23edb4bbefaeb4b8e9dd57, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -152,7 +152,7 @@ Material:
     - _farcolor: {r: 0.7406614, g: 0.8584906, b: 0.28751338, a: 0}
     - _nearColor: {r: 0.7296229, g: 0.990566, b: 0.62985045, a: 1}
     - _near_Far: {r: 16.75, g: 53.7, b: 0, a: 0}
-    - _terrainOffset: {r: 0.39, g: 0.12, b: 0, a: 0}
+    - _terrainOffset: {r: -0.69, g: 0.27, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3814834180715940657
 MonoBehaviour:

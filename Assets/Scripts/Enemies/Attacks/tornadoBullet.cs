@@ -22,7 +22,7 @@ public class tornadoBullet : MonoBehaviour
         playerinSight = Physics.CheckSphere(transform.position, sightRange, whatisPlayer);
         if (playerinSight)
         {
-            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(2);
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
             GameObject.FindWithTag("Player").GetComponent<Animator>().SetLayerWeight(1, 1f);
             GameObject.FindWithTag("Player").GetComponent<PlayerController>().startCoroutineForHits();
 

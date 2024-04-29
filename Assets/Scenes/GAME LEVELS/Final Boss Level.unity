@@ -3778,8 +3778,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
-  - {fileID: 99656467281103303, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
+  - {fileID: 2100000, guid: 864bc064708abcc46950b811fa0403e8, type: 2}
+  - {fileID: 2100000, guid: 269e71a0475406941a5a0c53c05dbb2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6209,6 +6209,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1420561277226521088, guid: 51e2030e4b6bb1949851481ac5bfa761,
+        type: 3}
+      propertyPath: m_TerrainData
+      value: 
+      objectReference: {fileID: 15600000, guid: e5e10359dc544d347874bd2e3fc12bb6,
+        type: 2}
     - target: {fileID: 1420561277226521089, guid: 51e2030e4b6bb1949851481ac5bfa761,
         type: 3}
       propertyPath: m_DrawTreesAndFoliage
@@ -6560,8 +6566,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
-  - {fileID: 99656467281103303, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
+  - {fileID: 2100000, guid: 864bc064708abcc46950b811fa0403e8, type: 2}
+  - {fileID: 2100000, guid: 269e71a0475406941a5a0c53c05dbb2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9168,8 +9174,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
-  - {fileID: 99656467281103303, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
+  - {fileID: 2100000, guid: 864bc064708abcc46950b811fa0403e8, type: 2}
+  - {fileID: 2100000, guid: 269e71a0475406941a5a0c53c05dbb2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11368,8 +11374,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
-  - {fileID: 99656467281103303, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
+  - {fileID: 2100000, guid: 864bc064708abcc46950b811fa0403e8, type: 2}
+  - {fileID: 2100000, guid: 269e71a0475406941a5a0c53c05dbb2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15366,10 +15372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabFruit: {fileID: 2864771666871996761, guid: 22ee9b6fbf70ff443b9ab46b1ecb907c,
     type: 3}
-  lemonSprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
-  limeSprite: {fileID: 21300000, guid: 99355bb05f5b4eb47920f14a024a64ab, type: 3}
-  strawberrySprite: {fileID: 21300000, guid: e53ae4195cf1e5e4b9bbf7d73a2eb1fd, type: 3}
-  pitahayaSprite: {fileID: 21300000, guid: 225628b5ad764e8408603eccd86293b1, type: 3}
+  lemonSprite: {fileID: 21300000, guid: d87e5a804ee997944a1f66bb39bd9794, type: 3}
+  limeSprite: {fileID: 21300000, guid: 99bebbdd5953f884bb795a13a27a75d0, type: 3}
+  strawberrySprite: {fileID: 21300000, guid: d8255cddbee350d45be0f54701683d76, type: 3}
+  pitahayaSprite: {fileID: 21300000, guid: dea7c79bbf9310741b93ff86381361e4, type: 3}
   strawberryColor:
     serializedVersion: 2
     rgba: 255
@@ -15466,8 +15472,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
-  - {fileID: 99656467281103303, guid: 548ba0875e51fc6488be2bef40c4d335, type: 3}
+  - {fileID: 2100000, guid: 864bc064708abcc46950b811fa0403e8, type: 2}
+  - {fileID: 2100000, guid: 269e71a0475406941a5a0c53c05dbb2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17783,7 +17789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147923131320}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -16.2, y: 0.28, z: -16.89}
+  m_LocalPosition: {x: -16.2, y: 0.69, z: -12.73}
   m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
   m_ConstrainProportionsScale: 1
   m_Children:

@@ -5203,6 +5203,7 @@ MonoBehaviour:
   walkPointTransform: {x: 0, y: 0, z: 0}
   walkPointSet: 0
   originalSpeed: 0
+  originalAcceleration: 0
   Timer: 5
   safedistance: 3
   walkpointrange: 3
