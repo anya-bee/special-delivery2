@@ -54,12 +54,12 @@ public class Points : MonoBehaviour
         }
 
 
-        if (scene == 4) // park level 2
+        if (scene == 3) // park level 2
         {
 
-            if (totalPoints > levelScores.parkLevelTwoScore)
+            if (totalPoints > levelScores.levelThreeScore)
             {
-                levelScores.parkLevelTwoScore = totalPoints;
+                levelScores.levelThreeScore = totalPoints;
             }
 
         }

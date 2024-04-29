@@ -981,7 +981,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8837751441874053110}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10000000
   m_Drag: 50
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1260,6 +1260,7 @@ MonoBehaviour:
     type: 3}
   speed: 2
   now: 0
+  deadStrawberry: 0
 --- !u!114 &28644849180275701
 MonoBehaviour:
   m_ObjectHideFlags: 0

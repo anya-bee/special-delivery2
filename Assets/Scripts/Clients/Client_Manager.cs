@@ -75,8 +75,10 @@ public class Client_Manager : MonoBehaviour
     IEnumerator appearButton()
     {
         fadeToBlack.gameObject.SetActive(true);
+        
         yield return new WaitForSeconds(1f);
         completedLevel.gameObject.SetActive(true);
+        Script_AudioManager.instance.PlaySFX("levelFinish");
         yield return new WaitForSeconds(2f);
         gameOverBoard.gameObject.SetActive(true);
         
@@ -141,7 +143,7 @@ public class Client_Manager : MonoBehaviour
                 ongoingClients = clientList.Count;
                 
                 StartCoroutine(appearButton());
-                Script_AudioManager.instance.PlaySFX("levelFinish");
+                
             }
 
             if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 10 && currentClient.GetComponent<clientOrder>().lastClient == false)

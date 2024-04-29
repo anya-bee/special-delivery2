@@ -36,13 +36,13 @@ public class Inventory
             if (!fruitInInventory)
             {
                 fruitsList.Add(f);
-                Script_AudioManager.instance.PlaySFX("pickFruit");
+                
             }
         }
         else
         {
             fruitsList.Add(f);
-            Script_AudioManager.instance.PlaySFX("pickFruit");
+            
         }
         onFruitListChanged?.Invoke(this, EventArgs.Empty);
     }

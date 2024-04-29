@@ -10,11 +10,12 @@ public class boss_PulpiDash : MonoBehaviour
     public Transform tornadoPF;
     public float speed;
     public bool now = false;
+    public bool deadStrawberry;
 
 
     void Start()
     {
-        
+        deadStrawberry = false;
         
         
         
@@ -27,6 +28,8 @@ public class boss_PulpiDash : MonoBehaviour
         StartCoroutine(destroyAfteraWhile());
         if (GetComponent<EnemyHealth>().isDead == true)
         {
+            Debug.Log("dead strawberry");
+            FN_ATK_MAIN.deathStrawberry++;
             GetComponent<EnemyHealth>().dieAction();
         }
 
@@ -64,7 +67,7 @@ public class boss_PulpiDash : MonoBehaviour
     IEnumerator destroyAfteraWhile()
     {
 
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(15f);
         Destroy(this.gameObject);
     }
 

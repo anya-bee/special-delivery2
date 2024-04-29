@@ -21,14 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/gameStartScene/Scene_Story.unity
     guid: fa3f93bea74d2584282850c7d651a3de
   - enabled: 1
-    path: Assets/Scenes/Park Levels/Park_Level1.unity
-    guid: 82401dd1aac070047886b0629f0c92bd
-  - enabled: 1
     path: Assets/Scenes/GAME LEVELS/Park_Level2.unity
     guid: dbf46ac31b6715f418b47650ea2d8ef1
   - enabled: 1
-    path: Assets/Scenes/GAME LEVELS/City Level 1.unity
-    guid: e278d1e28af95714fa8cbe365e297a5b
+    path: Assets/Scenes/GAME LEVELS/JungleLevel.unity
+    guid: 01d98ddb40eec9c4cbb1e575fc1a189e
+  - enabled: 1
+    path: Assets/Scenes/GAME LEVELS/Final Boss Level.unity
+    guid: f4efe31304d37b04da50202d3b33cce2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 224bfe63e360013448a2e186e2400b3c,
       type: 2}

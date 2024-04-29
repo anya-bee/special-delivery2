@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public class FN_ATK_MAIN : MonoBehaviour
 {
     
     public List<FN_PTH_MNG> attackManagers;
     public List<string> fruitAttackManagers;
-    
+    public static int deathStrawberry = 0;
+
 
     [Header("Health")]
     public EnemyHealth bossHealth;
@@ -21,12 +23,12 @@ public class FN_ATK_MAIN : MonoBehaviour
     public bool citricAttack;
     public Animator dragonAnimator;
     public int randomPitahayaStraw;
+    public VisualEffect dizzyDragon;
 
     [Header("Citric Spawn Attack")]
     public List<Transform> lemonSpawnPlaces;
 
-    [Header("Pulpidash")]
-    List<GameObject> pulpifresas;
+
 
     [Header("Dragon DMG")]
     public LayerMask dmgLayer;
@@ -36,6 +38,7 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     void Start()
     {
+        dizzyDragon.Stop();
         dragonAnimator = GetComponent<Animator>();
         for (int i =0; i< attackManagers.Count; i++)
         {
@@ -51,13 +54,26 @@ public class FN_ATK_MAIN : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+
+    public void hitDragon()
+    {
+        health -= 10;
+        CameraShake.Invoke();
+        StartCoroutine(dragonHit());
+    }
     void Update()
     {
         healthBar.fillAmount = health / 100;
         int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
 
-
-        if ( fruitAttackManagers[2].)
+        /*for ( int i = 0; i < 3; i++)
+        {
+            pulpifresas[i] = attackManagers[1].spawnLocations[i].currentBomb;
+            if (pulpifresas[i].GetComponent<boss_PulpiDash>().deadStrawberry == true) { 
+            }
+        }*/
+        
+        
 
         if ( insideLemons >0)
         {
@@ -77,17 +93,26 @@ public class FN_ATK_MAIN : MonoBehaviour
             
         }
 
+        if( deathStrawberry == 3)
+        {
+            GetComponent<Animator>().SetTrigger("dizzy");
+            StartCoroutine(longDragonHit());
+            deathStrawberry = 0;
+        }
 
-        if (!alreadyAttacked)
+
+        if (alreadyAttacked == false)
         {
             randomPitahayaStraw = Random.Range(1, 2);
             spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
+            
+            
             alreadyAttacked = true;
             strawberriesField = true;
-            StartCoroutine(resetAttack());
+            //StartCoroutine(resetAttack());
         }
 
-        if (!citricAttack)
+        if (citricAttack == false)
         {
             StartCoroutine(limeAttack());
             citricAttack = true;
@@ -104,6 +129,15 @@ public class FN_ATK_MAIN : MonoBehaviour
         GetComponent<Animator>().SetLayerWeight(1, 1f);
         yield return new WaitForSeconds(0.8f);
         GetComponent<Animator>().SetLayerWeight(1, 0f);
+    }
+
+    IEnumerator longDragonHit()
+    {
+        
+        dizzyDragon.Play();
+        yield return new WaitForSeconds(10f);
+        dizzyDragon.Stop();
+        deathStrawberry = 0;
     }
 
     public void spawnAttack(FN_PTH_MNG attack,string fruitType)
@@ -129,8 +163,9 @@ public class FN_ATK_MAIN : MonoBehaviour
     IEnumerator resetAttack()
     {
         
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(25f);
         alreadyAttacked = false;
+        deathStrawberry = 0;
         strawberriesField = false;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
         

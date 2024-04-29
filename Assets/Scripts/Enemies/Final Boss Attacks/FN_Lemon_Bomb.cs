@@ -24,6 +24,8 @@ public class FN_Lemon_Bomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         StartCoroutine(destroyAfteraWhile());
         GetComponent<Rigidbody>().velocity = direction.right * speed;
 

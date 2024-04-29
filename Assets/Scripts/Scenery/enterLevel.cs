@@ -38,6 +38,7 @@ public class enterLevel : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Script_AudioManager.instance.PlaySFX("enterLevelSound");
         Debug.Log("enter");
         lvlPopUp.SetActive(true);
         startButton.SetActive(true);

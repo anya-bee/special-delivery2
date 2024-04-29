@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.VFX;
+using UnityEngine.Events;
 using UnityEditor.ShaderGraph;
 
 public class PlayerAttack : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackRange;
     public float radius;
     public LayerMask enemiesLayer;
+    public LayerMask bossLayer;
     public Collider[] enemyCollider = new Collider[1];
     public float damagePlayer;
     public bool attackMode = false;
@@ -19,6 +21,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Enemy")]
     public bool enemyInrange;
     public float pushForce;
+    public UnityEvent dragonHit;
 
     [Header("VFX Reference")]
     public VisualEffect almaSlash;
@@ -45,6 +48,12 @@ public class PlayerAttack : MonoBehaviour
         playerSword.SetActive(true);
         StartCoroutine(playVFX());
         int numColliders2 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, enemyCollider, enemiesLayer);
+        int numColliders5 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, enemyCollider, bossLayer);
+
+        if(numColliders5 == 1)
+        {
+            dragonHit.Invoke();
+        }
 
         if (numColliders2 == 1)
         {
@@ -60,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
                     enemyCollider[0].GetComponent<FN_Lemon_Bomb>().checkSword = true;
                     enemyCollider[0] = null;
                 }
+                
                 
                 
                     

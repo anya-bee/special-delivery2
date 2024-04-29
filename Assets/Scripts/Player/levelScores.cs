@@ -8,7 +8,7 @@ public class levelScores : MonoBehaviour
 {
     public static int levelOneScore;
     public static int levelTwoScore;
-    public static int parkLevelTwoScore;
+    public static int levelThreeScore;
     public static int totalPoints;
     public static int totalCoins;
 
@@ -28,7 +28,7 @@ public class levelScores : MonoBehaviour
     [Header("levelScores")]
     public TextMeshProUGUI lvl1Score;
     public TextMeshProUGUI lvl2Score;
-    public TextMeshProUGUI parklvl2Score;
+    public TextMeshProUGUI lvl3Score;
     public TextMeshProUGUI totalCoinsDisplay;
 
     private void Start()
@@ -43,8 +43,9 @@ public class levelScores : MonoBehaviour
     {
         lvl1Score.text =  levelOneScore.ToString();
         lvl2Score.text = levelTwoScore.ToString();
-        
-        
+        lvl3Score.text = levelThreeScore.ToString();
+
+
 
         totalCoinsDisplay.text = ("Coins : " + totalCoins.ToString());
 

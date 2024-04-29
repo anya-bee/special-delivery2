@@ -44,6 +44,7 @@ public class PlayerInventory2 : MonoBehaviour
         if ( fruitDrop1 != null)
         {
             //touching item
+            Script_AudioManager.instance.PlaySFX("pickFruit");
             inventory.addFruit(fruitDrop1.getFruit());
             fruitDrop1.DestroySelf();
 

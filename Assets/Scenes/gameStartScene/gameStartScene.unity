@@ -2650,8 +2650,12 @@ MonoBehaviour:
   bgAudio:
   - name: mainMenu
     audioClip: {fileID: 8300000, guid: d2c5a9c64aa25af4392d4bc368d24c1d, type: 3}
-  - name: storyTelling
+  - name: cityLevel
+    audioClip: {fileID: 8300000, guid: 8107fbb1a479b1748bd2fe04e20734a7, type: 3}
+  - name: parkLevel
     audioClip: {fileID: 8300000, guid: 45b8467fe7175084a93496c32c63c3fa, type: 3}
+  - name: jungleLevel
+    audioClip: {fileID: 8300000, guid: 40ba38f6e30772e4ba9a273affe1cf19, type: 3}
   sfxAudio:
   - name: pickFruit
     audioClip: {fileID: 8300000, guid: d86a2a06c5d371542a4725fd610432e3, type: 3}
@@ -2663,6 +2667,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 9d8bd91c17e4f1d4ab493cf60f03a31f, type: 3}
   - name: levelFinish
     audioClip: {fileID: 8300000, guid: 1649dbc6830f8514da10456a448bdf17, type: 3}
+  - name: button
+    audioClip: {fileID: 8300000, guid: f611ee33218971141877b27502b7e9e4, type: 3}
+  - name: enterLevelSound
+    audioClip: {fileID: 8300000, guid: 7713713aae1908e4885b93a4202d76ce, type: 3}
   playerAudio: []
   enemyAudio: []
 --- !u!4 &270895393

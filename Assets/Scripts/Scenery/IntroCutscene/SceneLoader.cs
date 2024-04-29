@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
+        
         Time.timeScale = 1;
         //blueScreen.SetActive(true);
         SceneManager.LoadScene(scenetoLoad);
@@ -28,6 +29,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator changetoMap()
     {
+        Script_AudioManager.instance.PlaySFX("button");
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(scenetoLoad);
     }
@@ -35,6 +37,7 @@ public class SceneLoader : MonoBehaviour
 
     public void changeFromMainScene()
     {
+        Script_AudioManager.instance.PlaySFX("button");
         StartCoroutine(mainScreenChange());
         
     }

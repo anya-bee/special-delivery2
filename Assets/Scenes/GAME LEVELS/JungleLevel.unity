@@ -2313,7 +2313,7 @@ MonoBehaviour:
   Text1: {fileID: 1124736220}
   gameBoardText: {fileID: 46533769}
   totalPoints: 0
-  scene: 2
+  scene: 3
   tray1: {fileID: 1829549497}
   tray1points: 0
 --- !u!1 &250765236
