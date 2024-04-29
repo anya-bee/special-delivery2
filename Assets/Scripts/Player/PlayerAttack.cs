@@ -96,7 +96,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator attackInterval(Collider[] c)
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.2f);
         
         Script_AudioManager.instance.PlaySFX("stab");
         if (c[0].gameObject.GetComponent<EnemyHealth>().enemyString == "Strawberry_Enemy")
@@ -119,7 +119,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log("boss Lemon");
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < c.Length; i++)
             
         {

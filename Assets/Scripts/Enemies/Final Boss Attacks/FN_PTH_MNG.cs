@@ -51,7 +51,7 @@ public class FN_PTH_MNG : MonoBehaviour
 
     public void invokeFruitBombs()
     {
-
+        Script_AudioManager.instance.PlaySFX("growl1");
         foreach (PitahayaSpawnLocator Spawn in spawnLocations)
         {
             

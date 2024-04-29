@@ -67,7 +67,7 @@ public class boss_PulpiDash : MonoBehaviour
     IEnumerator destroyAfteraWhile()
     {
 
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
         Destroy(this.gameObject);
     }
 

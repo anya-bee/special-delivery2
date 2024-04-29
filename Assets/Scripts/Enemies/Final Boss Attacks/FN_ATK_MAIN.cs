@@ -38,13 +38,15 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     void Start()
     {
-        dizzyDragon.Stop();
+        dizzyDragon.gameObject.SetActive(false);
         dragonAnimator = GetComponent<Animator>();
         for (int i =0; i< attackManagers.Count; i++)
         {
             fruitAttackManagers[i] = attackManagers[i].fruitType;
         }
         health = 100;
+        alreadyAttacked = false;
+        
     }
 
     // Update is called once per frame
@@ -57,7 +59,8 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     public void hitDragon()
     {
-        health -= 10;
+        Script_AudioManager.instance.PlaySFX("stab");
+        health -= 5;
         CameraShake.Invoke();
         StartCoroutine(dragonHit());
     }
@@ -72,6 +75,7 @@ public class FN_ATK_MAIN : MonoBehaviour
             if (pulpifresas[i].GetComponent<boss_PulpiDash>().deadStrawberry == true) { 
             }
         }*/
+
         
         
 
@@ -103,13 +107,14 @@ public class FN_ATK_MAIN : MonoBehaviour
 
         if (alreadyAttacked == false)
         {
-            randomPitahayaStraw = Random.Range(1, 2);
+            randomPitahayaStraw = Random.Range(0, 2);
             spawnAttack(attackManagers[randomPitahayaStraw], fruitAttackManagers[randomPitahayaStraw]);
             
-            
+
             alreadyAttacked = true;
+
             strawberriesField = true;
-            //StartCoroutine(resetAttack());
+            StartCoroutine(resetAttack(randomPitahayaStraw));
         }
 
         if (citricAttack == false)
@@ -120,12 +125,21 @@ public class FN_ATK_MAIN : MonoBehaviour
         }
 
 
-            
+           
+    }
+    IEnumerator dragonAttackPattern()
+    {
+        alreadyAttacked = false;
+        yield return new WaitForSeconds(40f);
+        citricAttack = false;
+        yield return new WaitForSeconds(40f);
+
     }
 
 
     IEnumerator dragonHit()
     {
+
         GetComponent<Animator>().SetLayerWeight(1, 1f);
         yield return new WaitForSeconds(0.8f);
         GetComponent<Animator>().SetLayerWeight(1, 0f);
@@ -133,10 +147,11 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     IEnumerator longDragonHit()
     {
-        
+        Script_AudioManager.instance.PlaySFX("rest");
         dizzyDragon.Play();
+        dizzyDragon.gameObject.SetActive(true);
         yield return new WaitForSeconds(10f);
-        dizzyDragon.Stop();
+        dizzyDragon.gameObject.SetActive(false);
         deathStrawberry = 0;
     }
 
@@ -160,11 +175,15 @@ public class FN_ATK_MAIN : MonoBehaviour
         
     }
 
-    IEnumerator resetAttack()
+    IEnumerator resetAttack(int n)
     {
-        
-        yield return new WaitForSeconds(25f);
-        alreadyAttacked = false;
+        if (n == 0)
+        {
+            yield return new WaitForSeconds(6f);
+            alreadyAttacked = false;
+        }
+        yield return new WaitForSeconds(15f);
+        citricAttack = false;
         deathStrawberry = 0;
         strawberriesField = false;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
@@ -173,8 +192,9 @@ public class FN_ATK_MAIN : MonoBehaviour
     IEnumerator resetLimes()
     {
 
-        yield return new WaitForSeconds(15);
-        citricAttack = false;
+        yield return new WaitForSeconds(10f);
+        alreadyAttacked = false;
+        citricAttack = true;
         //spawnAttack(attackManagers[randomPitahayaStraw], dragonState);
 
     }

@@ -49,6 +49,14 @@ public class Script_AudioManager : MonoBehaviour
     public AudioSource playerSource;
     public AudioSource enemySource;
 
+    [Header("Pitch")]
+    public float minPitch;
+    public float maxPitch;
+
+    [Header("Volume")]
+    public float minVol;
+    public float maxVol;
+
     [Header("Audio Clips")]
     public List<AudioRef> bgAudio = new List<AudioRef>();
     public List<AudioRef> sfxAudio = new List<AudioRef>();
@@ -119,7 +127,7 @@ public class Script_AudioManager : MonoBehaviour
         }
     }
 
-    /*public void PlayEnemySFX(string name)
+    public void PlayEnemySFX(string name)
     {
         foreach (AudioRef reference in enemyAudio){
 
@@ -131,7 +139,17 @@ public class Script_AudioManager : MonoBehaviour
             }
 
         }
-    }*/
+    }
+
+    private void randomSound()
+    {
+        
+
+        sfxSource.pitch = Random.Range(minPitch, maxPitch);
+
+        sfxSource.volume = Random.Range(minVol, maxVol);
+
+    }
 
     public void PlaySFX(string name)
     {
@@ -140,6 +158,7 @@ public class Script_AudioManager : MonoBehaviour
             if (reference.name == name)
             {
                 sfxSource.clip = reference.audioClip;
+                randomSound();
                 sfxSource.Play();
                 break;
             }
