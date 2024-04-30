@@ -28,12 +28,12 @@ public class Tutorial : MonoBehaviour
     {
 
         levelScores.almaLife = 22;
-        levelScores.clientsNewTimer = 60;
+        levelScores.clientsNewTimer = 40;
     }
     private void Awake()
     {
         levelScores.almaLife = 22;
-        levelScores.clientsNewTimer = 60;
+        levelScores.clientsNewTimer = 40;
     }
 
     public void ActivateTutorialBox(ScriptableObject_TutorialTip tutorialTip)

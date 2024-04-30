@@ -69,24 +69,28 @@ public class levelScores : MonoBehaviour
 
     public void buyBlueColor(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
         storeManagement.currentBusMaterial = 1;
     }
 
     public void buyOrangeColor(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
         storeManagement.currentBusMaterial = 2;
     }
 
     public void buyPurple(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
         storeManagement.currentBusMaterial = 3;
     }
 
     public void buyLife(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
         almaLife = 25;
     }
@@ -94,13 +98,15 @@ public class levelScores : MonoBehaviour
 
     public void buyClientsTime(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
-        clientsNewTimer = 100;
+        clientsNewTimer = 55;
     }
 
 
     public void blenderGolden(int money)
     {
+        Script_AudioManager.instance.PlaySFX("clientExit");
         totalCoins = totalCoins - money;
         blenderIsGolden = true;
     }

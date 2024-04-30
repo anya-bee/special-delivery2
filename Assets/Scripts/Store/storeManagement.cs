@@ -67,7 +67,7 @@ public class storeManagement : MonoBehaviour
     private void Start()
     {
         levelScores.almaLife = 22;
-        levelScores.clientsNewTimer = 60;
+        levelScores.clientsNewTimer = 40;
         
     }
 

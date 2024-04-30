@@ -78,7 +78,7 @@ public class Client_Manager : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
         completedLevel.gameObject.SetActive(true);
-        Script_AudioManager.instance.PlaySFX("levelFinish");
+        //Script_AudioManager.instance.PlaySFX("levelFinish");
         yield return new WaitForSeconds(2f);
         gameOverBoard.gameObject.SetActive(true);
         

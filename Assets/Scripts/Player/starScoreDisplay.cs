@@ -114,17 +114,21 @@ public class starScoreDisplay : MonoBehaviour
         
     {
         yield return new WaitForSeconds(0.1f);
+        Script_AudioManager.instance.PlaySFX("winStar");
         if (numberTotalScore >= 1)
         {
+            
             star1.gameObject.SetActive(true);
         }
         if (numberTotalScore >= 65)
         {
+            
             star1.gameObject.SetActive(true);
             star2.gameObject.SetActive(true);
         }
         if (numberTotalScore >= 95)
         {
+            
             star1.gameObject.SetActive(true);
             star2.gameObject.SetActive(true);
             star3.gameObject.SetActive(true);

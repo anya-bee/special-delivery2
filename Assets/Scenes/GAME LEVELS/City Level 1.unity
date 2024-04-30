@@ -3491,6 +3491,10 @@ MonoBehaviour:
   sfxSource: {fileID: 411960387}
   playerSource: {fileID: 0}
   enemySource: {fileID: 0}
+  minPitch: 0
+  maxPitch: 0
+  minVol: 0
+  maxVol: 0
   bgAudio:
   - name: forestStage
     audioClip: {fileID: 8300000, guid: 120f7acac5089f44194e6a197b9b3535, type: 3}
@@ -4310,6 +4314,8 @@ MonoBehaviour:
   - {fileID: 647406129}
   - {fileID: 1027155227}
   boolNotebook: 0
+  isBossBattle: 0
+  blankFruit: {fileID: 0}
   notebookAnimator: {fileID: 605958409}
   bar: {fileID: 368026197}
 --- !u!95 &605958409
@@ -15690,6 +15696,90 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!1 &1884500011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884500012}
+  - component: {fileID: 1884500014}
+  - component: {fileID: 1884500013}
+  m_Layer: 0
+  m_Name: Cube.008 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884500012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884500011}
+  m_LocalRotation: {x: -0.113793045, y: 0.70251757, z: 0.69789046, w: -0.08043086}
+  m_LocalPosition: {x: 40.22, y: -13.66, z: 15.53}
+  m_LocalScale: {x: 0.13096905, y: 0.3849268, z: 0.34458813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1003421226516353869}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1884500013
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884500011}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7e213e2fdbfe6c64d9b3906e2e0da3a3, type: 2}
+  - {fileID: -876546973899608171, guid: 5a2e9e866bd50924686376eb5adc9f23, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1884500014
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884500011}
+  m_Mesh: {fileID: 8552134717624371188, guid: 5a2e9e866bd50924686376eb5adc9f23, type: 3}
 --- !u!1 &1892870613
 GameObject:
   m_ObjectHideFlags: 0
@@ -17501,17 +17591,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSword: {fileID: 648525019}
+  bossBattle: 0
   attackRange: {fileID: 139829654}
   radius: 0.9
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 1024
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 0
   enemyCollider:
   - {fileID: 0}
   damagePlayer: 4
   attackMode: 0
   enemyInrange: 0
   pushForce: 0
+  dragonHit:
+    m_PersistentCalls:
+      m_Calls: []
   almaSlash: {fileID: 1291011626}
   strawberryVFX: {fileID: 572769231}
   limeVFX: {fileID: 411778114}
@@ -18176,7 +18273,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147923131320}
-  m_LocalRotation: {x: -0, y: 0.99531496, z: -0, w: -0.096686006}
+  m_LocalRotation: {x: -0, y: 0.7488605, z: -0, w: 0.66272783}
   m_LocalPosition: {x: 3.32, y: 0.28, z: -8.37}
   m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
   m_ConstrainProportionsScale: 1
@@ -18205,7 +18302,7 @@ Transform:
   - {fileID: 1484972240}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 191.097, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 96.984, z: 0}
 --- !u!4 &543450651686194342
 Transform:
   m_ObjectHideFlags: 0
@@ -18625,6 +18722,7 @@ Transform:
   - {fileID: 1805524764069574974}
   - {fileID: 325305478}
   - {fileID: 1323836843}
+  - {fileID: 1884500012}
   m_Father: {fileID: 8849755002338733169}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21310,7 +21408,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 53cc4a2a8da10d549b63c9a451f881f7, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -21364,6 +21462,8 @@ MonoBehaviour:
   plusSpeed: 0
   cocoShield: {fileID: 0}
   fruitySword: {fileID: 0}
+  PowerUpBar: {fileID: 0}
+  powerUpTimer: 0
   powerUpVFX: {fileID: 0}
   bananaTrail: {fileID: 0}
   fruitySwordVFX: {fileID: 0}
@@ -25094,7 +25194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8849755002338733169
 Transform:
   m_ObjectHideFlags: 0
@@ -26188,7 +26288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef24b179e5209f4c84b5e016e9f5cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   currentMaterial: 0
+  bossStage: 0
 --- !u!1 &9216263439834275070
 GameObject:
   m_ObjectHideFlags: 0
