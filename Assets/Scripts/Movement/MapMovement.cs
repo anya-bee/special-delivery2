@@ -34,12 +34,12 @@ public class MapMovement : MonoBehaviour
             busAnimator.SetTrigger("Forward");
             
         }
-        else if (Input.GetKeyDown(KeyCode.D) && station == 1 && levelScores.levelTwoScore > 10)
+        else if (Input.GetKeyDown(KeyCode.D) && station == 1 )//&& levelScores.levelTwoScore > 10)
         {
             busAnimator.SetTrigger("Forward2");
             station = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.D) && station == 2 && levelScores.levelThreeScore > 10)
+        else if (Input.GetKeyDown(KeyCode.D) && station == 2 ) //&& levelScores.levelThreeScore > 10)
         {
             busAnimator.SetTrigger("Forward3");
             station = 3;
