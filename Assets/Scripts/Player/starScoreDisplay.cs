@@ -114,7 +114,7 @@ public class starScoreDisplay : MonoBehaviour
         
     {
         yield return new WaitForSeconds(0.1f);
-        Script_AudioManager.instance.PlaySFX("winStar");
+        //Script_AudioManager.instance.PlaySFX("winStar");
         if (numberTotalScore >= 1)
         {
             

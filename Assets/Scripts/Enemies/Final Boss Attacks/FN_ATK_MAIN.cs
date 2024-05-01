@@ -86,7 +86,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         {
             endingScreen.SetActive(true);
             Script_AudioManager.instance.PauseBGM(true);
-            Script_AudioManager.instance.PlaySFX("enterLevelSound");
+            //Script_AudioManager.instance.PlaySFX("enterLevelSound");
 
         }
         
