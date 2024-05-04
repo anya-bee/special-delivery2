@@ -52,6 +52,7 @@ public class boss_PulpiDash : MonoBehaviour
     IEnumerator fresaDash()
     {
         yield return new WaitForSeconds(0.7f);
+        Script_AudioManager.instance.PlaySFX("pulpiFresa");
         var tornadoOne = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
         tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
         var tornadoTwo = Instantiate(tornadoPF, spawnPoint.transform.position, spawnPoint.transform.rotation);

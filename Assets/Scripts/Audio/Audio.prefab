@@ -82,6 +82,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: f611ee33218971141877b27502b7e9e4, type: 3}
   - name: enterLevelSound
     audioClip: {fileID: 8300000, guid: 7713713aae1908e4885b93a4202d76ce, type: 3}
+  - name: pulpiFresa
+    audioClip: {fileID: 8300000, guid: 53b20c24bb0c85443b5d120cc08f4a4d, type: 3}
+  - name: dragoncito
+    audioClip: {fileID: 8300000, guid: 118d876558caa8e489c2dd6f5be6eb60, type: 3}
   playerAudio: []
   enemyAudio:
   - name: growl1

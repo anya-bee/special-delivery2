@@ -25,7 +25,7 @@ public class pitahaya_Explode : MonoBehaviour
 
     public void explosion()
     {
-        
+        Script_AudioManager.instance.PlaySFX("dragoncito");
         expLocation.gameObject.SetActive(true);
         Debug.Log("a pitahaya exploded!!!!!! BOOOOOOM");
         
