@@ -61,6 +61,7 @@ public class ActionTutorial_MoveCamera : Script_ActionsTutorial
             else
             {
                 CameraTransform.rotation = Quaternion.Euler((lastPos.eulerAngles.x - 360) - ((lastPos.eulerAngles.x - 360) * Strenght), 0, 0);
+
             }
             
             

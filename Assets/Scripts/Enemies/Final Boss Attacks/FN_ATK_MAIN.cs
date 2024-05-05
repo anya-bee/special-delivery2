@@ -55,6 +55,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         }
         health = 100;
         alreadyAttacked = false;
+        healthBar.gameObject.SetActive(false);
         
     }
 
