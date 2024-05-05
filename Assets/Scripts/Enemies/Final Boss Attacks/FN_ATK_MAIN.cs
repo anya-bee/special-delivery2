@@ -21,6 +21,7 @@ public class FN_ATK_MAIN : MonoBehaviour
     [Header("Dragon State")]
     public bool alreadyAttacked;
     public float pitahayaCounter = 0;
+    public float strawberryCounter = 0;
     public bool citricAttack;
     public Animator dragonAnimator;
     public int randomPitahayaStraw;
@@ -54,6 +55,7 @@ public class FN_ATK_MAIN : MonoBehaviour
             fruitAttackManagers[i] = attackManagers[i].fruitType;
         }
         health = 100;
+        Script_AudioManager.instance.PauseBGM(true);
         alreadyAttacked = false;
         healthBar.gameObject.SetActive(false);
         
@@ -121,6 +123,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         if( deathStrawberry == 3)
         {
             GetComponent<Animator>().SetTrigger("dizzy");
+            Script_AudioManager.instance.PlayEnemySFX("fresaHit");
             StartCoroutine(longDragonHit());
             deathStrawberry = 0;
         }
@@ -198,12 +201,19 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     IEnumerator resetAttack(int n)
     {
-        if (n == 0 && pitahayaCounter < 2)
+        if (n == 0 && pitahayaCounter < 1)
         {
             pitahayaCounter++;
             yield return new WaitForSeconds(6f);
             alreadyAttacked = false;
         }
+        /*else if (n == 1 && strawberryCounter < 0)
+        {
+            strawberryCounter++;
+            yield return new WaitForSeconds(17f);
+            alreadyAttacked = false;
+        }*/
+
         else
         {
             pitahayaCounter = 0;

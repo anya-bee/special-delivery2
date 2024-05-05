@@ -3163,7 +3163,7 @@ MonoBehaviour:
     rgba: 4283389178
   targetGreenColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4287168336
 --- !u!1 &380810480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,7 +4365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &605958405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11405,6 +11405,61 @@ Transform:
   m_Father: {fileID: 3808426682210717614}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1399305268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399305270}
+  - component: {fileID: 1399305271}
+  m_Layer: 0
+  m_Name: almalife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399305270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399305268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.285854, y: -17.571487, z: -4.9054136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399305271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399305268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222b3a4bdc6923b439dbfe8bc65d155c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busMaterial:
+  - {fileID: 0}
+  mainColor: {r: 0, g: 0, b: 0, a: 0}
+  ambientShadow: {r: 0, g: 0, b: 0, a: 0}
+  mainShadow: {r: 0, g: 0, b: 0, a: 0}
+  blenderMaterial: {fileID: 0}
+  mainColorG: {r: 0, g: 0, b: 0, a: 0}
+  ambientShadowG: {r: 0, g: 0, b: 0, a: 0}
+  mainShadowG: {r: 0, g: 0, b: 0, a: 0}
+  thisBus: {fileID: 9054377937169556510}
+  thisClientManager: {fileID: 1364515301}
 --- !u!1001 &1406235712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12489,11 +12544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3191707596303185662, guid: b6ef28f1be642f449be25faa956d0877,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5346204979422205764, guid: b6ef28f1be642f449be25faa956d0877,
         type: 3}
       propertyPath: m_RootOrder
@@ -12549,11 +12599,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5346204979422205765, guid: b6ef28f1be642f449be25faa956d0877,
-        type: 3}
-      propertyPath: sfxAudio.Array.data[8].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 118d876558caa8e489c2dd6f5be6eb60, type: 3}
     - target: {fileID: 5346204979422205819, guid: b6ef28f1be642f449be25faa956d0877,
         type: 3}
       propertyPath: m_Name
@@ -13806,13 +13851,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802512843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 402223cdf8700d348aedbc51033e6c85, type: 3}
+  m_Script: {fileID: 11500000, guid: aa29dac8d5231104b8b2b11f98cc54a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlots: {fileID: 0}
   slotTemplate: {fileID: 0}
   cellsize: 84
   VFXTime: 1
+  powerUpFruits:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1877236800}
+        m_TargetAssemblyTypeName: powerUpTrigger, Assembly-CSharp
+        m_MethodName: OrbSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1807460899
 GameObject:
   m_ObjectHideFlags: 0
@@ -15330,7 +15390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabFruit: {fileID: 2864771666871996761, guid: 22ee9b6fbf70ff443b9ab46b1ecb907c,
     type: 3}
-  lemonSprite: {fileID: 21300000, guid: d87e5a804ee997944a1f66bb39bd9794, type: 3}
+  lemonSprite: {fileID: 21300000, guid: 336998206785647468718104f3f72f78, type: 3}
   limeSprite: {fileID: 21300000, guid: 99bebbdd5953f884bb795a13a27a75d0, type: 3}
   strawberrySprite: {fileID: 21300000, guid: d8255cddbee350d45be0f54701683d76, type: 3}
   pitahayaSprite: {fileID: 21300000, guid: dea7c79bbf9310741b93ff86381361e4, type: 3}
@@ -16971,19 +17031,6 @@ MonoBehaviour:
   isDead: 0
   fadeToBlack: {fileID: 65614822}
   iconBorad: {fileID: 1105836899}
---- !u!114 &2123671282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147923131320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbc1bcefb709d24699208274b56e5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiInventory: {fileID: 1802512845}
 --- !u!114 &2123671283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17979,7 +18026,7 @@ GameObject:
   - component: {fileID: 2123671278}
   - component: {fileID: 2123671279}
   - component: {fileID: 2123671281}
-  - component: {fileID: 2123671282}
+  - component: {fileID: 5866666019922385787}
   - component: {fileID: 5866666019922385785}
   - component: {fileID: 5866666019922385786}
   - component: {fileID: 2123671283}
@@ -22659,18 +22706,46 @@ MonoBehaviour:
   originalAttack: 0
   PowerUpDuration: 10
   currentSprite: {fileID: 1610721870}
+  refreshBlender:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1557683665}
+        m_TargetAssemblyTypeName: Blender_Inventory, Assembly-CSharp
+        m_MethodName: refreshBlender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   bananaShoe: {fileID: 21300000, guid: 4df4f69fd2d60ef4ab55182f2e541150, type: 3}
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: 27f805628619e994684486d9acc10dc5, type: 3}
   PowerUpBar: {fileID: 368026197}
-  powerUpTimer: 0
+  powerUpTimer: 10
   powerUpVFX: {fileID: 5476953731551771043}
   bananaTrail: {fileID: 6597391274015560867}
   fruitySwordVFX: {fileID: 350178368}
   bananaShoesColor: {r: 3.539386, g: 2.9598377, b: 0.24837798, a: 0}
   cocoColor: {r: 19.689507, g: 11.141078, b: 8.990303, a: 0}
   swordColor: {r: 0.4479671, g: 2.749757, b: 5.051547, a: 0}
+--- !u!114 &5866666019922385787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147923131320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfc4680c3d73fc49927fa7a89c21be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiInventory: {fileID: 1802512845}
 --- !u!54 &5866666020709052149
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30345,6 +30420,7 @@ MonoBehaviour:
   lemons: 0
   alreadyAttacked: 1
   pitahayaCounter: 0
+  strawberryCounter: 0
   citricAttack: 1
   dragonAnimator: {fileID: 7077990892370908628}
   randomPitahayaStraw: 0

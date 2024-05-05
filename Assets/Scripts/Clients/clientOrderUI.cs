@@ -43,6 +43,7 @@ public class clientOrderUI : MonoBehaviour
         {
             notebookAnimator.SetBool("orderReady", true);
             boolNotebook = false;
+            
         }
         else
         {

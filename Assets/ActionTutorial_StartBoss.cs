@@ -8,6 +8,7 @@ public class ActionTutorial_StartBoss : Script_ActionsTutorial
     public override void Action()
     {
         StartCoroutine(Animationtransform(5f));
+        StartCoroutine(dragonRoar(1.2f));
     }
 
     public override void Action(float time)
@@ -24,5 +25,11 @@ public class ActionTutorial_StartBoss : Script_ActionsTutorial
         DragonAttack.healthBar.gameObject.SetActive(true);
 
 
+    }
+
+    IEnumerator dragonRoar(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Script_AudioManager.instance.PlayEnemySFX("startGrowl");
     }
 }

@@ -6485,11 +6485,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5346204979422205765, guid: b6ef28f1be642f449be25faa956d0877,
-        type: 3}
-      propertyPath: sfxAudio.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 5346204979422205819, guid: b6ef28f1be642f449be25faa956d0877,
         type: 3}
       propertyPath: m_Name

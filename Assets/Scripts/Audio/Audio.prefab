@@ -87,17 +87,19 @@ MonoBehaviour:
   - name: playerHit
     audioClip: {fileID: 8300000, guid: e392326d1a8059e44bbf786052a08389, type: 3}
   enemyAudio:
-  - name: growl1
-    audioClip: {fileID: 8300000, guid: 59ded7b6fbf469641985be03df8850a3, type: 3}
-  - name: growl2
+  - name: fresaHit
+    audioClip: {fileID: 8300000, guid: d3786f93c160de347b5b82e2edba4163, type: 3}
+  - name: startGrowl
     audioClip: {fileID: 8300000, guid: 69e9b1f6349df8343aa9611d81ed2a56, type: 3}
   - name: rest
     audioClip: {fileID: 8300000, guid: 4e9a26822152f4b469073967f7ae59cb, type: 3}
   - name: pulpiFresa
     audioClip: {fileID: 8300000, guid: 53b20c24bb0c85443b5d120cc08f4a4d, type: 3}
   - name: dragoncito
-    audioClip: {fileID: 8300000, guid: 118d876558caa8e489c2dd6f5be6eb60, type: 3}
+    audioClip: {fileID: 8300000, guid: 1d126643e2db0d1409726d192e5b3332, type: 3}
   - name: lemonKnock
+    audioClip: {fileID: 8300000, guid: b2614f77f6d39f448b9f219798cfe36f, type: 3}
+  - name: lemonBoss
     audioClip: {fileID: 8300000, guid: b2614f77f6d39f448b9f219798cfe36f, type: 3}
 --- !u!82 &5346204979422205818
 AudioSource:
@@ -305,7 +307,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3225054952672699448, guid: c9f43b6ea4611f94b898e1ebeef52127,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
