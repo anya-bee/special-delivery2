@@ -10,7 +10,7 @@ public class Script_ColliderTutorial : MonoBehaviour
     {
         if (other.tag != tagcollision) return;
 
-        Tutorial.instance.ActivateTutorialBox(tutorialTip);
+        if(Tutorial.instance!= null) Tutorial.instance.ActivateTutorialBox(tutorialTip);
         
         foreach (Script_ActionsTutorial action in tutorialTip._actions)
         {

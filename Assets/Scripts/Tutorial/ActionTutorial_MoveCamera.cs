@@ -36,7 +36,7 @@ public class ActionTutorial_MoveCamera : Script_ActionsTutorial
             float Strenght = animationCurve.Evaluate(elapsedTime / duration);
 
 
-            CameraTransform.position = StartPosition + ((lastPos - StartPosition) * Strenght);
+            CameraTransform.position = firsPos + ((lastPos - firsPos) * Strenght);
             //transform.position = transform.position + Random.insideUnitSphere * Strenght;
             yield return null;
         }

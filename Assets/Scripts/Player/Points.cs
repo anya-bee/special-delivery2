@@ -30,7 +30,7 @@ public class Points : MonoBehaviour
         tray1points = tray1.GetComponent<orderChecked>().points;
         
         Text1.text = "Points: " + totalPoints.ToString();
-        gameBoardText.text = totalPoints.ToString();
+        if(gameBoardText!=null)gameBoardText.text = totalPoints.ToString();
         
 
 
