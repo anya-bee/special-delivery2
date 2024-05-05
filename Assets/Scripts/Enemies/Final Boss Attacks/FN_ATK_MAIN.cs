@@ -41,6 +41,9 @@ public class FN_ATK_MAIN : MonoBehaviour
     [Header("Ending Screen")]
     public GameObject endingScreen;
 
+    //Cosa que agrego Hector
+    public bool BossStart = false;
+
     void Start()
     {
         endingScreen.SetActive(false);
@@ -72,6 +75,10 @@ public class FN_ATK_MAIN : MonoBehaviour
     }
     void Update()
     {
+        //Cosa que agrego Hector
+        if (!BossStart) return;
+        //Termina cosa que agrego Hector
+
         healthBar.fillAmount = health / 100;
         int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
 

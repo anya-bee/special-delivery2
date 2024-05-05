@@ -3695,6 +3695,7 @@ GameObject:
   - component: {fileID: 426244740}
   - component: {fileID: 426244739}
   - component: {fileID: 426244743}
+  - component: {fileID: 426244744}
   m_Layer: 0
   m_Name: TutorialWild
   m_TagString: Untagged
@@ -3727,6 +3728,7 @@ MonoBehaviour:
   actions:
   - {fileID: 1498638766}
   - {fileID: 426244743}
+  - {fileID: 426244744}
   references:
     version: 2
     RefIds: []
@@ -3785,6 +3787,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Musica: {fileID: 1078979001}
+--- !u!114 &426244744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426244738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45dae8f6c2d8d04aafefa548dc53d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DragonAttack: {fileID: 7077990892370908630}
 --- !u!1 &433507526
 GameObject:
   m_ObjectHideFlags: 0
@@ -30316,6 +30331,7 @@ MonoBehaviour:
   radius: 3.37
   strawberriesField: 0
   endingScreen: {fileID: 1542285667}
+  BossStart: 0
 --- !u!114 &7077990892370908631
 MonoBehaviour:
   m_ObjectHideFlags: 0
