@@ -34,6 +34,7 @@ public class lemonAttack : AIAction
             enemyAnimator.SetBool("attack", true);
             alreadyAttacked = true;
             GetComponent<lemonSmash>().stunPlayer();
+            Script_AudioManager.instance.PlayEnemySFX("lemonKnock");
             enemy.speed = 0;
             GetComponent<PatrolAction>().originalSpeed = 0;
             transform.LookAt(null);

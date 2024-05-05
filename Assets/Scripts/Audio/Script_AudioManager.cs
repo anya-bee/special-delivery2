@@ -120,6 +120,7 @@ public class Script_AudioManager : MonoBehaviour
             if (reference.name == name)
             {
                 playerSource.clip = reference.audioClip;
+                randomSound();
                 playerSource.Play();
                 break;
             }
@@ -134,6 +135,7 @@ public class Script_AudioManager : MonoBehaviour
             if (reference.name == name)
             {
                 enemySource.clip = reference.audioClip;
+                playerSource.pitch = 1.6f;
                 enemySource.Play();
                 break;
             }

@@ -146,7 +146,7 @@ public class Client_Manager : MonoBehaviour
                 
             }
 
-            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 10 && currentClient.GetComponent<clientOrder>().lastClient == false)
+            if (Vector3.Distance(currentClient.transform.position, exitStage.position) < 2 && currentClient.GetComponent<clientOrder>().lastClient == false)
             {
                 
                 isonTray = false;

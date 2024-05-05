@@ -31,6 +31,7 @@ public class lemonSmash : MonoBehaviour
     {
         if (first == false)
         {
+            
             player.GetComponent<PlayerController>().stunnedState = true;
             player.transform.LookAt(transform);
             darkLines.Play();
