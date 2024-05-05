@@ -962,6 +962,14 @@ MonoBehaviour:
     type: 3}
   expLocation: {fileID: 5308377164456799043}
   particlesPitahaya: {fileID: 0}
+  explodeRadius: 3.35
+  isInside: 0
+  dmgPlayer: 0
+  playerCollider:
+  - {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5110656422182723240
 GameObject:
   m_ObjectHideFlags: 0

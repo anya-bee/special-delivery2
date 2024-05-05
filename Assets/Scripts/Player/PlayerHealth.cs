@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if ( GetComponent<powerUps>().currentPowerUp != "cocoShieldMode")
         {
+            Script_AudioManager.instance.PlayPlayerSFX("playerHit");
             currentLifeAmount -= amount;
             
         }

@@ -45,7 +45,9 @@ public class lima_AcidSplash : MonoBehaviour
     IEnumerator fresaDash()
     {
         originalSplash.Play();
+        Script_AudioManager.instance.PlayEnemySFX("limeAcid");
         yield return new WaitForSeconds(0.3f);
+        
         var tornadoOne = Instantiate(acidPF, spawnPoint.transform.position, spawnPoint.transform.rotation);
         //tornadoOne.GetComponent<Rigidbody>().velocity = spawnPoint.forward * speed;
     }

@@ -42,8 +42,11 @@ public class UI_Inventory2 : MonoBehaviour
 
     IEnumerator loadJuice(List<string> fruitList)
     {
-        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderVFX.Play();
+        Script_AudioManager.instance.PlayPlayerSFX("blenderMix");
+        
         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderAnimator.SetBool("openBlender", false);
+        yield return new WaitForSeconds(0.6f);
+        GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderVFX.Play();
         yield return new WaitForSeconds(VFXTime);
         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().blenderAnimator.SetBool("openBlender", true);
         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
@@ -77,8 +80,9 @@ public class UI_Inventory2 : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
+                Script_AudioManager.instance.PlaySFX("pickFruit");
                 //use items 
-                
+
                 if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().isOnBlender)
                 {
                     

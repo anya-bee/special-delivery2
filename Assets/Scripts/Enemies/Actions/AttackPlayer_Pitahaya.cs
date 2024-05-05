@@ -38,7 +38,13 @@ public class AttackPlayer_Pitahaya : AIAction
     {
         yield return new WaitForSeconds(1.1f);
         gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+        
     }
 
+    IEnumerator waitToDie2()
+    {
+        yield return new WaitForSeconds(1.1f);
+        gameObject.GetComponent<EnemyHealth>().currentLifeAmount = 0;
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+    }
 }

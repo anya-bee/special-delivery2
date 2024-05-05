@@ -8,6 +8,17 @@ public class pitahaya_Explode : MonoBehaviour
     public Transform explosionObj;
     public Transform expLocation;
     public GameObject particlesPitahaya;
+    public float explodeRadius;
+    public int isInside;
+    public bool dmgPlayer;
+    public Collider[] playerCollider = new Collider[1];
+    public LayerMask playerLayer;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(this.transform.position, explodeRadius);
+    }
     void Start()
     {
         expLocation = Instantiate(explosionObj, expLocation.position, Quaternion.identity);
@@ -20,13 +31,24 @@ public class pitahaya_Explode : MonoBehaviour
     private void Update()
     {
         expLocation.position = new Vector3(this.transform.position.x, this.transform.position.y +2, this.transform.position.z);
+        isInside = Physics.OverlapSphereNonAlloc(transform.position, explodeRadius, playerCollider, playerLayer);
+        if (isInside == 1)
+        {
+            dmgPlayer = true;
+        }
+
     }
 
 
     public void explosion()
     {
-        Script_AudioManager.instance.PlaySFX("dragoncito");
+        Script_AudioManager.instance.PlayEnemySFX("dragoncito");
         expLocation.gameObject.SetActive(true);
+        if(dmgPlayer == true)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
+        }
+        
         Debug.Log("a pitahaya exploded!!!!!! BOOOOOOM");
         
 

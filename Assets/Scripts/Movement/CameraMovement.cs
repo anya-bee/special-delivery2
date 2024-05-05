@@ -53,10 +53,16 @@ public class CameraMovement : MonoBehaviour
         }
 
 
+
     }
+    /*private void OnTriggerEnter(Collider other)
+    {
+        float saveY;
+        transform.position.y = saveY
+    }*/
 
 
-    
 
-    
+
+
 }
