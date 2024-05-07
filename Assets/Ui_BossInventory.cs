@@ -110,12 +110,12 @@ public class Ui_BossInventory : MonoBehaviour
 
 
                     }
-
+                
                     if (GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender < 3)
                     {
                         GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().fruitsOnBlender++;
                         inventory.removeFruits(f);
-                        fruitAmount++;
+                        //fruitAmount++;
 
                     }   
                 

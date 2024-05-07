@@ -10,7 +10,7 @@ public class powerUpTrigger : MonoBehaviour
     public int randomOrb;
     public clientOrderUI clientOrderCode;
 
-    public List<string> fruitPowerOrb;
+ 
 
     [Header("Orb Types")]
     public List<Transform> orbTypeList;
@@ -18,10 +18,7 @@ public class powerUpTrigger : MonoBehaviour
     private void Start()
     {
 
-        fruitPowerOrb.Add("");
-        fruitPowerOrb.Add("");
-        fruitPowerOrb.Add("");
-        clientOrderCode.blankFruitsIcon();
+
 
     }
     // Update is called once per frame
@@ -31,11 +28,21 @@ public class powerUpTrigger : MonoBehaviour
     }
 
 
-    public void OrbSpawn()
+    public string OrbSpawn()
     {
         randomOrb = Random.Range(0, 3);
-        powerOrbInstance = Instantiate(orbTypeList[randomOrb], orbSpawnPlace.position, Quaternion.identity);
 
+        switch (randomOrb)
+        {
+            default:
+            case 0: return "bananaShoesMode";
+            case 1: return "cocoShieldMode";
+            case 2: return "fruitySwordMode";
+
+
+        }
+
+        
 
     }
 }
