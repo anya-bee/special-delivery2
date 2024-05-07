@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
             carryingOrder = false;
             currentGlass.GetComponent<juiceGlass>().destroyJuice();
             trashCollider[0] = null;
+            Script_AudioManager.instance.PlayPlayerSFX("trashCan");
             currentGlass = null;
             glassHitColliders[0] = null;
 

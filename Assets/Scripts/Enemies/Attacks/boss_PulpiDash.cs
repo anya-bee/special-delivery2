@@ -30,6 +30,7 @@ public class boss_PulpiDash : MonoBehaviour
         {
             Debug.Log("dead strawberry");
             FN_ATK_MAIN.deathStrawberry++;
+            
             GetComponent<EnemyHealth>().dieAction();
         }
 

@@ -97,7 +97,9 @@ public class FN_ATK_MAIN : MonoBehaviour
         {
             
             Script_AudioManager.instance.PauseBGM(true);
+            Script_AudioManager.instance.PlayEnemySFX("dragonDeath");
             GetComponent<SceneLoader>().LoadScene();
+
             //Script_AudioManager.instance.PlaySFX("enterLevelSound");
 
         }

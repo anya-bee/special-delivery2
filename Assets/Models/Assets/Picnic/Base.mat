@@ -36,7 +36,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 16e871db08afd4e48b2d807a94a1aef2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -150,12 +150,12 @@ Material:
     - _gloss: 45.8
     - _rimTrheshol: 1.5
     m_Colors:
-    - _AmbientShadow: {r: 0.73775256, g: 0.8113208, b: 0.38576004, a: 0}
+    - _AmbientShadow: {r: 0.44389462, g: 0.61314356, b: 0.6981132, a: 0}
     - _BaseColor: {r: 0.34097046, g: 0.74116987, b: 0.22022936, a: 1}
-    - _Color: {r: 0.34097043, g: 0.7411698, b: 0.22022933, a: 1}
+    - _Color: {r: 0.28627452, g: 0.5411765, b: 0.29803923, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Glow: {r: 1, g: 1, b: 1, a: 0}
-    - _MainShadow: {r: 0.49181202, g: 0.8490566, b: 0.509324, a: 0}
+    - _MainShadow: {r: 0.47333568, g: 0.9056604, b: 0.49747568, a: 0}
     - _ShadowContrast: {r: 0, g: -2.2, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _displaceContrast: {r: 0, g: 0, b: 0, a: 0}

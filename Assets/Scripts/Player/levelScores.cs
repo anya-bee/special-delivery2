@@ -30,6 +30,8 @@ public class levelScores : MonoBehaviour
     public TextMeshProUGUI lvl2Score;
     public TextMeshProUGUI lvl3Score;
     public TextMeshProUGUI totalCoinsDisplay;
+    public Button_UI storeButton;
+    
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class levelScores : MonoBehaviour
         
 
     }
+
 
     private void Update()
     {
@@ -49,18 +52,19 @@ public class levelScores : MonoBehaviour
 
         totalCoinsDisplay.text = ("Coins : " + totalCoins.ToString());
 
-
+        
         if (Input.GetKeyDown(KeyCode.F))
         {
             if ( display == false)
             {
                 storeImage.gameObject.SetActive(true);
-
+                Script_AudioManager.instance.PlayPlayerSFX("woodStore");
                 display = true;
             }
             else if(display == true)
             {
                 storeImage.gameObject.SetActive(false);
+                
                 display = false;
             }
         }
@@ -69,45 +73,64 @@ public class levelScores : MonoBehaviour
 
     public void buyBlueColor(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        storeManagement.currentBusMaterial = 1;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            storeManagement.currentBusMaterial = 1;
+        }
+        
     }
 
     public void buyOrangeColor(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        storeManagement.currentBusMaterial = 2;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            storeManagement.currentBusMaterial = 2;
+        }
     }
 
     public void buyPurple(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        storeManagement.currentBusMaterial = 3;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            storeManagement.currentBusMaterial = 3;
+        }
     }
 
     public void buyLife(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        almaLife = 25;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            almaLife = 25;
+        }
     }
 
 
     public void buyClientsTime(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        clientsNewTimer = 55;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            clientsNewTimer = 55;
+        }
     }
 
 
     public void blenderGolden(int money)
     {
-        Script_AudioManager.instance.PlaySFX("clientExit");
-        totalCoins = totalCoins - money;
-        blenderIsGolden = true;
+        if (totalCoins > money)
+        {
+            Script_AudioManager.instance.PlaySFX("clientExit");
+            totalCoins = totalCoins - money;
+            blenderIsGolden = true;
+        }
     }
 }

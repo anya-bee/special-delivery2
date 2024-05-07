@@ -92,13 +92,15 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 1b78a6ca826c58a4cbef9835af44a8f7, type: 3}
   - name: fruity
     audioClip: {fileID: 8300000, guid: 8af70d8b5840604468425cb1d14af541, type: 3}
+  - name: woodStore
+    audioClip: {fileID: 8300000, guid: 7684852b7bfe15849bca6f6ee91862bd, type: 3}
   enemyAudio:
   - name: fresaHit
     audioClip: {fileID: 8300000, guid: d3786f93c160de347b5b82e2edba4163, type: 3}
   - name: startGrowl
     audioClip: {fileID: 8300000, guid: 69e9b1f6349df8343aa9611d81ed2a56, type: 3}
   - name: rest
-    audioClip: {fileID: 8300000, guid: bbf8f0f5ecf9df74c928dc415d3e60e2, type: 3}
+    audioClip: {fileID: 8300000, guid: 09362c19f95d16247aaf743d33bfc978, type: 3}
   - name: pulpiFresa
     audioClip: {fileID: 8300000, guid: 53b20c24bb0c85443b5d120cc08f4a4d, type: 3}
   - name: dragoncito
@@ -107,6 +109,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: b2614f77f6d39f448b9f219798cfe36f, type: 3}
   - name: lemonBoss
     audioClip: {fileID: 8300000, guid: 90c8abc07d212074aa7c630657580849, type: 3}
+  - name: dragonDeath
+    audioClip: {fileID: 8300000, guid: 1c1d608261176454da56a9ecfc8305f8, type: 3}
 --- !u!82 &5346204979422205818
 AudioSource:
   m_ObjectHideFlags: 0
@@ -122,7 +126,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
