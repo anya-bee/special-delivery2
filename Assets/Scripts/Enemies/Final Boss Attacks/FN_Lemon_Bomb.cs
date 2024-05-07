@@ -14,7 +14,7 @@ public class FN_Lemon_Bomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Script_AudioManager.instance.PlayEnemySFX("lemonBoss");
     }
     public void changeLayer()
     {

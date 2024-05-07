@@ -5,12 +5,12 @@ using UnityEngine;
 public class OrbBullet : MonoBehaviour
 {
     public string orbType;
-    public Transform player;
+    public GameObject player;
     public powerUps playerPU;
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-        player.GetComponent<powerUps>().currentPowerUp = orbType;
+        
+        
     }
 
     // Update is called once per frame
@@ -22,9 +22,12 @@ public class OrbBullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        
-        
-        
+
+        player = other.gameObject;
+        playerPU = player.GetComponent<powerUps>();
+        playerPU.currentPowerUp = orbType;
+        Destroy(this.gameObject);
+
 
     }
 

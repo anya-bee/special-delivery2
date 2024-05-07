@@ -21,6 +21,7 @@ public class diedragon : MonoBehaviour
     }
 
 
+
     IEnumerator cameraShakeEnding()
     {
         CameraShake.Invoke();
@@ -31,5 +32,7 @@ public class diedragon : MonoBehaviour
         yield return new WaitForSeconds(5f);
         dieScreen.SetActive(true);
 
+        yield return new WaitForSeconds(8f);
+        GetComponent<SceneLoader>().LoadScene();
     }
 }

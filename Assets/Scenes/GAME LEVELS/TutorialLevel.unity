@@ -16332,7 +16332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849537467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.94, y: -0.54, z: -4.18}
+  m_LocalPosition: {x: 25.91, y: -0.54, z: -4.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25439,11 +25439,15 @@ MonoBehaviour:
   isTutorial: 1
   almaController: {fileID: 2123671278}
   currentPowerUp: 
+  powerUpNumber: 0
   isActivated: 0
   originalSpeed: 0
   originalAttack: 0
   PowerUpDuration: 0
   currentSprite: {fileID: 0}
+  refreshBlender:
+    m_PersistentCalls:
+      m_Calls: []
   bananaShoe: {fileID: 0}
   plusSpeed: 0
   cocoShield: {fileID: 0}

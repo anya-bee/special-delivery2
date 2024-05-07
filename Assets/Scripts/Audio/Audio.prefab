@@ -86,13 +86,19 @@ MonoBehaviour:
   playerAudio:
   - name: playerHit
     audioClip: {fileID: 8300000, guid: e392326d1a8059e44bbf786052a08389, type: 3}
+  - name: coco
+    audioClip: {fileID: 8300000, guid: 5f06236508f60b545a77e2713a22b253, type: 3}
+  - name: banana
+    audioClip: {fileID: 8300000, guid: 1b78a6ca826c58a4cbef9835af44a8f7, type: 3}
+  - name: fruity
+    audioClip: {fileID: 8300000, guid: 8af70d8b5840604468425cb1d14af541, type: 3}
   enemyAudio:
   - name: fresaHit
     audioClip: {fileID: 8300000, guid: d3786f93c160de347b5b82e2edba4163, type: 3}
   - name: startGrowl
     audioClip: {fileID: 8300000, guid: 69e9b1f6349df8343aa9611d81ed2a56, type: 3}
   - name: rest
-    audioClip: {fileID: 8300000, guid: 4e9a26822152f4b469073967f7ae59cb, type: 3}
+    audioClip: {fileID: 8300000, guid: bbf8f0f5ecf9df74c928dc415d3e60e2, type: 3}
   - name: pulpiFresa
     audioClip: {fileID: 8300000, guid: 53b20c24bb0c85443b5d120cc08f4a4d, type: 3}
   - name: dragoncito
@@ -100,7 +106,7 @@ MonoBehaviour:
   - name: lemonKnock
     audioClip: {fileID: 8300000, guid: b2614f77f6d39f448b9f219798cfe36f, type: 3}
   - name: lemonBoss
-    audioClip: {fileID: 8300000, guid: b2614f77f6d39f448b9f219798cfe36f, type: 3}
+    audioClip: {fileID: 8300000, guid: 90c8abc07d212074aa7c630657580849, type: 3}
 --- !u!82 &5346204979422205818
 AudioSource:
   m_ObjectHideFlags: 0

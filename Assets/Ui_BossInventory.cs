@@ -105,6 +105,7 @@ public class Ui_BossInventory : MonoBehaviour
                 {
                         fruitList[2] = f.GetString();
                     powerUpFruits.Invoke();
+                    
                         //GameObject.FindWithTag("Blender").GetComponent<Blender_Inventory>().SetJuice(fruitList);
 
 

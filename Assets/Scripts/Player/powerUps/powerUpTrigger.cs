@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class powerUpTrigger : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class powerUpTrigger : MonoBehaviour
     public Transform orbSpawnPlace;
     public int randomOrb;
     public clientOrderUI clientOrderCode;
-
+    public UnityEvent refreshBlender;
  
 
     [Header("Orb Types")]
@@ -28,21 +29,29 @@ public class powerUpTrigger : MonoBehaviour
     }
 
 
-    public string OrbSpawn()
+    public void OrbSpawn()
     {
         randomOrb = Random.Range(0, 3);
 
-        switch (randomOrb)
+        powerOrbInstance = Instantiate(orbTypeList[randomOrb], orbSpawnPlace.position, Quaternion.identity);
+        if (randomOrb == 0)
         {
-            default:
-            case 0: return "bananaShoesMode";
-            case 1: return "cocoShieldMode";
-            case 2: return "fruitySwordMode";
+            Script_AudioManager.instance.PlayPlayerSFX("banana");
 
+        }
+        else if(randomOrb == 1)
+        {
+            Script_AudioManager.instance.PlayPlayerSFX("fruity");
+
+        }
+        else if (randomOrb == 2)
+        {
+            Script_AudioManager.instance.PlayPlayerSFX("coco");
 
         }
 
-        
+
+
 
     }
 }

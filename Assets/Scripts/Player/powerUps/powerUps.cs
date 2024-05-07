@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 
 public class powerUps : MonoBehaviour
 {
-    public bool isTutorial ;
+    public bool isTutorial;
 
     [Header("Current Power Up")]
     public PlayerController almaController;
@@ -39,7 +39,7 @@ public class powerUps : MonoBehaviour
     [ColorUsage(true, true)]
     public Color swordColor;
 
-    
+
 
 
 
@@ -57,59 +57,65 @@ public class powerUps : MonoBehaviour
             PowerUpBar.fillAmount = 1;
             powerUpNumber = 3;
         }
-        
-    }
-    public void OrbSpawn()
-    {
-        int randomOrb = Random.Range(0, 3);
-        powerUpNumber = randomOrb;
-        if (powerUpNumber == 0)
-        {
-            powerUpNumber = 0;
-            StartCoroutine(bananaShoesMode());
-            refreshBlender.Invoke();
-            
-
-        }
-        else if (powerUpNumber == 1)
-        {
-            powerUpNumber = 2;
-            StartCoroutine(cocoShieldMode());
-            refreshBlender.Invoke();
-            
-        }
-        else if (powerUpNumber == 2)
-        {
-            powerUpNumber = 2;
-            StartCoroutine(fruitySwordMode());
-            refreshBlender.Invoke();
-            
-        }
 
     }
+   
 
     // Update is called once per frame
     void Update()
     {
-        
-        if ( powerUpNumber < 3)
+        if (currentPowerUp == "bananaShoesMode")
+
+
         {
+
+            StartCoroutine(bananaShoesMode());
+            refreshBlender.Invoke();
+
+            PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
+
+        }
+        else if (currentPowerUp == "cocoShieldMode")
+        {
+
+            StartCoroutine(cocoShieldMode());
+            refreshBlender.Invoke();
+
             PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
         }
-        
+        else if (currentPowerUp == "fruitySwordMode")
+        {
+
+            StartCoroutine(fruitySwordMode());
+            refreshBlender.Invoke();
+
+
+            PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
+        }
+        else
+        {
+            currentPowerUp = " ";
+            PowerUpBar.fillAmount = 0;
+            PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+            PowerUpBar.GetComponent<barColorCode>().resetColors();
+        }
+
+
+
+
     }
 
     IEnumerator bananaShoesMode()
     {
         Debug.Log(" BANANA EFFECT ");
-        currentPowerUp = "BananaShoes";
-        PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+
+
         currentSprite.sprite = bananaShoe;
         currentSprite.gameObject.SetActive(true);
         bananaTrail.SetActive(true);
         PowerUpBar.fillAmount = 1;
         PowerUpBar.gameObject.SetActive(true);
-        //PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
+
         //powerUpVFX.SetVector4("ParticlesColor", bananaShoesColor);
         //powerUpVFX.gameObject.SetActive(true);
 
@@ -128,30 +134,29 @@ public class powerUps : MonoBehaviour
         isActivated = false;
         currentPowerUp = " ";
         PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+        PowerUpBar.GetComponent<barColorCode>().resetColors();
         powerUpTimer = PowerUpDuration;
-        powerUpNumber = 3;
+
 
     }
-    
-
     IEnumerator fruitySwordMode()
     {
         Debug.Log(" FRUITY SWOOOORD");
-        currentPowerUp = "FruitSword";
-        PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+
+
         currentSprite.sprite = fruitySword;
         currentSprite.gameObject.SetActive(true);
         fruitySwordVFX.SetActive(true);
-        PowerUpBar.fillAmount = 1;
-        //powerUpVFX.SetVector4("ParticlesColor", swordColor);
-        //powerUpVFX.gameObject.SetActive(true);
-        PowerUpBar.gameObject.SetActive(true);
-        //PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
+
+
+         //powerUpVFX.SetVector4("ParticlesColor", swordColor);
+         //powerUpVFX.gameObject.SetActive(true);
+         PowerUpBar.gameObject.SetActive(true);
+        
         GetComponent<PlayerAttack>().damagePlayer = 7f;
         isActivated = true;
         yield return new WaitForSeconds(PowerUpDuration);
 
-        powerUpVFX.gameObject.SetActive(false);
         fruitySwordVFX.SetActive(false);
         currentSprite.gameObject.SetActive(false);
         currentSprite.sprite = null;
@@ -159,22 +164,23 @@ public class powerUps : MonoBehaviour
         
         isActivated = false;
         PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+        PowerUpBar.GetComponent<barColorCode>().resetColors();
         currentPowerUp = " ";
         powerUpTimer = PowerUpDuration;
-        powerUpNumber = 3;
+
 
     }
 
     IEnumerator cocoShieldMode()
     {
         Debug.Log(" cocoshield");
-        currentPowerUp = "cocoShieldMode";
-        PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+
+
         PowerUpBar.fillAmount = 1;
         currentSprite.sprite = cocoShield;
         currentSprite.gameObject.SetActive(true);
         PowerUpBar.gameObject.SetActive(true);
-        //PowerUpBar.fillAmount = (powerUpTimer -= Time.deltaTime) / PowerUpDuration;
+
 
         powerUpVFX.SetVector4("ParticlesColor", cocoColor);
         powerUpVFX.gameObject.SetActive(true);
@@ -187,12 +193,9 @@ public class powerUps : MonoBehaviour
         isActivated = false;
         currentPowerUp = " ";
         PowerUpBar.color = PowerUpBar.GetComponent<barColorCode>().targetGreenColor;
+        PowerUpBar.GetComponent<barColorCode>().resetColors();
         powerUpTimer = PowerUpDuration;
-        powerUpNumber = 3;
-    }
 
-
-
-
-
+        }
 }
+

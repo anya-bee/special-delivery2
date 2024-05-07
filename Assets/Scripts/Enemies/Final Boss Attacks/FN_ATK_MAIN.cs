@@ -72,6 +72,7 @@ public class FN_ATK_MAIN : MonoBehaviour
     public void hitDragon()
     {
         Script_AudioManager.instance.PlaySFX("stab");
+        Script_AudioManager.instance.PlayEnemySFX("rest");
         health -= 5;
         CameraShake.Invoke();
         StartCoroutine(dragonHit());
@@ -111,6 +112,7 @@ public class FN_ATK_MAIN : MonoBehaviour
                 {
                     lemonColliders[i].gameObject.GetComponent<FN_Lemon_Bomb>().destroySelf();
                     health -= 5;
+                    Script_AudioManager.instance.PlayEnemySFX("rest");
                     CameraShake.Invoke();
                     lemonColliders[0] = null;
                     StartCoroutine(dragonHit());
@@ -126,6 +128,7 @@ public class FN_ATK_MAIN : MonoBehaviour
             GetComponent<Animator>().SetTrigger("dizzy");
             Script_AudioManager.instance.PlayEnemySFX("fresaHit");
             StartCoroutine(longDragonHit());
+
             deathStrawberry = 0;
         }
 
@@ -172,10 +175,13 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     IEnumerator longDragonHit()
     {
-        Script_AudioManager.instance.PlaySFX("rest");
+        alreadyAttacked = true;
+        citricAttack = true;
+        
         dizzyDragon.Play();
         dizzyDragon.gameObject.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
+        
         dizzyDragon.gameObject.SetActive(false);
         deathStrawberry = 0;
     }
@@ -202,7 +208,7 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     IEnumerator resetAttack(int n)
     {
-        if (n == 0 && pitahayaCounter < 1)
+        if (n == 0 && pitahayaCounter < 0)
         {
             pitahayaCounter++;
             yield return new WaitForSeconds(6f);
@@ -214,6 +220,13 @@ public class FN_ATK_MAIN : MonoBehaviour
             yield return new WaitForSeconds(17f);
             alreadyAttacked = false;
         }*/
+        else if(deathStrawberry == 3)
+        {
+            yield return new WaitForSeconds(7f);
+            citricAttack = false;
+            deathStrawberry = 0;
+            strawberriesField = false;
+        }
 
         else
         {

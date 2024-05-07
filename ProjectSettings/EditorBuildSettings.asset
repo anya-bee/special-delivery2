@@ -30,7 +30,10 @@ EditorBuildSettings:
     path: Assets/Scenes/GAME LEVELS/Final Boss Level.unity
     guid: f4efe31304d37b04da50202d3b33cce2
   - enabled: 1
-    path: Assets/Scenes/GAME LEVELS/ENDING SCREEN.unity
+    path: Assets/Scenes/GAME LEVELS/REAL ENDING.unity
+    guid: 2bdd0c9ce454c7c43977b235b4ebc6ef
+  - enabled: 1
+    path: Assets/Scenes/GAME LEVELS/CREDITS REAL.unity
     guid: 41e6072818403c54296516f618c088bb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 224bfe63e360013448a2e186e2400b3c,
