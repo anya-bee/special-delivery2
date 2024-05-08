@@ -40,7 +40,7 @@ public class script_ChangeTextAction : MonoBehaviour
     private void Start()
     {
         changetext();
-        Destroy(magicAnimator, 4);
+        Destroy(magicAnimator, 1.5f);
 
     }
 

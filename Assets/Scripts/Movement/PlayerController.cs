@@ -88,13 +88,17 @@ public class PlayerController : MonoBehaviour
         int numColliders3 = Physics.OverlapSphereNonAlloc(this.transform.position, radius, trayCollider, trayLayer);
         if (numColliders3 == 1)
         {
-            carryingOrder = false;
-            trayCollider[0].gameObject.GetComponent<orderChecked>().glassIsOnTray = true;
-            Script_AudioManager.instance.PlaySFX("clientExit");
-            currentGlass.GetComponent<juiceGlass>().leaveJuice(trayCollider[0].transform);
-            trayCollider[0] = null;
-            currentGlass = null;
-            glassHitColliders[0] = null;
+            if(currentGlass != null)
+            {
+                carryingOrder = false;
+                trayCollider[0].gameObject.GetComponent<orderChecked>().glassIsOnTray = true;
+                Script_AudioManager.instance.PlaySFX("clientExit");
+                currentGlass.GetComponent<juiceGlass>().leaveJuice(trayCollider[0].transform);
+                trayCollider[0] = null;
+                currentGlass = null;
+                glassHitColliders[0] = null;
+            }
+            
 
         }
 

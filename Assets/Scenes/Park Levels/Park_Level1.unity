@@ -12116,7 +12116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypeList:
   - {fileID: 8209447150915501388, guid: 850e45afad2b2944f8d0b9cefd8bf8d5, type: 3}
-  - {fileID: 5308377164456799043, guid: 60fd73b4d7361c3448e79d08cb94565b, type: 3}
+  - {fileID: 5308377164456799043, guid: fc3ce2a56527de24fb74493adc9046a0, type: 3}
   - {fileID: 8209447150915501388, guid: befaec9aaf7d4fc43853d0a6407ef9fb, type: 3}
   - {fileID: 8111445375325150684, guid: 0c08cd9664e29ee4abdc99e9ac1f1cd5, type: 3}
   newEnemy: 0
@@ -12883,7 +12883,9 @@ MonoBehaviour:
   orbSpawnPlace: {fileID: 1173285023}
   randomOrb: 0
   clientOrderCode: {fileID: 0}
-  fruitPowerOrb: []
+  refreshBlender:
+    m_PersistentCalls:
+      m_Calls: []
   orbTypeList:
   - {fileID: 7220234760528338505, guid: 85c4eccbbd7d6b24f91e0b16cd50d872, type: 3}
   - {fileID: 7110617946062456829, guid: 9efa702f47a510e4381d3e024177d879, type: 3}
@@ -28184,11 +28186,15 @@ MonoBehaviour:
   isTutorial: 0
   almaController: {fileID: 2123671278}
   currentPowerUp: 
+  powerUpNumber: 0
   isActivated: 0
   originalSpeed: 0
   originalAttack: 0
   PowerUpDuration: 5
   currentSprite: {fileID: 1610721870}
+  refreshBlender:
+    m_PersistentCalls:
+      m_Calls: []
   bananaShoe: {fileID: 21300000, guid: 4df4f69fd2d60ef4ab55182f2e541150, type: 3}
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
