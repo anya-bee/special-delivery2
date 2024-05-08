@@ -12,7 +12,7 @@ public class sendtomainmenu : MonoBehaviour
 
     IEnumerator gotoMainScene()
     {
-        yield return new WaitForSeconds(13f);
+        yield return new WaitForSeconds(15f);
         GetComponent<SceneLoader>().LoadScene();
     }
 

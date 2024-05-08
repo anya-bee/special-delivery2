@@ -54,7 +54,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         {
             fruitAttackManagers[i] = attackManagers[i].fruitType;
         }
-        health = 100;
+        health = 500;
         Script_AudioManager.instance.PauseBGM(true);
         alreadyAttacked = false;
         healthBar.gameObject.SetActive(false);
@@ -83,7 +83,7 @@ public class FN_ATK_MAIN : MonoBehaviour
         if (!BossStart) return;
         //Termina cosa que agrego Hector
 
-        healthBar.fillAmount = health / 100;
+        healthBar.fillAmount = health / 500;
         int insideLemons = Physics.OverlapSphereNonAlloc(this.transform.position, radius, lemonColliders, dmgLayer);
 
         /*for ( int i = 0; i < 3; i++)
@@ -113,7 +113,7 @@ public class FN_ATK_MAIN : MonoBehaviour
                 if (lemonColliders[i] != null)
                 {
                     lemonColliders[i].gameObject.GetComponent<FN_Lemon_Bomb>().destroySelf();
-                    health -= 5;
+                    health -= 15;
                     Script_AudioManager.instance.PlayEnemySFX("rest");
                     CameraShake.Invoke();
                     lemonColliders[0] = null;
@@ -210,7 +210,7 @@ public class FN_ATK_MAIN : MonoBehaviour
 
     IEnumerator resetAttack(int n)
     {
-        if (n == 0 && pitahayaCounter < 0)
+        /*if (n == 0 && pitahayaCounter < 0)
         {
             pitahayaCounter++;
             yield return new WaitForSeconds(6f);
@@ -222,7 +222,7 @@ public class FN_ATK_MAIN : MonoBehaviour
             yield return new WaitForSeconds(17f);
             alreadyAttacked = false;
         }*/
-        else if(deathStrawberry == 3)
+         if(deathStrawberry == 3)
         {
             yield return new WaitForSeconds(7f);
             citricAttack = false;

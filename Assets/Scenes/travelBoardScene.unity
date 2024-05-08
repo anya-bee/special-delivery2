@@ -533,6 +533,7 @@ RectTransform:
   - {fileID: 1264839912}
   - {fileID: 990530281}
   - {fileID: 57599272}
+  - {fileID: 141733312}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1182,7 +1183,7 @@ GameObject:
   - component: {fileID: 141733314}
   - component: {fileID: 141733313}
   m_Layer: 5
-  m_Name: blueScreen
+  m_Name: finalBlue screen
   m_TagString: blueScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,16 +1197,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141733311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000039068287}
-  m_LocalScale: {x: 0.35971224, y: 0.35971224, z: 0.35971224}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 294458894}
-  m_RootOrder: 1
+  m_Father: {fileID: 47806016}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -243.8849, y: 141.17249}
+  m_AnchoredPosition: {x: 0.000045776367, y: -4.000183}
   m_SizeDelta: {x: 1943.4785, y: 1111.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &141733313
@@ -1622,7 +1623,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 40
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1975,7 +1976,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1710908369}
-  - {fileID: 141733312}
   m_Father: {fileID: 388940280}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3484,7 +3484,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 40
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3724,7 +3724,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 500
+          m_IntArgument: 300
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4153,7 +4153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenetoLoad: 5
   loadingScreen: 0
-  blueScreen: {fileID: 1808832023}
+  blueScreen: {fileID: 141733311}
 --- !u!114 &915887981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4200,7 +4200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 915887980}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: changeFromMainScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4855,7 +4855,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 500
+          m_IntArgument: 300
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5347,7 +5347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenetoLoad: 6
   loadingScreen: 0
-  blueScreen: {fileID: 1913217135}
+  blueScreen: {fileID: 141733311}
 --- !u!114 &1213915687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5394,7 +5394,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1213915686}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: changeFromMainScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7435,7 +7435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1710908371}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: changeFromMainScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7810,7 +7810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenetoLoad: 1
   loadingScreen: 0
-  blueScreen: {fileID: 324952930}
+  blueScreen: {fileID: 141733311}
 --- !u!114 &1760166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7857,7 +7857,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1760166947}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: changeFromMainScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8758,7 +8758,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 40
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

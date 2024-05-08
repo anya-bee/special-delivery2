@@ -962,7 +962,7 @@ MonoBehaviour:
     type: 3}
   expLocation: {fileID: 5308377164456799043}
   particlesPitahaya: {fileID: 0}
-  explodeRadius: 3.35
+  explodeRadius: 1.92
   isInside: 0
   dmgPlayer: 0
   playerCollider:

@@ -46,7 +46,7 @@ public class SceneLoader : MonoBehaviour
     {
         blueScreen.SetActive(true);
         
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(1f);
 
         LoadScene();
 

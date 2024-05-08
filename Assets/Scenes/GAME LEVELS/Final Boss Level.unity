@@ -364,7 +364,7 @@ RectTransform:
   m_Children:
   - {fileID: 1499318999}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -592,7 +592,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 249010932}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2530,15 +2530,15 @@ RectTransform:
   - {fileID: 1124736219}
   - {fileID: 1813820807}
   - {fileID: 1197095485}
-  - {fileID: 605958405}
   - {fileID: 2077719140}
-  - {fileID: 1867957871}
   - {fileID: 612540254}
   - {fileID: 1468008724}
   - {fileID: 47404706}
   - {fileID: 1762435977}
   - {fileID: 65614820}
   - {fileID: 1105836897}
+  - {fileID: 605958405}
+  - {fileID: 1867957871}
   - {fileID: 257681346}
   - {fileID: 1542285668}
   m_Father: {fileID: 0}
@@ -4594,7 +4594,7 @@ RectTransform:
   - {fileID: 368026196}
   - {fileID: 1455871008}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 5
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -4715,7 +4715,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249010932}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8018,7 +8018,7 @@ RectTransform:
   - {fileID: 733391728}
   - {fileID: 203104860}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8163,7 +8163,7 @@ MonoBehaviour:
     isDead: 0
   rangeX: {x: -26, y: -15}
   rangeY: {x: 0, y: 0}
-  rangeZ: {x: -17, y: -7}
+  rangeZ: {x: -17, y: -10}
 --- !u!1 &1124736218
 GameObject:
   m_ObjectHideFlags: 0
@@ -11843,9 +11843,9 @@ MonoBehaviour:
   - spawnLocation: {fileID: 333265614}
     currentBomb: {fileID: 0}
     isDead: 0
-  rangeX: {x: -30, y: -15}
+  rangeX: {x: -26, y: -15}
   rangeY: {x: 9, y: 20}
-  rangeZ: {x: -11.01, y: -6}
+  rangeZ: {x: -17, y: -10}
 --- !u!4 &1392690324
 Transform:
   m_ObjectHideFlags: 0
@@ -12237,7 +12237,7 @@ RectTransform:
   m_Children:
   - {fileID: 470059939}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14276,7 +14276,7 @@ RectTransform:
   m_Children:
   - {fileID: 147106950}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15130,7 +15130,7 @@ RectTransform:
   - {fileID: 1278263293}
   - {fileID: 302248589}
   m_Father: {fileID: 249010932}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17290,7 +17290,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 249010932}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17679,6 +17679,7 @@ MonoBehaviour:
   currentLifeAmount: 22
   maxLifeAmount: 22
   isDead: 0
+  isFirstLevel: 0
   fadeToBlack: {fileID: 65614822}
   iconBorad: {fileID: 1105836899}
 --- !u!114 &2123671283
@@ -31068,7 +31069,7 @@ MonoBehaviour:
   - 
   bossHealth: {fileID: 7077990892370908631}
   healthBar: {fileID: 1762435978}
-  health: 500
+  health: 300
   lemons: 0
   alreadyAttacked: 1
   pitahayaCounter: 0

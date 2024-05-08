@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentLifeAmount;
     public float maxLifeAmount;
     public bool isDead;
-
+    public bool isFirstLevel= false;
 
     [Header("RetryMenu")]
 
@@ -26,7 +26,11 @@ public class PlayerHealth : MonoBehaviour
         fadeToBlack.gameObject.SetActive(false);
         iconBorad.gameObject.SetActive(false);
         GetComponent<Animator>().SetLayerWeight(1, 0);
-
+        if (isFirstLevel == true)
+        {
+            levelScores.almaLife = 22;
+            levelScores.clientsNewTimer = 40;
+        }
     }
 
     private void Update()
