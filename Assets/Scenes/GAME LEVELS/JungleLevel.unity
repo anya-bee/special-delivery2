@@ -2700,12 +2700,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &350178368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7838973116277249795, guid: 972e9d5a22f1576458f42398cef2dfd3,
-    type: 3}
-  m_PrefabInstance: {fileID: 635354840}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &368026195
 GameObject:
   m_ObjectHideFlags: 0
@@ -15994,7 +15988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746882560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: 0, z: 5.3}
+  m_LocalPosition: {x: -25.5, y: 0.9, z: 5.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16019,9 +16013,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypeList:
   - {fileID: 8209447150915501388, guid: befaec9aaf7d4fc43853d0a6407ef9fb, type: 3}
+  - {fileID: 5308377164456799043, guid: 60fd73b4d7361c3448e79d08cb94565b, type: 3}
   - {fileID: 8111445375325150684, guid: 0c08cd9664e29ee4abdc99e9ac1f1cd5, type: 3}
   - {fileID: 8209447150915501388, guid: 850e45afad2b2944f8d0b9cefd8bf8d5, type: 3}
-  - {fileID: 5308377164456799043, guid: 60fd73b4d7361c3448e79d08cb94565b, type: 3}
   newEnemy: 0
   enemiesPerLevel: 0
   enemyCount: 0
@@ -20173,8 +20167,8 @@ GameObject:
   - component: {fileID: 2123671281}
   - component: {fileID: 2123671282}
   - component: {fileID: 5866666019922385785}
-  - component: {fileID: 5866666019922385786}
   - component: {fileID: 2123671283}
+  - component: {fileID: 5866666019922385786}
   m_Layer: 3
   m_Name: Alma_CurrentPF
   m_TagString: Player
@@ -29639,20 +29633,32 @@ MonoBehaviour:
   isActivated: 0
   originalSpeed: 0
   originalAttack: 0
-  PowerUpDuration: 5
-  currentSprite: {fileID: 1610721870}
+  PowerUpDuration: 10
+  currentSprite: {fileID: 0}
   refreshBlender:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Blender_Inventory, Assembly-CSharp
+        m_MethodName: refreshBlender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   bananaShoe: {fileID: 21300000, guid: 4df4f69fd2d60ef4ab55182f2e541150, type: 3}
   plusSpeed: 4
   cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
   fruitySword: {fileID: 21300000, guid: 27f805628619e994684486d9acc10dc5, type: 3}
   PowerUpBar: {fileID: 0}
-  powerUpTimer: 0
-  powerUpVFX: {fileID: 5476953731551771043}
+  powerUpTimer: 10
+  powerUpVFX: {fileID: 0}
   bananaTrail: {fileID: 6597391274015560867}
-  fruitySwordVFX: {fileID: 350178368}
+  fruitySwordVFX: {fileID: 5476953731551771041}
   bananaShoesColor: {r: 3.539386, g: 2.9598377, b: 0.24837798, a: 0}
   cocoColor: {r: 19.689507, g: 11.141078, b: 8.990303, a: 0}
   swordColor: {r: 0.4479671, g: 2.749757, b: 5.051547, a: 0}

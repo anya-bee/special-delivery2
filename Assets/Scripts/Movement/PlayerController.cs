@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<Animator>().SetTrigger("finishStun");
         GetComponent<Animator>().SetLayerWeight(1, 0f);
         stunnedState = false;
-        speed = originalSpeed;
+        speed = 6;
         //GetComponent<PlayerController>().speed = orgSpeed;
     }
 

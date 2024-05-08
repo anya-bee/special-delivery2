@@ -42,13 +42,13 @@ public class pitahaya_Explode : MonoBehaviour
 
     public void explosion()
     {
-        Script_AudioManager.instance.PlayEnemySFX("dragoncito");
+        
         expLocation.gameObject.SetActive(true);
         if(dmgPlayer == true)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
         }
-        
+        Script_AudioManager.instance.PlayEnemySFX("dragoncito");
         Debug.Log("a pitahaya exploded!!!!!! BOOOOOOM");
         
 

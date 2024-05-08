@@ -60,8 +60,9 @@ public class EnemyHealth : MonoBehaviour
         spawnFruit();
         if (enemyString == "Pitahaya_Enemy")
         {
+            //GetComponent<pitahaya_Explode>().explosionObj.gameObject.SetActive(true);
+            //GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Damage(1);
             GetComponent<pitahaya_Explode>().explosion();
-
             Destroy(this.gameObject);
         }
         else

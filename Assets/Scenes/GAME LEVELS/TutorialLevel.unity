@@ -6070,7 +6070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643042769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.02, y: 0.34, z: -21.18}
+  m_LocalPosition: {x: 10.01, y: 0.34, z: -20.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15323,7 +15323,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  timeToShow: 4
+  timeToShow: 6
   actions: []
   references:
     version: 2
@@ -22408,6 +22408,7 @@ GameObject:
   - component: {fileID: 2123671282}
   - component: {fileID: 2123671283}
   - component: {fileID: 5866666019922385785}
+  - component: {fileID: 5866666019922385786}
   m_Layer: 3
   m_Name: Alma Character
   m_TagString: Player
@@ -23040,7 +23041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1424267049422892209
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27122,6 +27123,54 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5866666019922385786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147923131320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4775c67d34d4d644ab6a513dae0a9c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTutorial: 0
+  almaController: {fileID: 2123671278}
+  currentPowerUp: 
+  powerUpNumber: 0
+  isActivated: 0
+  originalSpeed: 0
+  originalAttack: 0
+  PowerUpDuration: 10
+  currentSprite: {fileID: 0}
+  refreshBlender:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Blender_Inventory, Assembly-CSharp
+        m_MethodName: refreshBlender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  bananaShoe: {fileID: 21300000, guid: 4df4f69fd2d60ef4ab55182f2e541150, type: 3}
+  plusSpeed: 4
+  cocoShield: {fileID: 21300000, guid: 5b460c630eb7e4d42aac3d405f1f870c, type: 3}
+  fruitySword: {fileID: 21300000, guid: 27f805628619e994684486d9acc10dc5, type: 3}
+  PowerUpBar: {fileID: 0}
+  powerUpTimer: 10
+  powerUpVFX: {fileID: 0}
+  bananaTrail: {fileID: 0}
+  fruitySwordVFX: {fileID: 0}
+  bananaShoesColor: {r: 3.539386, g: 2.9598377, b: 0.24837798, a: 0}
+  cocoColor: {r: 19.689507, g: 11.141078, b: 8.990303, a: 0}
+  swordColor: {r: 0.4479671, g: 2.749757, b: 5.051547, a: 0}
 --- !u!54 &5866666020709052149
 Rigidbody:
   m_ObjectHideFlags: 0

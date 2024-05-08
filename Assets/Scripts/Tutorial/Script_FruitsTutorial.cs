@@ -31,7 +31,12 @@ public class Script_FruitsTutorial : MonoBehaviour
             }
             if (tutorialOrder.glassOrder[1] == fruit.GetString())
             {
-                secondFruit = true;
+                if(tutorialOrder.glassOrder[0] == tutorialOrder.glassOrder[1] && fruit.amount == 2)
+                {
+                    secondFruit = true;
+                }
+
+                
             }
             if (tutorialOrder.glassOrder[2] == fruit.GetString())
             {
